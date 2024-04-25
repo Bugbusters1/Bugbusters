@@ -1,22 +1,13 @@
 import "./App.css";
 import Login from "./components/Login-SignUp/LoginPage.jsx";
-import { useWindowSize } from "@uidotdev/usehooks";
-function Browser({ size }) {
-  return (
-    <div
-      data-testid="browser"
-      className="browser"
-      style={{ width: size.width / 4, height: size.height / 4 }}
-    />
-  );
-}
+import Home from "./components/Home.jsx";
 function App() {
   return (
     
 
 
     <>
-      <Login />
+      <Home />
     </>
   );
 }
