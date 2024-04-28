@@ -541,7 +541,7 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(.disa
 .divider-1 span {
 	display: inline-block;
 	width: 200px;
-	border-bottom: 1px dotted #aaa;
+	border-bottom: 1.5px solid #000000;
 }
 
 
@@ -854,7 +854,7 @@ footer {
 	font-weight: 600;
 	display: flex;
 	align-items: center;
-	background: #3a5efd;
+	background: #000000;
 	color: #f5f5f5;
   }
   
