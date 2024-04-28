@@ -1,3 +1,4 @@
+let currentCategory = "all";
 const items = [
   // Hospital Items
   {
@@ -232,25 +233,32 @@ const filterOptions = {
       <!-- Add options for areas -->
   </select>
   `,
+  all: ``,
 };
 
 document.querySelectorAll(".dropdown-item").forEach((item) => {
   item.addEventListener("click", (event) => {
     const selectedCategory = event.target.textContent.toLowerCase();
     if (selectedCategory === "all") {
+      const resultsContainer = document.getElementById("filterInputs");
+      resultsContainer.innerHTML = "";
       displayItems();
     } else {
       const selectedCategories = selectedCategory.split(" ");
+      currentCategory = selectedCategories[0];
       filterInputs(selectedCategories[0]);
       filterItemsByCategory(selectedCategory);
     }
   });
 });
-
-function filterItemsByCategory(category) {
+function filterItemsByCategory2(category) {
   const results = items.filter((item) =>
     item.category.toLowerCase().includes(category)
   );
+  return results;
+}
+function filterItemsByCategory(category) {
+  const results = filterItemsByCategory2(category);
   displayResults(results);
 }
 
@@ -328,6 +336,7 @@ function filterInputs(category) {
 }
 
 function filterClothes() {
+  let FilterItems = filterItemsByCategory2(currentCategory);
   const minAgeInput = document.getElementById("minAge").value;
   const maxAgeInput = document.getElementById("maxAge").value;
 
@@ -337,7 +346,7 @@ function filterClothes() {
   const gender = document.getElementById("gender").value;
   const season = document.getElementById("season").value;
 
-  const filteredItems = items.filter((item) => {
+  const filteredItems = FilterItems.filter((item) => {
     const fitsAgeRange = item.minAge <= maxAge && item.maxAge >= minAge;
 
     const fitsGender = gender === "All" || item.gender === gender;
@@ -347,20 +356,18 @@ function filterClothes() {
   });
   displayItems(filteredItems);
 }
-function filterSchoolSupplies(category) {
-  let results;
-  if (category === "books") {
-    results = items.filter((item) => item.category.toLowerCase() === "books");
-  } else if (category === "stationary") {
-    results = items.filter(
-      (item) => item.category.toLowerCase() === "stationary"
-    );
-  } else {
-    results = items;
-  }
+function filterSchoolSupplies() {
+  let FilterItems = filterItemsByCategory2(currentCategory);
+  const category = document.getElementById("category").value;
+  let results = FilterItems.filter((item) => {
+    const fitsCategory = category === "All" || item.category === category;
+    return fitsCategory;
+  });
+
   displayResults(results);
 }
 function filterToys() {
+  let FilterItems = filterItemsByCategory2(currentCategory);
   const minAgeInput = document.getElementById("ageMin").value;
   const maxAgeInput = document.getElementById("ageMax").value;
 
@@ -370,7 +377,7 @@ function filterToys() {
   const gender = document.getElementById("gender").value;
   const category = document.getElementById("category").value;
 
-  let filteredRequests = toyRequests.filter((request) => {
+  let filteredRequests = FilterItems.filter((request) => {
     const fitsAgeRange = minAge <= request.ageMax && maxAge >= request.ageMin;
     const fitsGender = gender === "All" || request.gender === gender;
     const fitsCategory = category === "All" || request.category === category;
@@ -381,29 +388,32 @@ function filterToys() {
   displayResults(filteredRequests);
 }
 function filterFoodRequests() {
+  let FilterItems = filterItemsByCategory2(currentCategory);
   const foodCategory = document.getElementById("foodCategory").value;
 
-  const filteredRequests = foodRequests.filter((request) => {
-    return foodCategory === "all" || request.category === foodCategory;
+  const filteredRequests = FilterItems.filter((request) => {
+    return foodCategory === "All" || request.category === foodCategory;
   });
 
   displayFoodRequests(filteredRequests);
 }
 function filterMedicalRequests() {
+  let FilterItems = filterItemsByCategory2(currentCategory);
   const medicalCategory = document.getElementById("medicalCategory").value;
 
-  const filteredRequests = medicalRequests.filter((request) => {
+  const filteredRequests = FilterItems.filter((request) => {
     return medicalCategory === "all" || request.category === medicalCategory;
   });
 
   displayMedicalRequests(filteredRequests);
 }
 function filterBloodRequests() {
+  let FilterItems = filterItemsByCategory2(currentCategory);
   const selectedHospital = document.getElementById("bloodHospital").value;
   const selectedGovernorate = document.getElementById("bloodGovernorate").value;
   const selectedArea = document.getElementById("bloodArea").value;
 
-  const filteredRequests = bloodRequests.filter((request) => {
+  const filteredRequests = FilterItems.filter((request) => {
     return (
       (selectedHospital === "all" || request.hospital === selectedHospital) &&
       (selectedGovernorate === "all" ||
