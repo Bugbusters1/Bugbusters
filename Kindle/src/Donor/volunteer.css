@@ -1,0 +1,192 @@
+.input-div {
+	position: relative;
+	width: 50px; /* Adjusted width */
+	height: 50px; /* Adjusted height */
+	border-radius: 50%;
+	border: 2px solid white;
+	background-color: #3a5efd;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	/* box-shadow: 0px 0px 100px #0226C5, inset 0px 0px 10px #0226C5, 0px 0px 5px rgb(255, 255, 255); */
+	
+  }
+  .icon {
+	color: white;
+	font-size: 2rem;
+	cursor: pointer;
+
+  }
+  
+  .input {
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer !important;
+  }
+
+  .progress-loader {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+  }
+  
+  .progress-loader {
+	width: 180px;
+	background: rgba(0, 0, 0, 0.2);
+	height: 5px;
+	border-radius: 7px;
+  }
+  
+  .progress {
+	content: '';
+	width: 1px;
+	height: 5px;
+	border-radius: 7px;
+	background: rgb(9, 188, 9);
+	transition: 0.5s;
+	animation: loading1274 3s ease forwards;
+  }
+  
+  @keyframes loading1274 {
+	0% {
+	  width: 0%;
+	}
+  
+	10% {
+	  width: 10%;
+	}
+  
+	50% {
+	  width: 40%;
+	}
+  
+	60% {
+	  width: 60%;
+	}
+  
+	100% {
+	  width: 100%;
+	}
+  }
+
+  .containerTrick {
+	display: flex;
+  }
+  
+  .input-containerTrick {
+	margin-right: 20px; /* Adjust margin as needed */
+  }
+
+  .customCheckBoxHolder {
+  margin: 5px;
+  display: flex;
+}
+
+.customCheckBox {
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 8px;
+  background-color: rgba(0, 0, 0, 0.16);
+  border-radius: 0px;
+  color: rgba(255, 255, 255, 0.7);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: color, background-color, box-shadow;
+  display: flex;
+  height: 32px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px 1px 1px 0px;
+  outline: none;
+  justify-content: center;
+  min-width: 55px;
+}
+
+.customCheckBox:hover {
+  background-color: #2c2c2c;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.customCheckBox .inner {
+  font-size: 18px;
+  font-weight: 900;
+  pointer-events: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: transform;
+  transform: translateY(0px);
+}
+
+.customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
+
+.customCheckBoxWrapper:first-of-type .customCheckBox {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-right: 0px;
+}
+
+.customCheckBoxWrapper:last-of-type .customCheckBox {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-left: 0px;
+}
+
+.customCheckBoxInput {
+  display: none;
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox {
+  background-color: #2d6737;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox .inner {
+  transform: translateY(-2px);
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox:hover {
+  background-color: #34723f;
+  box-shadow: rgba(0, 0, 0, 0.26) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 3px 6px 2px;
+}
+
+.customCheckBoxWrapper .customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
+input[type="file"]::file-selector-button {
+    border-radius: 4px;
+    padding: 0 16px;
+    height: 40px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #8096f4;
+    box-shadow: 0px 1px 0px #8096f4;
+    margin-right: 16px;
+    transition: background-color 200ms;
+  }
+  
+  /* file upload button hover state */
+  input[type="file"]::file-selector-button:hover {
+    background-color: #f3f4f6;
+  }
+  
+  /* file upload button active state */
+  input[type="file"]::file-selector-button:active {
+    background-color: #e5e7eb;
+  }
+  
+  /* ------------------------ */
+
+  #map {
+    height: 400px; /* Adjust the height as needed */
+    width: 100%; /* Adjust the width as needed */
+}

@@ -18,38 +18,51 @@ body {
   color: var(--text-color);
 }
 
-.container {
-  max-width: 800px;
+.containerView {
+  max-width: 1000px;
   margin: 20px auto;
   padding: 20px;
   border: 1px solid var(--border-color);
   border-radius: 8px;
   box-shadow: 0 0 10px var(--box-shadow-color);
   background: var(--container-background-color);
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 h1 {
   text-align: center;
-  color: var(--header-color); /* New color for header */
+  color: var(--header-color);
 }
 
 .item-card {
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
+  flex: 1 1 30%; /* Each item takes up one-third of the container width */
+  margin: 10px; /* Adjust margin as needed */
   padding: 20px;
-  margin-bottom: 20px;
+  box-sizing: border-box; /* Include padding and border in the total width */
   box-shadow: 0 4px 8px var(--box-shadow-color);
   background: var(--form-background-color);
 }
 
+@media (max-width: 768px) {
+  .item-card {
+    flex: 1 1 100%; /* Each item takes up full width on smaller screens */
+  }
+}
+
 .item-card img {
-  max-width: 100px;
+  max-width: 100%;
+  height: auto;
   display: block;
   margin: 0 auto 10px;
 }
 
 .item-card h2 {
-  margin-top: 0;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .item-card p {
@@ -57,6 +70,9 @@ h1 {
 }
 
 .item-card button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
   background-color: var(--primary-color);
   color: #fff;
   border: none;
@@ -529,4 +545,69 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(
   border: 0;
   color: #fff;
   box-shadow: none;
+}
+.container-input {
+  position: relative;
+}
+
+.input {
+  width: 150px;
+  padding: 10px 0px 10px 40px;
+  border-radius: 9999px;
+  border: solid 1px #333;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  opacity: 0.8;
+}
+
+.container-input svg {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+}
+
+.input:focus {
+  opacity: 1;
+  width: 250px;
+}
+.buttons {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.container-input {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+.input {
+  margin-right: 5px; /* Adjust margin as needed */
+}
+.center-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.top-content {
+  height: 370px; /* Set the desired height */
+}
+#filterInputs {
+  display: flex;
+  align-items: center;
+}
+
+#filterInputs label {
+  margin-right: 10px;
+}
+
+.age-inputs {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.age-inputs input {
+  width: 50px; /* Adjust width as needed */
 }
