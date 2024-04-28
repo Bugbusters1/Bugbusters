@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" type="image/svg+xml" href="/vite.svg">
+	<title>Kindle</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="../assets/css/animate.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/media-queries.css">
+
+	<!-- Favicon and touch icons -->
+	<link rel="shortcut icon" href="../assets/ico/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+</head>
+
+<body>
+
+	<!-- Wrapper -->
+	<div class="wrapper">
+
+		<!-- Sidebar -->
+		<nav class="sidebar">
+
+			<!-- close sidebar menu -->
+			<div class="dismiss">
+				<i class="fas fa-arrow-left"></i>
+			</div>
+
+			<div class="logo">
+				<h3><a href="OrganizationHome.html">Kindle</a></h3>
+			</div>
+
+			<ul class="list-unstyled menu-elements">
+				<li class="active">
+					<a class="scroll-link" href="#top-content"><i class="fas fa-home"></i> Home</a>
+				</li>
+                <li>
+					<a class="scroll-link" href="NewPost.html"><i class="fas fa-pencil-alt"></i> New Post</a>
+				</li>
+                <li>
+					<a class="scroll-link" href="MyPosts.html"><i class="fas fa-book-open"></i> My Posts</a>
+				</li>
+                <li>
+					<a class="scroll-link" href="FulfilledDonations.html"><i class="fas fa-hand-holding-heart"></i> Fulfilled Donations</a>
+				</li>
+				<li>
+					<a class="scroll-link" href="#section-1"><i class="fas fa-cog"></i> What we do</a>
+				</li>
+				<li>
+					<a class="scroll-link" href="#section-2"><i class="fas fa-user"></i> About us</a>
+				</li>
+				<li>
+					<a class="scroll-link" href="#section-5"><i class="fas fa-pencil-alt"></i> Portfolio</a>
+				</li>
+				<li>
+					<a class="scroll-link" href="#section-6"><i class="fas fa-envelope"></i> Contact us</a>
+				</li>
+				<li>
+					<a class="scroll-link" href="#section-1"><i class="fas fa-cog"></i>Account Settings</a>
+				</li>
+				<li>
+					<a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"
+						role="button" aria-controls="otherSections">
+						<i class="fas fa-sync"></i>Other sections
+					</a>
+					<ul class="collapse list-unstyled" id="otherSections">
+						<li>
+							<a class="scroll-link" href="#section-3">Our projects</a>
+						</li>
+						<li>
+							<a class="scroll-link" href="#section-4">We think that...</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+			<div class="to-top">
+				<a class="btn btn-primary btn-customized-3" href="#" role="button">
+					<i class="fas fa-sign-out-alt"></i> Log out 
+				</a>
+			</div>
+			
+			<!-- <div class="dark-light-buttons">
+				<a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
+				<a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
+			</div> -->
+
+		</nav>
+		<!-- End sidebar -->
+
+		<!-- Dark overlay -->
+		<div class="overlay"></div>
+
+		<!-- Content -->
+		<div class="content">
+
+			<!-- open sidebar menu -->
+			<a class="open-menu" href="#" role="button">
+				<button class="btnMenu">
+					<span class="icon">
+						<svg viewBox="0 0 175 80" width="40" height="40">
+							<rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+							<rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+							<rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+						</svg>
+					</span>
+					<span class="text">Menu</span>
+				</button>
+			</a>
+			
+			<!-- Section for viewing details of fulfilled donation posts -->
+<div class="section-7-container section-container section-container-image-bg" id="section-7">
+    <div class="container">
+        <div class="row">
+            <div class="col section-7 section-description wow fadeIn">
+                <h2>Donation Posts</h2>
+                <div class="divider-1 wow fadeInUp"><span></span></div>
+                <p>Access your organization's donation posts section to view details of donations made by your organization, and manage them as needed.</p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Display details of fulfilled donation posts here -->
+            <!-- For example, you can use a table to display the list of posts -->
+            <div class="col-md-12 section-7-box wow fadeInUp">
+                <h3>Donation Posts</h3>
+                <div class="section-7-content">
+                    <!-- Your content here -->
+                    <!-- Sample table structure -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Organization Name</th>
+                                <th>Donation Category</th>
+                                <th>Donation Details</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Example donation posts -->
+                            <tr>
+                                <td>Charity For Education</td>
+                                <td>Clothing</td>
+                                <td>T-shirts, jeans</td>
+                                <td>
+                                    <!-- Buttons for actions -->
+                                    <a href="UpdatePost.html" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Edit</a>
+                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Charity For Education</td>
+                                <td>Medical Supplies</td>
+                                <td>Bandages, syringes</td>
+                                <td>
+                                    <!-- Buttons for actions -->
+                                    <a href="UpdatePost.html" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Edit</a>
+                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Charity For Education</td>
+                                <td>School Supplies</td>
+                                <td>Books, pencils, notebooks</td>
+                                <td>
+                                    <!-- Buttons for actions -->
+                                    <a href="UpdatePost.html" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Edit</a>
+                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Charity For Education</td>
+                                <td>Food</td>
+                                <td>Canned goods, rice, pasta</td>
+                                <td>
+                                    <!-- Buttons for actions -->
+                                    <a href="UpdatePost.html" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Edit</a>
+                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
+                                </td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                    <div id="no-posts-message" class="alert alert-info d-none" role="alert" style="font-weight: bold; color: #333;">
+                        No current posts
+                    </div>
+                    <script>
+                        // Get all delete buttons
+                        const deleteButtons = document.querySelectorAll('.btn-danger');
+
+                        // Attach click event listener to each delete button
+                        deleteButtons.forEach(button => {
+                            button.addEventListener('click', function() {
+                                // Get the parent row of the button
+                                const row = this.closest('tr');
+                                
+                                // Apply CSS transition to fade out the row gradually
+                                row.style.transition = 'opacity 0.5s ease';
+                                row.style.opacity = '0'; // Set opacity to 0
+                                
+                                // After the transition duration, remove the row from the DOM
+                                setTimeout(function() {
+                                    row.remove();
+                                    // Create a message element
+                                    const message = document.createElement('div');
+                                    message.textContent = 'Donation post deleted successfully';
+                                    message.classList.add('alert', 'alert-success', 'text-dark', 'font-weight-bold');
+                                    // Insert the message after the table
+                                    const table = document.querySelector('.table');
+                                    table.parentNode.insertBefore(message, table.nextSibling);
+                                    // Remove the message after a certain duration (e.g., 3 seconds)
+                                    setTimeout(function() {
+                                        message.remove();
+                                    }, 3000); // 3 seconds
+                                    if (document.querySelectorAll('tbody tr').length === 0) {
+                                        document.getElementById('no-posts-message').classList.remove('d-none');
+                                    }
+                                    
+                                }, 1000); // 1.0s transition duration
+                            });
+                        });
+
+
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+
+			<!-- Footer -->
+			<footer class="footer-container">
+
+				<div class="container">
+					<div class="row">
+
+						<div class="col">
+							&copy; This website perserves your personal information.
+						</div>
+
+					</div>
+				</div>
+
+			</footer>
+
+		</div>
+		<!-- End content -->
+
+	</div>
+	<!-- End wrapper -->
+
+	<!-- Javascript -->
+	<script src="../assets/js/jquery-3.3.1.min.js"></script>
+	<script src="../assets/js/jquery-migrate-3.0.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="../assets/js/jquery.backstretch.min.js"></script>
+	<script src="../assets/js/wow.min.js"></script>
+	<script src="../assets/js/jquery.waypoints.min.js"></script>
+	<script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../assets/js/scripts.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    
+        var newPostButton = document.querySelector('.menu-elements li:nth-child(2) a');
+        var myPostsButton = document.querySelector('.menu-elements li:nth-child(3) a');
+        var FulfilledDonationsButton = document.querySelector('.menu-elements li:nth-child(4) a');
+
+
+        newPostButton.addEventListener('click', function(event) {
+            // Prevent the default action of the link (i.e., navigating to its href)
+            event.preventDefault();
+         
+            // Redirect the user to NewPost.html
+            window.location.href = 'NewPost.html';
+        });
+
+        myPostsButton.addEventListener('click', function(event) {
+            // Prevent the default action of the link (i.e., navigating to its href)
+            event.preventDefault();
+         
+            // Redirect the user to NewPost.html
+            window.location.href = 'MyPosts.html';
+        });
+
+
+        FulfilledDonationsButton.addEventListener('click', function(event) {
+            // Prevent the default action of the link (i.e., navigating to its href)
+            event.preventDefault();
+        
+            // Redirect the user to FulfilledDonations.html
+            window.location.href = 'FulfilledDonations.html';
+        });
+    });
+
+    </script>
+
+</body>
+
+<style>
+    /* CSS for the table */
+.table {
+    color: #fff; /* Change text color to white */
+}
+
+/* CSS for table headers */
+.table thead th {
+    color: #fff; /* Change header text color to white */
+}
+
+/* CSS for table rows */
+.table tbody td {
+    color: #fff; /* Change row text color to white */
+}
+/* CSS to position the button next to the donor name */
+.donor-name {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px; /* Adjust the margin as needed */
+}
+.view-donor-details-btn {
+    vertical-align: middle;
+}
+
+</style>
+
+
+</html>
