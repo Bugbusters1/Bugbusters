@@ -733,11 +733,11 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(.disa
 .section-6-form input[type="text"],
 .section-6-form textarea {
 	background: none;
-	border: 1px solid #fff;
+	border: 1px solid  #8096f4;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	font-weight: 300;
-	color: #fff;
+	color: #0c0f1d;
 	box-shadow: none;
 	transition: all .3s;
 }
@@ -749,9 +749,9 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(.disa
 .section-6-form input[type="text"]:focus,
 .section-6-form textarea:focus {
 	outline: 0;
-	background: #fff;
-	border: 1px solid #fff;
-	color: #888;
+	background: #f7f8fd;
+	border: 1px solid #8096f4;
+	color: #0c0f1d;
 	box-shadow: none;
 }
 
@@ -762,19 +762,19 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(.disa
 
 .section-6-form input[type="text"]::-moz-placeholder,
 .section-6-form textarea::-moz-placeholder {
-	color: #ccc;
+	color: #0c0f1d;
 	font-style: italic;
 }
 
 .section-6-form input[type="text"]:-ms-input-placeholder,
 .section-6-form textarea:-ms-input-placeholder {
-	color: #ccc;
+	color: #0c0f1d;
 	font-style: italic;
 }
 
 .section-6-form input[type="text"]::-webkit-input-placeholder,
 .section-6-form textarea::-webkit-input-placeholder {
-	color: #ccc;
+	color: #0c0f1d;
 	font-style: italic;
 }
 
@@ -908,5 +908,88 @@ footer {
 	  linear-gradient(-45deg, var(--l) var(--bg) 70%, #0000 0),
 	  linear-gradient(45deg, var(--color) var(--bg));
 	background-size: var(--size) var(--size);
+  }
+  
+  .formField {
+	margin: 10px;
+	position: relative;
+	
+  }
+  
+  .formField input {
+	padding: 20px 15px 10px 15px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	background-color: #f7f8fd;
+	color: #0c0f1d;
+	font-size: 16px;
+	font-weight: 550;
+	transition: 0.3s ease-in-out;
+	border: 0 0 0 2px #8096f4;
+  }
+  
+  .formField input:hover,
+  .formField input:focus {
+	box-shadow: 0 0 0 2px #8096f4;
+  }
+  
+  .formField span {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 13px 15px;
+	color: #0c0f1d;
+	font-size: 16px;
+	font-weight:300 ;
+	text-shadow: -1px -1px 0 #f1f1f1, 1px -1px 0 #f1f1f1, -1px 1px 0 #f1f1f1,
+	  1px 1px 0 #f7f8fd;
+	transition: 0.3s ease-in-out;
+	pointer-events: none;
+	
+  }
+  
+  .formField input:focus + span,
+  .formField input:valid + span {
+	transform: translateY(-12px) translateX(-5px) scale(0.95);
+	transition: 0.3s ease-in-out;
+	
+  }
+  
+  .input-wrapper {
+	position: relative;
+	width: 200px;
+	margin: 50px auto;
+  }
+  
+  .input-box {
+	font-size: 16px;
+	padding: 10px 0;
+	border: none;
+	border-bottom: 2px solid #ccc;
+	color: #08AEEA;
+	width: 100%;
+	background-color: transparent;
+	transition: border-color 0.3s ease-in-out;
+  }
+  
+  .underline {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #08AEEA;
+	transform: scaleX(0);
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .input-box:focus {
+	border-color: #08AEEA;
+	outline: none;
+  }
+  
+  .input-box:focus + .underline {
+	transform: scaleX(1);
   }
   
