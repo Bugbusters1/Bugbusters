@@ -18,7 +18,7 @@ body {
   color: var(--text-color);
 }
 
-.container {
+.containerView {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
@@ -26,6 +26,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 10px var(--box-shadow-color);
   background: var(--container-background-color);
+  text-align: left;
 }
 
 h1 {
@@ -48,8 +49,9 @@ h1 {
   margin: 0 auto 10px;
 }
 
-.item-card h2 {
+.item-card h20 {
   margin-top: 0;
+  font-size: 30px;
 }
 
 .item-card p {
