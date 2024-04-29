@@ -3,7 +3,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	font-weight: 300;
-	background: #B1D4E0;
+	background: #FCFAF0;
 	color: #0c0f1d;
 	line-height: 30px;
 	text-align: center;
@@ -15,7 +15,7 @@ strong {
 }
 
 a {
-	color: #3a5efd;
+	color: #222024;
 	
 	text-decoration: none;
 	transition: all .3s;
@@ -23,7 +23,7 @@ a {
 
 a:hover,
 a:focus {
-	color: #3d5adb;
+	color: black;
 	border: 0;
 	text-decoration: none;
 }
@@ -62,13 +62,13 @@ img {
 }
 
 ::-moz-selection {
-	background: #8096f4;
+	background: #222024;
 	color: #fff;
 	text-shadow: none;
 }
 
 ::selection {
-	background: #8096f4;
+	background: #222024;
 	color: #fff;
 	text-shadow: none;
 }
@@ -355,7 +355,7 @@ a.btn-customized {
 	margin-left: 5px;
 	margin-right: 5px;
 	padding: .75rem 1.5rem;
-	background: #3a5efd;
+	background: #222024;
 	border: 0;
 	border-radius: 4px;
 	font-size: 16px;
@@ -372,8 +372,8 @@ a.btn-customized.active:focus,
 a.btn-customized.btn.btn-primary:not(:disabled):not(.disabled):active,
 a.btn-customized.btn.btn-primary:not(:disabled):not(.disabled):active:focus {
 	outline: 0;
-	background: #3a5efd;
-	background: #3d5adb;
+	background: #222024;
+	background: black;
 	border: 0;
 	color: #fff;
 	box-shadow: none;
@@ -592,9 +592,9 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(.disa
 	width: 80px;
 	height: 80px;
 	margin: 0 auto;
-	border: 1px solid #3a5efd;
+	border: 1px solid #222024;
 	font-size: 40px;
-	color: #8096f4;
+	color: #222024;
 	line-height: 78px;
 	text-align: center;
 	border-radius: 50%;
@@ -638,7 +638,7 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(.disa
 	width: 60px;
 	height: 60px;
 	margin: 0 auto;
-	background: #3a5efd;
+	background: #222024;
 	font-size: 28px;
 	color: #fff;
 	line-height: 60px;
@@ -683,7 +683,7 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(.disa
 
 .section-5-box h3 a:hover,
 .section-5-box h3 a:focus {
-	color: #8096f4;
+	color: #222024;
 }
 
 .section-5-box h3 i {
@@ -733,7 +733,7 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(.disa
 .section-6-form input[type="text"],
 .section-6-form textarea {
 	background: none;
-	border: 1px solid  #8096f4;
+	border: 1px solid  #222024;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	font-weight: 300;
@@ -750,14 +750,14 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(.disa
 .section-6-form textarea:focus {
 	outline: 0;
 	background: #f7f8fd;
-	border: 1px solid #8096f4;
+	border: 1px solid #222024;
 	color: #0c0f1d;
 	box-shadow: none;
 }
 
 .section-6-form input[type="text"].input-error,
 .section-6-form textarea.input-error {
-	border-color: #3d5adb;;
+	border-color: black;;
 }
 
 .section-6-form input[type="text"]::-moz-placeholder,
@@ -780,7 +780,7 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(.disa
 
 .section-6-form button.btn-customized {
 	padding: .75rem 1.5rem;
-	background: #3a5efd;
+	background: #222024;
 	border: 0;
 	border-radius: 4px;
 	font-family: 'Roboto', sans-serif;
@@ -798,8 +798,8 @@ a.btn-customized-4.btn-customized-light.btn.btn-primary:not(:disabled):not(.disa
 .section-6-form button.btn.btn-primary:not(:disabled):not(.disabled):active,
 .section-6-form button.btn.btn-primary:not(:disabled):not(.disabled):active:focus {
 	outline: 0;
-	background: #3a5efd;
-	background: #3d5adb;
+	background: #222024;
+	background: black;
 	border: 0;
 	color: #fff;
 	box-shadow: none;
@@ -926,12 +926,12 @@ footer {
 	font-size: 16px;
 	font-weight: 550;
 	transition: 0.3s ease-in-out;
-	border: 0 0 0 2px #8096f4;
+	border: 0 0 0 2px #222024;
   }
   
   .formField input:hover,
   .formField input:focus {
-	box-shadow: 0 0 0 2px #8096f4;
+	box-shadow: 0 0 0 2px #222024;
   }
   
   .formField span {

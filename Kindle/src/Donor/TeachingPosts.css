@@ -1,0 +1,121 @@
+.filter-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #222024;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1340px;
+    transition: background-color 0.3s ease;
+  }
+
+  .filter-button:hover {
+    background-color: #000000;
+  }
+
+  /* Style for the filter icon */
+  .filter-icon {
+    margin-right: 5px;
+  }
+
+      /* Style for the sidebar */
+      .Filtersidebar {
+        position: fixed;
+        top: -100%; /* Start from the top */
+        right: 0;
+        width: 100%; /* Adjust width as needed */
+        height: 350px; /* Adjust height as needed */
+        background-color: #222024;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: top 0.5s ease; /* Transition on the top property */
+        overflow-y:hidden;
+      }
+      
+      .Filtersidebar.active {
+        top: 0; /* Slide down to the top */
+      }
+      
+      /* Style for the sidebar content */
+      .Filtersidebar-content {
+        padding: 20px;
+        display: flex;
+        flex-direction: row; /* Horizontal layout */
+        justify-content: space-between; /* Equal spacing between containers */
+        display: flex;
+        flex-direction: column;
+      }
+      
+
+    .radio-container {
+        margin-left: 80px;
+        max-width: 300px;
+        color: white;
+        display:inline-block;
+       margin-left: 100px;
+    }
+    
+    .radio-wrapper {
+        margin-bottom: 20px;
+        
+        flex: 1 1 auto;
+    }
+    
+    .radio-button {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        padding: auto;
+    }
+    
+    .radio-button:hover {
+        transform: translateY(-2px);
+    }
+    
+    .radio-button input[type="radio"] {
+        display: none;
+    }
+    
+    .radio-checkmark {
+        display: inline-block;
+        position: relative;
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+    
+    .radio-checkmark:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: white;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .radio-button input[type="radio"]:checked ~ .radio-checkmark:before {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    
+    .radio-label {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .maincontent {
+        transition: margin-top 0.5s ease; /* Transition margin-top */
+        margin: 0px;
+    }
+    
+    .maincontent.active {
+        margin-top: 350px;
+    }

@@ -168,8 +168,8 @@ input[type="file"]::file-selector-button {
     height: 40px;
     cursor: pointer;
     background-color: white;
-    border: 1px solid #8096f4;
-    box-shadow: 0px 1px 0px #8096f4;
+    border: 1px solid #222024;
+    box-shadow: 0px 1px 0px #222024;
     margin-right: 16px;
     transition: background-color 200ms;
   }

@@ -334,6 +334,11 @@ function displayItems() {
 
     itemContainer.appendChild(itemCard);
   });
+  itemContainer.style.display = "flex";
+  itemContainer.style.flexWrap = "wrap";
+  itemContainer.style.justifyContent = "space-between"; // Adjust as needed
+  itemContainer.style.marginRight = "-10px"; // Adjust for spacing between item cards
+  itemContainer.style.marginBottom = "-10px";
 }
 function filterInputs(category) {
   const filterInputsDiv = document.getElementById("filterInputs");
