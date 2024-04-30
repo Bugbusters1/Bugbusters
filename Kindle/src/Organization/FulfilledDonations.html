@@ -47,8 +47,8 @@
 			</div>
 
 			<ul class="list-unstyled menu-elements">
-				<li class="active">
-					<a class="scroll-link" href="#top-content"><i class="fas fa-home"></i> Home</a>
+				<li>
+					<a class="scroll-link" href="OrganizationHome.html"><i class="fas fa-home"></i> Home</a>
 				</li>
                 <li>
 					<a class="scroll-link" href="NewPost.html"><i class="fas fa-pencil-alt"></i> New Post</a>
@@ -56,45 +56,19 @@
                 <li>
 					<a class="scroll-link" href="MyPosts.html"><i class="fas fa-book-open"></i> My Posts</a>
 				</li>
-                <li>
-					<a class="scroll-link" href="FulfilledDonations.html"><i class="fas fa-hand-holding-heart"></i> Fulfilled Donations</a>
-				</li>
-				<li>
-					<a class="scroll-link" href="#section-1"><i class="fas fa-cog"></i> What we do</a>
-				</li>
-				<li>
-					<a class="scroll-link" href="#section-2"><i class="fas fa-user"></i> About us</a>
-				</li>
-				<li>
-					<a class="scroll-link" href="#section-5"><i class="fas fa-pencil-alt"></i> Portfolio</a>
-				</li>
-				<li>
-					<a class="scroll-link" href="#section-6"><i class="fas fa-envelope"></i> Contact us</a>
+                <li class="active">
+					<a class="scroll-link active" href="FulfilledDonations.html"><i class="fas fa-hand-holding-heart"></i> Fulfilled Donations</a>
 				</li>
 				<li>
 					<a class="scroll-link" href="#section-1"><i class="fas fa-cog"></i>Account Settings</a>
 				</li>
-				<li>
-					<a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"
-						role="button" aria-controls="otherSections">
-						<i class="fas fa-sync"></i>Other sections
-					</a>
-					<ul class="collapse list-unstyled" id="otherSections">
-						<li>
-							<a class="scroll-link" href="#section-3">Our projects</a>
-						</li>
-						<li>
-							<a class="scroll-link" href="#section-4">We think that...</a>
-						</li>
-					</ul>
-				</li>
 			</ul>
 
-			<div class="to-top">
-				<a class="btn btn-primary btn-customized-3" href="#" role="button">
+			
+				<a class="btn btn-primary btn-customized-3" href="../HomePage.html" role="button">
 					<i class="fas fa-sign-out-alt"></i> Log out 
 				</a>
-			</div>
+			
 			
 			<!-- <div class="dark-light-buttons">
 				<a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
@@ -129,16 +103,16 @@
     <div class="container">
         <div class="row">
             <div class="col section-7 section-description wow fadeIn">
-                <h2 style="color: #333;">Fulfilled Donation Posts</h2>
+                <h2>Fulfilled Donation Posts</h2>
                 <div class="divider-1 wow fadeInUp"><span></span></div>
-                <p style="color: #333;">Access the fulfilled donation posts section, view details of donations fulfilled by donors, and acknowledge donor contributions.</p>
+                <p>Access the fulfilled donation posts section, view details of donations fulfilled by donors, and acknowledge donor contributions.</p>
             </div>
         </div>
         <div class="row">
             <!-- Display details of fulfilled donation posts here -->
             <!-- For example, you can use a table to display the list of posts -->
             <div class="col-md-12 section-7-box wow fadeInUp">
-                <h3 style="color: #333;">Fulfilled Donation Posts</h3>
+                <h3>Fulfilled Donation Posts</h3>
                 <div class="section-7-content">
                     <!-- Your content here -->
                     <!-- Sample table structure -->
@@ -188,9 +162,9 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <span class="donor-name">Michael Johnson</span>
+                                    <span class="donor-name">Michael John</span>
                                     <!-- Button to access donor details -->
-                                    <button class="btn btn-sm btn-primary view-donor-details-btn" data-donor-details='{"name": "Michael Johnson", "occupation": "Teacher", "email": "michael.johnson@example.com", "phone": "+1234567890"}'><i class="fas fa-eye"></i>View Donor</button>
+                                    <button class="btn btn-sm btn-primary view-donor-details-btn" data-donor-details='{"name": "Michael John", "occupation": "Teacher", "email": "michael.john@example.com", "phone": "+1234567890"}'><i class="fas fa-eye"></i>View Donor</button>
                                 </td>
                                 <td>School Supplies</td>
                                 <td>Books, pencils, notebooks</td>
@@ -410,10 +384,19 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-    
+        
+        var homeButton = document.querySelector('.menu-elements li:nth-child(1) a');    
         var newPostButton = document.querySelector('.menu-elements li:nth-child(2) a');
         var myPostsButton = document.querySelector('.menu-elements li:nth-child(3) a');
         var FulfilledDonationsButton = document.querySelector('.menu-elements li:nth-child(4) a');
+
+        homeButton.addEventListener('click', function(event) {
+            // Prevent the default action of the link (i.e., navigating to its href)
+            event.preventDefault();
+        
+            // Redirect the user to OrganizationHome.html
+            window.location.href = 'OrganizationHome.html';
+        });
 
 
         newPostButton.addEventListener('click', function(event) {
@@ -449,18 +432,19 @@
 <style>
     /* CSS for the table */
 .table {
-    color: #333; /* Change text color to white */
+    color: #333333;
     background-color: #FFFDD0;
+    margin-bottom: 50px;
 }
 
 /* CSS for table headers */
 .table thead th {
-    color: #333; /* Change header text color to white */
+    color: #333333;
 }
 
 /* CSS for table rows */
 .table tbody td {
-    color: #333; /* Change row text color to white */
+    color: #333333;
 }
 /* CSS to position the button next to the donor name */
 .donor-name {
@@ -592,19 +576,20 @@
 .card {
   width: 300px;
   height: 400px;
-  background: rgb(223, 225, 235);
+  background: #FFF7E4;
   border-radius: 50px;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .popup-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
+    position: absolute; /* Change from fixed to absolute */
+    top: 50%; /* Center the popup vertically */
+    left: 50%; /* Center the popup horizontally */
+    transform: translate(-50%, -50%); /* Center the popup both vertically and horizontally */
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 9999; /* Ensure the popup appears on top of other elements */
+    animation: popupAppear 0.5s ease-in-out;
 }
 
 /* Centering the card */
@@ -619,7 +604,7 @@
   font-weight: bold;  
   text-align: center;  /* Center the text horizontally */
   padding: 20px;  /* Add some padding for better separation from the card edges */
-  color: #333;  /* Change the text color to a darker shade for better readability */
+  color: #594D2B;  /* Change the text color to a darker shade for better readability */
 }
 
 .close-button {  /* Target the existing close button */
@@ -645,7 +630,20 @@
   background-color: rgb(130, 0, 0);  /* Change on button press (optional) */
 }
 
+/* Add styling for active menu item */
+.menu-elements .active {
+	background: rgba(255, 255, 255, 0.31);
+}
 
+.menu-elements .active a {
+    color: #555; 
+}
+
+.section-container-image-bg {
+    background-image: url('./assets/img/backgrounds/1.jpg'); /* Path to your transparent background image */
+    background-size: cover; /* Cover the entire container with the background image */
+    padding: 20px; /* Add padding for better readability */
+}
 
 </style>
 
