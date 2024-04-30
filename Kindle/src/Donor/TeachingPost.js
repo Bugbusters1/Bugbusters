@@ -70,6 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       itemCard.innerHTML = `
               <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.name}</h2><br>
+              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.subject}</h2><br>
+              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.area}</h2><br>
+              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.governorate}</h2><br>
           `;
 
       PostContainer.appendChild(itemCard);
@@ -87,7 +90,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const itemElement = document.createElement("div");
         itemElement.classList.add("item-card");
         itemElement.innerHTML = `
-          <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.name}</h2><br>
+        <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.name}</h2><br>
+        <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.subject}</h2><br>
+        <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.area}</h2><br>
+        <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.governorate}</h2><br>
       `;
         resultsContainer.appendChild(itemElement);
       });
