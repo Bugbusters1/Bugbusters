@@ -3,36 +3,37 @@ let CurrArea = "all";
 let CurrGovernorate = "all";
 let posts = [
   {
-    name: "1",
+    name: "one",
     area: "all",
     governorate: "all",
     subject: "all",
   },
   {
-    name: "2",
+    name: "two",
     area: "fifth",
     governorate: "cairo",
     subject: "math",
   },
   {
-    name: "3",
+    name: "three",
     area: "zayed",
     governorate: "giza",
     subject: "english",
   },
   {
-    name: "4",
+    name: "four",
     area: "octobor",
     governorate: "giza",
     subject: "science",
   },
   {
-    name: "5",
+    name: "five",
     area: "downtown",
     governorate: "cairo",
     subject: "history",
   },
 ];
+
 function toggleFilterSidebar() {
   var sidebar = document.getElementById("sidebar2");
   var maincontent = document.getElementById("maincontent");
@@ -46,6 +47,18 @@ function closeSidebar() {
 }
 document.addEventListener("DOMContentLoaded", function () {
   displayItems();
+  function searchItems() {
+    let currentList;
+    currentList = filterPosts2();
+    const searchTerm = document
+      .getElementById("searchInput")
+      .value.toLowerCase();
+    const results = currentList.filter((item) => {
+      console.log(item.name);
+      return item.name.toLowerCase().includes(searchTerm);
+    });
+    displayResults(results);
+  }
   function displayItems() {
     const PostContainer = document.getElementById("PostContainer");
 
@@ -85,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
       resultsContainer.style.marginBottom = "-10px";
     }
   }
-  function filterPosts() {
+  function filterPosts2() {
     let filteredPosts = posts.filter((post) => {
       return (
         (CurrSubject === "all" ||
@@ -97,9 +110,10 @@ document.addEventListener("DOMContentLoaded", function () {
           post.governorate === "all")
       );
     });
-    displayResults(filteredPosts);
-    console.log("Filtered Posts:");
-    console.log(filteredPosts);
+    return filteredPosts;
+  }
+  function filterPosts() {
+    displayResults(filterPosts2());
   }
   document.getElementById("subject").addEventListener("change", function () {
     CurrSubject = document.querySelector('input[name="subject"]:checked').value;
@@ -116,5 +130,13 @@ document.addEventListener("DOMContentLoaded", function () {
         'input[name="governorate"]:checked'
       ).value;
       filterPosts();
+    });
+  document.getElementById("searchInput").addEventListener("input", searchItems);
+  document
+    .getElementById("searchInput")
+    .addEventListener("keyup", function (event) {
+      if (event.key === "Enter") {
+        searchItems();
+      }
     });
 });
