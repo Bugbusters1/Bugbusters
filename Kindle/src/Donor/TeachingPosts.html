@@ -151,7 +151,8 @@
       rel="apple-touch-icon-precomposed"
       href="../assets/ico/apple-touch-icon-57-precomposed.png" />
       
-      <script src="ReqD.js" defer></script>
+      <!-- <script src="ReqD.js" defer></script> -->
+      <script src="TeachingPost.js" defer></script>
   </head>
 
   <body>
@@ -319,7 +320,7 @@
             <i class="fas fa-filter filter-icon"></i> Filter
           </button>
           <div class="containerView containerTest " style="padding-top: 0px;">
-            <div id="itemContainer" class="item-container" style="display:flex;flex-wrap: wrap;justify-content: space-between"></div>
+            <div id="PostContainer" class="item-container" style="display:flex;flex-wrap: wrap;justify-content: space-between"></div>
         </div>
         </div>
 
@@ -346,12 +347,12 @@
     
               <div style="margin-left: 40px; margin-top: 20px;">
                 
-                <div class="radio-container">
+                <div id = "subject"class="radio-container">
                     <h3 style="text-align: left;color: white;">Subject :</h3>
                     <div class="radio-wrapper">
                         
                         <label class="radio-button">
-                            <input id="All" name="subject" type="radio" checked>
+                            <input value ="all" name="subject" type="radio" checked>
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">All</span>
                         </label>
@@ -359,7 +360,7 @@
                   
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input id="Maths" name="subject" type="radio">
+                            <input  value ="math" name="subject" type="radio">
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">Mathematics</span>
                         </label>
@@ -368,7 +369,7 @@
                     
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input id="English" name="subject" type="radio">
+                            <input value ="english"  name="subject" type="radio">
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">English</span>
                         </label>
@@ -376,7 +377,7 @@
                     
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input id="Science" name="subject" type="radio">
+                            <input  value ="science" name="subject" type="radio">
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">Science</span>
                         </label>
@@ -384,7 +385,7 @@
 
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input id="History" name="subject" type="radio">
+                            <input value ="history" name="subject" type="radio">
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">History</span>
                         </label>
@@ -394,11 +395,11 @@
                 </div>
             
                
-                <div class="radio-container">
+                <div id = "area" class="radio-container">
                     <h3 style="text-align: left;color: white;">Area :</h3>
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input id="All" name="area" type="radio" checked>
+                            <input value ="all" name="area" type="radio" checked>
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">All</span>
                         </label>
@@ -406,7 +407,7 @@
                   
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input id="Fifth" name="area" type="radio">
+                            <input value ="fifth" name="area" type="radio">
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">Fifth Settlement</span>
                         </label>
@@ -414,7 +415,7 @@
 
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input id="Zayed" name="area" type="radio">
+                            <input value ="zayed" name="area" type="radio">
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">Sheikh Zayed</span>
                         </label>
@@ -422,7 +423,7 @@
 
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input id="Octobor" name="area" type="radio">
+                            <input value ="octobor" name="area" type="radio">
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">6th Octobor</span>
                         </label>
@@ -430,7 +431,7 @@
                   
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input id="Downtown" name="area" type="radio">
+                            <input value ="downtown" name="area" type="radio">
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">Downtown</span>
                         </label>
@@ -439,11 +440,11 @@
             
                 </div>
 
-                <div class="radio-container">
+                <div id = "governorate" class="radio-container">
                     <h3 style="text-align: left;color: white;">Governorate :</h3>
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input id="All" name="governorate" type="radio" checked>
+                            <input value ="all" name="governorate" type="radio" checked>
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">All</span>
                         </label>
@@ -451,7 +452,7 @@
                   
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input id="Cairo" name="governorate" type="radio">
+                            <input value ="cairo" name="governorate" type="radio">
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">Cairo</span>
                         </label>
@@ -459,7 +460,7 @@
 
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input id="Alexandria" name="governorate" type="radio">
+                            <input value ="alexandria" name="governorate" type="radio">
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">Alexandria</span>
                         </label>
@@ -467,7 +468,7 @@
 
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input id="Aswan" name="governorate" type="radio">
+                            <input value ="aswan" name="governorate" type="radio">
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">Aswan</span>
                         </label>
@@ -475,7 +476,7 @@
                   
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input id="Giza" name="governorate" type="radio">
+                            <input value ="giza" name="governorate" type="radio">
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">Giza</span>
                         </label>
