@@ -47,54 +47,28 @@
 			</div>
 
 			<ul class="list-unstyled menu-elements">
-				<li class="active">
-					<a class="scroll-link" href="#top-content"><i class="fas fa-home"></i> Home</a>
+				<li>
+					<a class="scroll-link" href="OrganizationHome.html"><i class="fas fa-home"></i> Home</a>
 				</li>
                 <li>
 					<a class="scroll-link" href="NewPost.html"><i class="fas fa-pencil-alt"></i> New Post</a>
 				</li>
-                <li>
-					<a class="scroll-link" href="MyPosts.html"><i class="fas fa-book-open"></i> My Posts</a>
+                <li class="active">
+					<a class="scroll-link active" href="MyPosts.html"><i class="fas fa-book-open"></i> My Posts</a>
 				</li>
                 <li>
 					<a class="scroll-link" href="FulfilledDonations.html"><i class="fas fa-hand-holding-heart"></i> Fulfilled Donations</a>
 				</li>
 				<li>
-					<a class="scroll-link" href="#section-1"><i class="fas fa-cog"></i> What we do</a>
-				</li>
-				<li>
-					<a class="scroll-link" href="#section-2"><i class="fas fa-user"></i> About us</a>
-				</li>
-				<li>
-					<a class="scroll-link" href="#section-5"><i class="fas fa-pencil-alt"></i> Portfolio</a>
-				</li>
-				<li>
-					<a class="scroll-link" href="#section-6"><i class="fas fa-envelope"></i> Contact us</a>
-				</li>
-				<li>
 					<a class="scroll-link" href="#section-1"><i class="fas fa-cog"></i>Account Settings</a>
-				</li>
-				<li>
-					<a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"
-						role="button" aria-controls="otherSections">
-						<i class="fas fa-sync"></i>Other sections
-					</a>
-					<ul class="collapse list-unstyled" id="otherSections">
-						<li>
-							<a class="scroll-link" href="#section-3">Our projects</a>
-						</li>
-						<li>
-							<a class="scroll-link" href="#section-4">We think that...</a>
-						</li>
-					</ul>
 				</li>
 			</ul>
 
-			<div class="to-top">
-				<a class="btn btn-primary btn-customized-3" href="#" role="button">
+			
+				<a class="btn btn-primary btn-customized-3" href="../HomePage.html" role="button">
 					<i class="fas fa-sign-out-alt"></i> Log out 
 				</a>
-			</div>
+			
 			
 			<!-- <div class="dark-light-buttons">
 				<a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
@@ -129,16 +103,16 @@
     <div class="container">
         <div class="row">
             <div class="col section-7 section-description wow fadeIn">
-                <h2 style="color: #333;">Donation Posts</h2>
+                <h2>Donation Posts</h2>
                 <div class="divider-1 wow fadeInUp"><span></span></div>
-                <p style="color: #333;">Access your organization's donation posts section to view details of donations made by your organization, and manage them as needed.</p>
+                <p">Access your organization's donation posts section to view details of donations made by your organization, and manage them as needed.</p>
             </div>
         </div>
         <div class="row">
             <!-- Display details of fulfilled donation posts here -->
             <!-- For example, you can use a table to display the list of posts -->
             <div class="col-md-12 section-7-box wow fadeInUp">
-                <h3 style="color: #333;">Donation Posts</h3>
+                <h3>Donation Posts</h3>
                 <div class="section-7-content">
                     <!-- Your content here -->
                     <!-- Sample table structure -->
@@ -283,10 +257,19 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-    
+
+        var homeButton = document.querySelector('.menu-elements li:nth-child(1) a');
         var newPostButton = document.querySelector('.menu-elements li:nth-child(2) a');
         var myPostsButton = document.querySelector('.menu-elements li:nth-child(3) a');
         var FulfilledDonationsButton = document.querySelector('.menu-elements li:nth-child(4) a');
+
+        homeButton.addEventListener('click', function(event) {
+            // Prevent the default action of the link (i.e., navigating to its href)
+            event.preventDefault();
+        
+            // Redirect the user to OrganizationHome.html
+            window.location.href = 'OrganizationHome.html';
+        });
 
 
         newPostButton.addEventListener('click', function(event) {
@@ -322,18 +305,19 @@
 <style>
     /* CSS for the table */
 .table {
-    color: #333; /* Change text color to white */
+    color: #333333; 
     background-color: #FFFDD0;
+    margin-bottom: 50px;
 }
 
 /* CSS for table headers */
 .table thead th {
-    color: #333; /* Change header text color to white */
+    color: #333333; 
 }
 
 /* CSS for table rows */
 .table tbody td {
-    color: #333; /* Change row text color to white */
+    color: #333333; 
 }
 /* CSS to position the button next to the donor name */
 .donor-name {
@@ -343,6 +327,21 @@
 }
 .view-donor-details-btn {
     vertical-align: middle;
+}
+
+/* Add styling for active menu item */
+.menu-elements .active {
+	background: rgba(255, 255, 255, 0.31);
+}
+
+.menu-elements .active a {
+    color: #555; 
+}
+
+.section-container-image-bg {
+    background-image: url('./assets/img/backgrounds/1.jpg'); /* Path to your transparent background image */
+    background-size: cover; /* Cover the entire container with the background image */
+    padding: 20px; /* Add padding for better readability */
 }
 
 </style>
