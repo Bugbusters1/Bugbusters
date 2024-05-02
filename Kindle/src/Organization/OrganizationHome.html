@@ -60,7 +60,7 @@
 					<a class="scroll-link" href="FulfilledDonations.html"><i class="fas fa-hand-holding-heart"></i> Fulfilled Donations</a>
 				</li>
 				<li>
-					<a class="scroll-link" href="#section-1"><i class="fas fa-cog"></i>Account Settings</a>
+					<a class="scroll-link" href="settings.html"><i class="fas fa-cog"></i>Account Settings</a>
 				</li>
 			</ul>
 
@@ -364,42 +364,7 @@
 	<script src="../assets/js/jquery.waypoints.min.js"></script>
 	<script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="../assets/js/scripts.js"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-    
-        var newPostButton = document.querySelector('.menu-elements li:nth-child(2) a');
-        var myPostsButton = document.querySelector('.menu-elements li:nth-child(3) a');
-        var FulfilledDonationsButton = document.querySelector('.menu-elements li:nth-child(4) a');
-
-
-        newPostButton.addEventListener('click', function(event) {
-            // Prevent the default action of the link (i.e., navigating to its href)
-            event.preventDefault();
-         
-            // Redirect the user to NewPost.html
-            window.location.href = 'NewPost.html';
-        });
-
-        myPostsButton.addEventListener('click', function(event) {
-            // Prevent the default action of the link (i.e., navigating to its href)
-            event.preventDefault();
-         
-            // Redirect the user to NewPost.html
-            window.location.href = 'MyPosts.html';
-        });
-
-
-        FulfilledDonationsButton.addEventListener('click', function(event) {
-            // Prevent the default action of the link (i.e., navigating to its href)
-            event.preventDefault();
-        
-            // Redirect the user to FulfilledDonations.html
-            window.location.href = 'FulfilledDonations.html';
-        });
-    });
-
-    </script>
+	<script src="./sideBarButtons.js"></script>
     
 
 </body>
