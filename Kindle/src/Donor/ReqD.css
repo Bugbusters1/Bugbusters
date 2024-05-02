@@ -221,4 +221,6 @@ h1 {
 }
 
 
-
+.dropdown-item:hover{
+  background-color: black;
+}

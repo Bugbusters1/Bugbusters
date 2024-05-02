@@ -54,6 +54,7 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/media-queries.css" />
     <link rel="stylesheet" href="./ReqD.css" />
+    <link rel="stylesheet" href="../Donor/TeachingPosts.css">
     <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="../assets/ico/favicon.png" />
     <link
@@ -151,6 +152,7 @@
       href="../assets/ico/apple-touch-icon-57-precomposed.png" />
       
       <script src="ReqD.js" defer></script>
+      
   </head>
 
   <body>
@@ -258,7 +260,7 @@
             <span class="text">Menu</span>
           </button>
         </a>
-
+        <div class="maincontent" id="maincontent">
         <!-- Top content -->
         <div class="top-content section-container" id="top-content">
           <div class="container">
@@ -266,7 +268,7 @@
               <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
                 <h1 class="wow fadeIn" style="color:  #0c0f1d                ;">Kindle</h1>
                 <div class="description wow fadeInLeft">
-                  <h3 ><p style="color:  #0c0f1d                ;"></p>Together, Make a Difference.</p></h3>
+                <h3 ><p style="color:  #0c0f1d                ;"></p>Together, Make a Difference.</p></h3>
                 </div>
                 <div class="center-container">
                   <div class="buttons wow fadeInUp">
@@ -290,24 +292,23 @@
                             790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
                           fill-rule="evenodd"></path>
                       </svg>
-                      <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Dropdown button
+                      <div class="dropdown" style="position: relative; display: inline-block;">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #222024; padding: 12px 20px; font-size: 18px; border-radius: 10px;">
+                          Category
                         </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">All</a></li>
-                          <li><a class="dropdown-item" href="#">Clothes</a></li>
-                          <li><a class="dropdown-item" href="#">Toys</a></li>
-                          <li><a class="dropdown-item" href="#">Food</a></li>
-                          <li><a class="dropdown-item" href="#">Medical Supplies</a></li>
-                          <li><a class="dropdown-item" href="#">School Supplies</a></li>
-                          <li><a class="dropdown-item" href="#">Blood Donations</a></li>
+                        <ul class="dropdown-menu" style="position: absolute; top: 100%; left: 0; background-color: #222024; border: none;">
+                          <li><a class="dropdown-item" href="#" style="color: #ffffff;">All</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #ffffff;">Clothes</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #ffffff;">Toys</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #ffffff;">Food</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #ffffff;">Medical Supplies</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #ffffff;">School Supplies</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #ffffff;">Blood Donations</a></li>
                         </ul>
                       </div>
+                      
                     </div>
-                    <div id="filterInputs">
-
-                  </div>
+                 
                   </div>
                 </div>
               </div>
@@ -323,10 +324,24 @@
           <BR>
           <h1 style="font-family: roboto; font-weight: bolder;text-align: justify;margin-left:240px ;font-size: 48px">Requested Items for Donation</h1>
           <div class="divider-1 wow fadeInUp" style="margin-right:1220px"><span></span></div>
+          <button class="filter-button" onclick="toggleFilterSidebar()">
+            <i class="fas fa-filter filter-icon"></i> Filter
+          </button>
           <div class="containerView containerTest">
             <div id="itemContainer" class="item-container" style="display:flex;flex-wrap: wrap;justify-content: space-between"></div>
         </div>
         </div>
+
+        <div class="Filtersidebar" id="sidebar2">
+          <div class="filter-button" style="background-color: #222024; position: absolute; top: 15px; right: 20px;" onclick="closeSidebar()">
+              <i class="fas fa-arrow-left"></i>   Return
+          </div>
+          <div style="margin-left: 40px; margin-top: 20px;">
+          <div id="filterInputs" style="margin-left: 100px; margin-top: 20px;">
+
+          </div>
+          </div>
+          </div>
 
         <!-- Footer -->
         <footer class="footer-container">
@@ -339,6 +354,7 @@
           </div>
         </footer>
       </div>
+    </div>
       <!-- End content -->
     </div>
     <!-- End wrapper -->
@@ -359,6 +375,6 @@
     <script src="../assets/js/jquery.waypoints.min.js"></script>
     <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../assets/js/scripts.js"></script>
-    
+    <script src="../Donor/TeachingPost.js"></script>
   </body>
 </html>
