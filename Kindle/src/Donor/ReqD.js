@@ -221,88 +221,509 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const filterOptions = {
     clothes: `
-    <label for="age">Age:</label>
-    <div class="age-inputs">
-        <input type="number" id="minAge" placeholder="Min Age">
-        <input type="number" id="maxAge" placeholder="Max Age">
-    </div>
-    <label for="gender">Gender:</label>
-    <select id="gender">
-        <option value="all">All</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-    </select>
-    <label for="season">Season:</label>
-    <select id="season">
-        <option value="all">All</option>
-        <option value="summer">Summer</option>
-        <option value="winter">Winter</option>
-        <option value="spring">Spring</option>
-        <option value="autumn">Autumn</option>
-    </select>
-  `,
-    school: `
-    <label for="itemType">Item Type:</label>
-    <select id="SchoolitemType">
-    <option value="all">All</option>
-        <option value="books">Books</option>
-        <option value="stationary">Stationary</option>
-    </select>
-  `,
-    toys: ` <label for="age">Age:</label>
-  <input type="number" id="ageMin" placeholder="Min Age">
-  <input type="number" id="ageMax" placeholder="Max Age">
+    <div id = "age"class="radio-container">
+                    <h3 style="text-align: left;color: white;">Age :</h3>
+                    <div class="radio-wrapper">
+                        
+                        <label class="radio-button">
+                            <input value ="all" name="age" type="radio" checked>
+                            <span class="radio-checkmark"></span>
+                            <span class="radio-label">All</span>
+                        </label>
+                    </div>
+                  
+                    <div class="radio-wrapper">
+                        <label class="radio-button">
+                            <input  value ="zero" name="age" type="radio">
+                            <span class="radio-checkmark"></span>
+                            <span class="radio-label">0-5 years old</span>
+                        </label>
+                    </div>
 
-  <label for="gender">Gender:</label>
-  <select id="Toys gender">
-      <option value="all">All</option>
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-  </select>
-  <label for="category">Category:</label>
-  <select id="Toys category">
-      <option value="all">All</option>
-      <option value="board games">Board Games</option>
-      <option value="stuffed toys">Stuffed Toys</option>
-      <option value="dolls">Dolls</option>
-      <option value="sports">Sports</option>
-      <option value="cars">Cars</option>
-      <option value="outdoor">Outdoor</option>
-  </select>`,
-    food: `<label for="foodCategory">Food Category:</label>
-  <select id="foodCategory">
-      <option value="all">All</option>
-      <option value="fruits vegetables">Fruits and Vegetables</option>
-      <option value="canned foods">Canned Foods</option>
-      <option value="fresh meals">Fresh Meals</option>
-      <option value="baked goods">Baked Goods</option>
-  </select>
+                    
+                    <div class="radio-wrapper">
+                        <label class="radio-button">
+                            <input value ="five"  name="age" type="radio">
+                            <span class="radio-checkmark"></span>
+                            <span class="radio-label">5-10 years old</span>
+                        </label>
+                    </div>
+                    
+                    <div class="radio-wrapper">
+                        <label class="radio-button">
+                            <input  value ="ten" name="age" type="radio">
+                            <span class="radio-checkmark"></span>
+                            <span class="radio-label">10-17 years old</span>
+                        </label>
+                    </div>
+
+                    <div class="radio-wrapper">
+                        <label class="radio-button">
+                            <input value ="eighteen" name="age" type="radio">
+                            <span class="radio-checkmark"></span>
+                            <span class="radio-label">18 and above years old</span>
+                        </label>
+                    </div>
+                    <!-- Add more radio buttons for subjects -->
+            
+                </div>
+
+<div id = "gender"class="radio-container">
+                <h3 style="text-align: left;color: white;">Gender :</h3>
+                <div class="radio-wrapper">
+                    
+                    <label class="radio-button">
+                        <input value ="all" name="gender" type="radio" checked>
+                        <span class="radio-checkmark"></span>
+                        <span class="radio-label">All</span>
+                    </label>
+                </div>
+              
+                <div class="radio-wrapper">
+                    <label class="radio-button">
+                        <input  value ="male" name="gender" type="radio">
+                        <span class="radio-checkmark"></span>
+                        <span class="radio-label">Male</span>
+                    </label>
+                </div>
+
+                
+                <div class="radio-wrapper">
+                    <label class="radio-button">
+                        <input value ="female"  name="gender" type="radio">
+                        <span class="radio-checkmark"></span>
+                        <span class="radio-label">Female</span>
+                    </label>
+                </div>
+                
+        
+    </div>
+  <div id = "season"class="radio-container">
+                    <h3 style="text-align: left;color: white;">Season :</h3>
+                    <div class="radio-wrapper">
+                        
+                        <label class="radio-button">
+                            <input value ="all" name="season" type="radio" checked>
+                            <span class="radio-checkmark"></span>
+                            <span class="radio-label">All</span>
+                        </label>
+                    </div>
+                  
+                    <div class="radio-wrapper">
+                        <label class="radio-button">
+                            <input  value ="winter" name="season" type="radio">
+                            <span class="radio-checkmark"></span>
+                            <span class="radio-label">Winter</span>
+                        </label>
+                    </div>
+
+                    
+                    <div class="radio-wrapper">
+                        <label class="radio-button">
+                            <input value ="autumn"  name="season" type="radio">
+                            <span class="radio-checkmark"></span>
+                            <span class="radio-label">Autumn</span>
+                        </label>
+                    </div>
+                    
+                    <div class="radio-wrapper">
+                        <label class="radio-button">
+                            <input  value ="spring" name="age" type="radio">
+                            <span class="radio-checkmark"></span>
+                            <span class="radio-label">Spring</span>
+                        </label>
+                    </div>
+
+                    <div class="radio-wrapper">
+                        <label class="radio-button">
+                            <input value ="summer" name="age" type="radio">
+                            <span class="radio-checkmark"></span>
+                            <span class="radio-label">Summer</span>
+                        </label>
+                    </div>
+                    <!-- Add more radio buttons for subjects -->
+            
+                </div>
+       `,
+    school: `
+    <div id = "school"class="radio-container">
+                    <h3 style="text-align: left;color: white;">School Item :</h3>
+                    <div class="radio-wrapper">
+                        
+                        <label class="radio-button">
+                            <input value ="all" name="school" type="radio" checked>
+                            <span class="radio-checkmark"></span>
+                            <span class="radio-label">All</span>
+                        </label>
+                    </div>
+                  
+                    <div class="radio-wrapper">
+                        <label class="radio-button">
+                            <input  value ="book" name="school" type="radio">
+                            <span class="radio-checkmark"></span>
+                            <span class="radio-label">Book</span>
+                        </label>
+                    </div>
+
+                    
+                    <div class="radio-wrapper">
+                        <label class="radio-button">
+                            <input value ="stationary"  name="school" type="radio">
+                            <span class="radio-checkmark"></span>
+                            <span class="radio-label">Stationary</span>
+                        </label>
+                    </div>
+                    
+
+            
+                </div>
   `,
-    medical: `<label for="medicalCategory">Medical Category:</label>
-  <select id="medicalCategory">
-      <option value="all">All</option>
-      <option value="medical devices">Medical Devices</option>
-      <option value="medical equipment">Medical Equipment</option>
-      <option value="medication">medication</option>
-  </select>
+    toys: `     <div id = "age"class="radio-container">
+    <h3 style="text-align: left;color: white;">Age :</h3>
+    <div class="radio-wrapper">
+        
+        <label class="radio-button">
+            <input value ="all" name="age" type="radio" checked>
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">All</span>
+        </label>
+    </div>
+  
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input  value ="zero" name="age" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">0-5 years old</span>
+        </label>
+    </div>
+
+    
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value ="five"  name="age" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">5-10 years old</span>
+        </label>
+    </div>
+    
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input  value ="ten" name="age" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">10-18 years old</span>
+        </label>
+    </div>
+
+</div>
+
+<div id = "gender"class="radio-container">
+<h3 style="text-align: left;color: white;">Gender :</h3>
+<div class="radio-wrapper">
+    
+    <label class="radio-button">
+        <input value ="all" name="gender" type="radio" checked>
+        <span class="radio-checkmark"></span>
+        <span class="radio-label">All</span>
+    </label>
+</div>
+
+<div class="radio-wrapper">
+    <label class="radio-button">
+        <input  value ="male" name="gender" type="radio">
+        <span class="radio-checkmark"></span>
+        <span class="radio-label">Male</span>
+    </label>
+</div>
+
+
+<div class="radio-wrapper">
+    <label class="radio-button">
+        <input value ="female"  name="gender" type="radio">
+        <span class="radio-checkmark"></span>
+        <span class="radio-label">Female</span>
+    </label>
+</div>
+
+
+</div>
+
+<div id = "toys"class="radio-container">
+<h3 style="text-align: left;color: white;">Toy type :</h3>
+<div class="radio-wrapper">
+    
+    <label class="radio-button">
+        <input value ="all" name="toys" type="radio" checked>
+        <span class="radio-checkmark"></span>
+        <span class="radio-label">All</span>
+    </label>
+</div>
+
+<div class="radio-wrapper">
+    <label class="radio-button">
+        <input  value ="sport" name="toys" type="radio">
+        <span class="radio-checkmark"></span>
+        <span class="radio-label">Sports</span>
+    </label>
+</div>
+
+
+<div class="radio-wrapper">
+    <label class="radio-button">
+        <input value ="board"  name="toys" type="radio">
+        <span class="radio-checkmark"></span>
+        <span class="radio-label">Board Games</span>
+    </label>
+</div>
+
+<div class="radio-wrapper">
+    <label class="radio-button">
+        <input  value ="dolls" name="toys" type="radio">
+        <span class="radio-checkmark"></span>
+        <span class="radio-label">Dolls</span>
+    </label>
+</div>
+
+<div class="radio-wrapper">
+    <label class="radio-button">
+        <input value ="outdoor" name="toys" type="radio">
+        <span class="radio-checkmark"></span>
+        <span class="radio-label">Outdoor</span>
+    </label>
+</div>
+<!-- Add more radio buttons for subjects -->
+
+</div>
+`,
+    food: `<div id = "food"class="radio-container">
+    <h3 style="text-align: left;color: white;">Food type :</h3>
+    <div class="radio-wrapper">
+        
+        <label class="radio-button">
+            <input value ="all" name="food" type="radio" checked>
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">All</span>
+        </label>
+    </div>
+    
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input  value ="fruits" name="food" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Fruits and Vegetables</span>
+        </label>
+    </div>
+    
+    
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value ="canned"  name="food" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Canned Food</span>
+        </label>
+    </div>
+    
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input  value ="baked" name="food" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Baked goods</span>
+        </label>
+    </div>
+    
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value ="fresh" name="food" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Fresh Meals</span>
+        </label>
+    </div>
+    <!-- Add more radio buttons for subjects -->
+    
+    </div>
   `,
-    blood: `<label for="bloodHospital">Hospital:</label>
-  <select id="bloodHospital">
-      <option value="all">All</option>
-      <!-- Add options for hospitals -->
-  </select>
+    medical: `
+    <div id = "medical"class="radio-container">
+    <h3 style="text-align: left;color: white;">Medical Supplies :</h3>
+    <div class="radio-wrapper">
+        
+        <label class="radio-button">
+            <input value ="all" name="medical" type="radio" checked>
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">All</span>
+        </label>
+    </div>
+    
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input  value ="devices" name="medical" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Medical Devices</span>
+        </label>
+    </div>
+    
+    
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value ="equipment"  name="medical" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Medical Equipment</span>
+        </label>
+    </div>
+    
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input  value ="dolls" name="medical" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Dolls</span>
+        </label>
+    </div>
+    
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value ="medication" name="medical" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Medication</span>
+        </label>
+    </div>
+    <!-- Add more radio buttons for subjects -->
+    
+    </div>
+  `,
+    blood: `
+    <div id ="organization"class="radio-container">
+    <h3 style="text-align: left;color: white;">Hospital :</h3>
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input id="All" name="organization" type="radio" checked>
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">All</span>
+        </label>
+    </div>
   
-  <label for="bloodGovernorate">Governorate:</label>
-  <select id="bloodGovernorate">
-      <option value="all">All</option>
-      <!-- Add options for governorates -->
-  </select>
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value="ain" name="organization" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Ain Shams Specialized Hospital</span>
+        </label>
+    </div>
+
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value="damascus" name="organization" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Damascus Hospital </span>
+        </label>
+    </div>
+
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value="greek" name="organization" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Greek hospital</span>
+        </label>
+    </div>
   
-  <label for="bloodArea">Area:</label>
-  <select id="bloodArea">
-      <option value="all">All</option>
-      <!-- Add options for areas -->
-  </select>
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value="medical" name="organization" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Cairo Medical Hospital</span>
+        </label>
+    </div>
+    <!-- Add more radio buttons for areas -->
+
+</div>
+
+<div id = "area"class="radio-container">
+    <h3 style="text-align: left;color: white;">Area :</h3>
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value="all" name="area" type="radio" checked>
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">All</span>
+        </label>
+    </div>
+  
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value="fifth" name="area" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Fifth Settlement</span>
+        </label>
+    </div>
+
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value="heliopolis" name="area" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Heliopolis</span>
+        </label>
+    </div>
+
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value="octobor" name="area" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">6th Octobor</span>
+        </label>
+    </div>
+  
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value="dokki" name="area" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Dokki</span>
+        </label>
+    </div>
+    <!-- Add more radio buttons for areas -->
+
+</div>
+
+<div id="governorate"class="radio-container">
+    <h3 style="text-align: left;color: white;">Governorate :</h3>
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value="all" name="governorate" type="radio" checked>
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">All</span>
+        </label>
+    </div>
+  
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value="cairo" name="governorate" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Cairo</span>
+        </label>
+    </div>
+
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value="alexandria" name="governorate" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Alexandria</span>
+        </label>
+    </div>
+
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value="aswan" name="governorate" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Aswan</span>
+        </label>
+    </div>
+  
+    <div class="radio-wrapper">
+        <label class="radio-button">
+            <input value="giza" name="governorate" type="radio">
+            <span class="radio-checkmark"></span>
+            <span class="radio-label">Giza</span>
+        </label>
+    </div>
+    <!-- Add more radio buttons for areas -->
+
+</div>
   `,
     all: ``,
   };
