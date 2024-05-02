@@ -20,6 +20,91 @@
           padding: 0;
         }	
       </style>
+
+    <!--Notifications-->
+    <style>@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap);
+
+        body {
+            font-family: "Roboto", sans-serif;
+            background: #EFF1F3;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .section-50 {
+            padding: 50px 0;
+        }
+        
+        .m-b-50 {
+            margin-bottom: 50px;
+        }
+        
+        .dark-link {
+            color: #333;
+        }
+        
+        .heading-line {
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .heading-line:after {
+            content: "";
+            height: 2.5px;
+            width: 140px;
+            background-color: #222024;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .notification-ui_dd-content {
+            margin-bottom: 30px;
+        }
+        
+        .notification-list {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            padding: 20px;
+            margin-bottom: 7px;
+            background-color: #222024;
+            -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+        }
+        
+        .notification-list--unread {
+            border-left: 2px solid #FCFAF0;
+        }
+        
+        .notification-list .notification-list_content {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+        
+        .notification-list .notification-list_content .notification-list_img img {
+            height: 48px;
+            width: 48px;
+            border-radius: 50px;
+            margin-right: 20px;
+        }
+        
+        .notification-list .notification-list_content .notification-list_detail p {
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+        
+        .notification-list .notification-list_feature-img img {
+            height: 48px;
+            width: 48px;
+            border-radius: 5px;
+            margin-left: 20px;
+        }</style>
+
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -40,6 +125,90 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://use.fontawesome.com/releases/v6.2.0/js/all.js"></script>
     <script type="module" src="../Donor/GoogleMarker.js"></script>
+    <!--Notifications-->
+    <style>@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap);
+
+        body {
+            font-family: "Roboto", sans-serif;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .section-50 {
+            padding: 50px 0;
+        }
+        
+        .m-b-50 {
+            margin-bottom: 50px;
+        }
+        
+        .dark-link {
+            color: #222024;
+            ;
+        }
+        
+        .heading-line {
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .heading-line:after {
+            content: "";
+            height: 2.5px;
+            width: 200px;
+            background-color: #222024;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .notification-ui_dd-content {
+            margin-bottom: 30px;
+        }
+        
+        .notification-list {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            padding: 20px;
+            margin-bottom: 7px;
+            background-color:white;
+            -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+        }
+        
+        .notification-list--unread {
+            border-left: 5px solid #222024;
+        }
+        
+        .notification-list .notification-list_content {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+        
+        .notification-list .notification-list_content .notification-list_img img {
+            height: 48px;
+            width: 48px;
+            border-radius: 50px;
+            margin-right: 20px;
+        }
+        
+        .notification-list .notification-list_content .notification-list_detail p {
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+        
+        .notification-list .notification-list_feature-img img {
+            height: 48px;
+            width: 48px;
+            border-radius: 5px;
+            margin-left: 20px;
+        }</style>
+
 </head>
 
 <body>
@@ -148,22 +317,22 @@
 								</p>
 								</h3>
 							</div>
-							<div class="buttons wow fadeInUp">
+							<!-- <div class="buttons wow fadeInUp">
                                 <a class="btn btn-primary btn-customized scroll-link" href="#section-2" role="button">
                                     <i class="fas fa-chalkboard-teacher"></i> Volunteer as a Teacher
                                 </a>
                                 <a class="btn btn-primary btn-customized scroll-link" href="#section-3" role="button">
                                     <i class="fas fa-user-md"></i> Volunteer as a Doctor
                                 </a>
-                            </div>
+                            </div> -->
                             
 						</div>
 					</div>
 				</div>
-			</div>
+			
 
 			<!-- Section 1 -->
-            <div class="section-1-container section-container" id="section-1">
+            <!-- <div class="section-1-container section-container" id="section-1">
                 <div class="container">
                     <div class="row">
                         <div class="col section-1 section-description wow fadeIn">
@@ -200,10 +369,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             
 			<!-- Section 2 -->
-<div class="section-2-container section-container section-container-gray-bg " id="section-2" style="background-color: #FCFAF0;">
+<!-- <div class="section-2-container section-container section-container-gray-bg " id="section-2" style="background-color: #FCFAF0;">
     <div class="container">
         <div class="row">
             <div class="col section-2 section-description wow fadeIn">
@@ -216,9 +385,9 @@
                 <h3>Please fill in the following form</h3>
                 
                 <div class="section-6-form">
-                    <form role="form" id="teacher-form" action="../assets/contact.php" method="post">
+                    <form role="form" action="../assets/contact.php" method="post">
                         <h4>Upload any documents related to your experience in tutoring :</h4>
-                        <input type="file" required />
+                        <input type="file" />
                         <div class="col-md-6 section-1-box wow fadeInUp">
                             <div class="row">
                                
@@ -227,51 +396,32 @@
                         <div class="form-group">
                             <label class="sr-only" for="contact-email" >Subjects to Tutor</label>
                             <input type="text" name="email" placeholder="Subjects to tutor"
-                                class="contact-email form-control" id="contact-email" required>
+                                class="contact-email form-control" id="contact-email">
                         </div>
                         <div class="form-group">
                             <h4 style="font-weight: bold;">Please note that all pro-bono classes needed will be sent to you by email , according to your preferences , to choose from</h4>
                             <label class="sr-only" for="contact-subject">days</label>
                             <input type="text" name="subject" placeholder="Number of classes available to tutor per week"
-                                class="contact-subject form-control" id="contact-subject" required>
+                                class="contact-subject form-control" id="contact-subject">
                         </div>
 
                         <div class="form-group">
                             
                             <label class="sr-only" for="contact-subject">students</label>
                             <input type="text" name="subject" placeholder="Number of Students class"
-                                class="contact-subject form-control" id="contact-subject" required>
+                                class="contact-subject form-control" id="contact-subject">
                         </div>
 
 
-                        <button type="submit" id="submit-post-btn" class="btn btn-primary btn-customized" ><i class="fas fa-check-circle"></i> Submit</button>
-						<p id="message" class="text-success"></p>
+                        <button type="submit" class="btn btn-primary btn-customized" ><i class="fas fa-check-circle"></i> Submit</button>
                     </form>
                 </div>
             </div>
     </div>
-</div>
-<div id="submission-message" class="alert alert-success d-none" role="alert">
-	Post Submitted Successfully
-</div>
-
-<script>
-	document.getElementById('submit-post-btn').addEventListener('click', function(event) {
-        // Check if the form is valid
-        if (document.getElementById('teacher-form').checkValidity()) {
-        // Prevent the default form submission behavior
-        event.preventDefault();
-        // Show the submission message if the form is valid
-        document.getElementById('submission-message').classList.remove('d-none');
-        setTimeout(function() {
-        document.getElementById('submission-message').classList.add('d-none');
-        }, 3000);
-        }
-        });
-</script>
+</div> -->
 
 			<!-- Section 3 -->
-<div class="section-3-container section-container" id="section-3" style="background-color: #FCFAF0;">
+<!-- <div class="section-3-container section-container" id="section-3" style="background-color: #FCFAF0;">
     <div class="container">
         <div class="row">
             <div class="col section-2 section-description wow fadeIn">
@@ -284,9 +434,9 @@
                 <h3>Please fill in the following form</h3>
                 
                 <div class="section-6-form">
-                    <form role="form" id="doctor-form" action="../assets/contact.php" method="post">
+                    <form role="form" action="../assets/contact.php" method="post">
                         <h4>Upload CV and any other related documents :</h4>
-                        <input type="file" required />
+                        <input type="file" />
                         <div class="col-md-6 section-1-box wow fadeInUp">
                             <div class="row">
                                
@@ -295,12 +445,12 @@
                         <div class="form-group">
                             <label class="sr-only" for="contact-email" >speciality</label>
                             <input type="text" name="email" placeholder="Specialty"
-                                class="contact-email form-control" id="contact-email" required>
+                                class="contact-email form-control" id="contact-email">
                         </div>
                         <div class="form-group">
                             <label class="sr-only" for="contact-subject">days</label>
                             <input type="text" name="subject" placeholder="Number of visits available per week"
-                                class="contact-subject form-control" id="contact-subject" required>
+                                class="contact-subject form-control" id="contact-subject">
                         </div>
 
                         <h4>Please Enter Address Details :</h4>
@@ -308,50 +458,122 @@
                             
                             <label class="sr-only" for="contact-subject">students</label>
                             <input type="text" name="subject" placeholder="address"
-                                class="contact-subject form-control" id="contact-subject" required>
+                                class="contact-subject form-control" id="contact-subject">
                         </div>
 
                         <div class="form-group">
                             
                             <label class="sr-only" for="contact-subject">students</label>
                             <input type="text" name="subject" placeholder="Area"
-                                class="contact-subject form-control" id="contact-subject" required>
+                                class="contact-subject form-control" id="contact-subject">
                         </div>
 
                         <div class="form-group">
                             
                             <label class="sr-only" for="contact-subject">students</label>
                             <input type="text" name="subject" placeholder="governorate"
-                                class="contact-subject form-control" id="contact-subject" required>
+                                class="contact-subject form-control" id="contact-subject">
                         </div>
 						<h4>Please pinpoint your address on map:</h4>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d708.1388568256748!2d31.281328141854207!3d30.067719408090635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583f9ec9b02a01%3A0x3c19ee8d3652e00d!2z2LXZitiv2YTZitipINin2YTYsdit2YXZhg!5e0!3m2!1sen!2seg!4v1714328201328!5m2!1sen!2seg" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <br>
 
-                        <button type="submit" id="submit-post-btn2" class="btn btn-primary btn-customized" ><i class="fas fa-check-circle"></i> Submit</button>
-						<p id = "message2" class="text-success"></p>
+                        <button type="submit" class="btn btn-primary btn-customized" ><i class="fas fa-check-circle"></i> Submit</button>
                     </form>
                 </div>
             </div>
     </div>
-</div>
-<div id="submission-message2" class="alert alert-success d-none" role="alert">
-	Post Submitted Successfully
-</div>
-<script>
-	document.getElementById('submit-post-btn2').addEventListener('click', function(event) {
-        // Check if the form is valid
-        if (document.getElementById('doctor-form').checkValidity()) {
-        // Prevent the default form submission behavior
-        event.preventDefault();
-        // Show the submission message if the form is valid
-        document.getElementById('submission-message2').classList.remove('d-none');
-        setTimeout(function() {
-        document.getElementById('submission-message2').classList.add('d-none');
-        }, 3000);
-        }
-        });
-</script>
+</div> -->
+
+<section class="section-50" style="padding: 50px 0;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+        <h2 style="color:#222024;text-align:left;font-size: 65px;font-weight: 300;">Notifications <i class="fa fa-bell " style="font-size: 50px;color: #212121;"></i></h2>
+        <h3 class="m-b-50 heading-line"></h3>
+
+        <div class="notification-ui_dd-content">
+            <div class="notification-list notification-list--unread" style="display: flex; align-items: center;">
+                <div class="notification-list_content" style="display: flex; align-items: center;">
+                    <div class="notification-list_img" style="text-align: left;">
+                       
+                    </div>
+                    <div class="notification-list_detail" style="text-align: left;">
+                        <p><b>Delivery Driver</b> is 5 minutes away from your location.</p>
+                        <p class="text-muted">The driver is on the way to collect the agreed donation items.</p>
+                        <p class="text-muted"><small>2 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="notification-list_feature-img" style="text-align: left;">
+                    <i class="fa fa-truck" style="font-size: 50px;color: #212121;"></i>
+                </div>
+            </div>
+            <div class="notification-list notification-list--unread" style="display: flex; align-items: center;">
+                <div class="notification-list_content" style="display: flex; align-items: center;">
+                    <div class="notification-list_img" style="text-align: left;">
+                       
+                    </div>
+                    <div class="notification-list_detail" style="text-align: left;">
+                        <p><b>Delivery Driver</b> might be late from agreed time slot.</p>
+                        <p class="text-muted">Expected traffic jam ahead of drivers way, notification will be sent in case of any updates on route.</p>
+                        <p class="text-muted"><small>20 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="notification-list_feature-img" style="text-align: left;">
+                    <i class="fa fa-truck" style="font-size: 50px;color: #212121;"></i>
+                </div>
+            </div>
+            <div class="notification-list" style="display: flex; align-items: center;">
+                <div class="notification-list_content" style="display: flex; align-items: center;">
+                    <div class="notification-list_img" style="text-align: left;">
+                       
+                    </div>
+                    <div class="notification-list_detail" style="text-align: left;">
+                        <p><b>Delivery Driver</b> arrived at given location.</p>
+                        <p class="text-muted">The driver is waiting to collect donation items.</p>
+                        <p class="text-muted"><small>3 day ago</small></p>
+                    </div>
+                </div>
+                <div class="notification-list_feature-img" style="text-align: left;">
+                    <i class="fa fa-truck" style="font-size: 50px;color: #212121;"></i>
+                </div>
+            </div>
+            <div class="notification-list" style="display: flex; align-items: center;">
+                <div class="notification-list_content" style="display: flex; align-items: center;">
+                    <div class="notification-list_img" style="text-align: left;">
+                       
+                    </div>
+                    <div class="notification-list_detail" style="text-align: left;">
+                        <p><b>Delivery Driver</b> postponed pickup date.</p>
+                        <p class="text-muted">Unfortunately, due to unexpeced severe wether conditions, all drivers must postpone their pickup dates.</p>
+                        <p class="text-muted"><small>2 week ago</small></p>
+                    </div>
+                </div>
+                <div class="notification-list_feature-img" style="text-align: left;">
+                    <i class="fa fa-truck" style="font-size: 50px;color: #212121;"></i>
+                </div>
+            </div>
+            <div class="notification-list" style="display: flex; align-items: center;">
+                <div class="notification-list_content" style="display: flex; align-items: center;">
+                    <div class="notification-list_img" style="text-align: left;">
+                       
+                    </div>
+                    <div class="notification-list_detail" style="text-align: left;">
+                        <p><b>Delivery Driver</b> is 5 minutes away from your location.</p>
+                        <p class="text-muted">The driver is on the way to collect the agreed donation items.</p>
+                        <p class="text-muted"><small>1 month ago</small></p>
+                    </div>
+                </div>
+                <div class="notification-list_feature-img" style="text-align: left;">
+                    <i class="fa fa-truck" style="font-size: 50px;color: #212121;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="text-center" style="text-decoration: underline;">
+            <a href="#!" class="dark-link">Load more activity</a>
+        </div>
+        
+    </div>
+</section>
+
 			<!-- Section 6 -->
 			<!-- <div class="section-6-container section-container " id="section-6">
 				<div class="container">
