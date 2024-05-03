@@ -172,11 +172,40 @@
             </div>
             <div id="itemImage"></div>
           </div>
-        </div>
+          <div class="row">
+            <div class="col-md-6 section-6-box wow fadeInUp">
+                <h3>Please enter number of Quantity to donate</h3>
+                
+                <div class="section-6-form">
+                    <form role="form" id="teacher-form" action="../assets/contact.php" method="post">
+                       
+
+                        <div class="form-group">
+                            
+                            <label class="sr-only" for="contact-subject">Quantity to be donated</label>
+                            <input type="text" name="subject" placeholder="Quantity to be donated..."
+                                class="contact-subject form-control" id="contact-subject" required>
+                        </div>
+
+                        <h3>Please fill in Donation Pickup form</h3>
+                        <div class="form-group">
+                            
+                          <label class="sr-only" for="contact-subject">Quantity to be donated</label>
+                          <input type="text" name="subject" placeholder="Quantity to be donated..."
+                              class="contact-subject form-control" id="contact-subject" required>
+                      </div>
+
+
+                        <button type="submit" id="submit-post-btn" class="btn btn-primary btn-customized" ><i class="fas fa-check-circle"></i> Donate</button>
+						<p id="message" class="text-success"></p>
+                    </form>
+                </div>
+            </div>
+    </div>
       </div>
   
 
-      
+
 			<!-- Section 1 -->
             <!-- <div class="section-1-container section-container" id="section-1">
                 <div class="container">
