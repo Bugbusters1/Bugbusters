@@ -67,8 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       name: "Stethoscope",
       quantity: 20,
-      description:
-        "A device for listening to the internal sounds of the body.",
+      description: "A device for listening to the internal sounds of the body.",
       image: "../assets/img/items/Stethoscope.png",
       category: "Medical Supplies",
       medicalCategory: "devices",
@@ -200,8 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       name: "Stationery Set",
       quantity: 12,
-      description:
-        "Includes pens, pencils and other essentials for school.",
+      description: "Includes pens, pencils and other essentials for school.",
       image: "../assets/img/items/Stationery Set.png",
       category: "School Supplies",
       itemType: "stationary",
@@ -951,7 +949,11 @@ document.addEventListener("DOMContentLoaded", function () {
               }</p>
               <a href="./PopUp.html?itemText=${encodeURIComponent(
                 item.text
-              )}" style="text-decoration: none;">
+              )}&itemName=${encodeURIComponent(
+          item.name
+        )}&itemImage=${encodeURIComponent(
+          item.image
+        )}" style="text-decoration: none;">
       <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
     </a>
                </a>
@@ -977,15 +979,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
       itemCard.innerHTML = `
       <a ><img src="${item.image}" alt="${item.name}" /><br>
-            <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${
-              item.name
-            }</h2><br>
-            <p style="color:color:#0c0f1d;font-size:26px ">Description: ${
-              item.description
-            }</p>
-            <a href="./PopUp.html?itemText=${encodeURIComponent(
-              item.text
-            )}" style="text-decoration: none;">
+              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${
+                item.name
+              }</h2><br>
+              <p style="color:color:#0c0f1d;font-size:26px ">Description: ${
+                item.description
+              }</p>
+              <a href="./PopUp.html?itemText=${encodeURIComponent(
+                item.text
+              )}&itemName=${encodeURIComponent(
+          item.name
+        )}&itemImage=${encodeURIComponent(
+          item.image
+        )}" style="text-decoration: none;">
     <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
   </a>
              </a>
