@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Popup Page</title>
+  </head>
+  <body>
+    <h1>Item Details</h1>
+    <div id="itemName"></div>
+
+    <script>
+      // Function to retrieve query parameters from URL
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      // Get the item name from the URL
+      const itemText = getQueryParam("itemText");
+
+      // Display the item name
+      document.getElementById("itemName").textContent = itemText;
+    </script>
+  </body>
+</html>
