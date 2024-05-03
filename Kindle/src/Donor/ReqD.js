@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         - Hand sanitizer for hand hygiene
 
       Quantity needed: 70
-      `
+      `,
     },
     {
       name: "Wheelchair",
@@ -877,12 +877,17 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".dropdown-item").forEach((item) => {
     item.addEventListener("click", (event) => {
       const selectedCategory = event.target.textContent.toLowerCase();
+      const filterButtonContainer = document.getElementById("filterButton");
       if (selectedCategory === "all") {
         const resultsContainer = document.getElementById("filterInputs");
         resultsContainer.innerHTML = "";
+        filterButtonContainer.innerHTML = "";
         currentCategory = "all";
         displayItems();
       } else {
+        filterButtonContainer.innerHTML = `<button class="filter-button" onclick="toggleFilterSidebar()">
+        <i class="fas fa-filter filter-icon"></i> Filter
+      </button>`;
         const selectedCategories = selectedCategory.split(" ");
         currentCategory = selectedCategories[0];
         filterInputs(selectedCategories[0]);
@@ -941,17 +946,19 @@ document.addEventListener("DOMContentLoaded", function () {
         itemElement.classList.add("item-card");
         itemElement.innerHTML = `
         <a ><img src="${item.image}" alt="${item.name}" /><br>
-              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${item.name
-          }</h2><br>
-              <p style="color:color:#0c0f1d;font-size:26px ">Description: ${item.description
-          }</p>
+              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${
+                item.name
+              }</h2><br>
+              <p style="color:color:#0c0f1d;font-size:26px ">Description: ${
+                item.description
+              }</p>
               <a href="./PopUp.html?itemText=${encodeURIComponent(
-            item.text
-          )}&itemName=${encodeURIComponent(
-            item.name
-          )}&itemImage=${encodeURIComponent(
-            item.image
-          )}" style="text-decoration: none;">
+                item.text
+              )}&itemName=${encodeURIComponent(
+          item.name
+        )}&itemImage=${encodeURIComponent(
+          item.image
+        )}" style="text-decoration: none;">
       <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
     </a>
                </a>
@@ -977,17 +984,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
       itemCard.innerHTML = `
       <a ><img src="${item.image}" alt="${item.name}" /><br>
-      <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${item.name
-        }</h2><br>
-      <p style="color:color:#0c0f1d;font-size:26px ">Description: ${item.description
-        }</p>
+      <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${
+        item.name
+      }</h2><br>
+      <p style="color:color:#0c0f1d;font-size:26px ">Description: ${
+        item.description
+      }</p>
       <a href="./PopUp.html?itemText=${encodeURIComponent(
-          item.text
-        )}&itemName=${encodeURIComponent(
-          item.name
-        )}&itemImage=${encodeURIComponent(
-          item.image
-        )}" style="text-decoration: none;">
+        item.text
+      )}&itemName=${encodeURIComponent(
+        item.name
+      )}&itemImage=${encodeURIComponent(
+        item.image
+      )}" style="text-decoration: none;">
     <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
   </a>
              </a>
