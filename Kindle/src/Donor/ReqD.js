@@ -883,7 +883,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const filteredRequests = FilterItems.filter((request) => {
       return (
-        foodCategory === "All" ||
+        foodCategory === "all" ||
         request.foodType === foodCategory ||
         request.foodType === "all"
       );
