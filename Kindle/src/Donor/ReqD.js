@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Medical Supplies",
       medicalCategory: "medication",
       text: ` 
-    1. Device Type:
+     Device Type:
         - Bandages (adhesive strips)
         - Gauze pads
         - Adhesive tape
@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
         - Pain relievers (e.g., ibuprofen, acetaminophen)
         - Antihistamines
         - Hand sanitizer
-
-    2. Use:
+       
+       Use:
         - Bandages for covering wounds and stopping bleeding
         - Gauze pads for dressing larger wounds
         - Adhesive tape for securing bandages and dressings
@@ -49,12 +49,12 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Medical Supplies",
       medicalCategory: "equipment",
       text: `
-      1. Device Type: 
+       Device Type: 
         - Manual Wheelchair: A wheelchair propelled by the user or an attendant through the use of hand rims attached to the rear wheels.
         - Power Wheelchair: A wheelchair powered by batteries and electric motors, allowing for independent movement by the user.
-        - Transport Wheelchair: A lightweight and compact wheelchair designed for short-term use or transport, often with smaller rear wheels and without large hand rims.
+        - Transport Wheelchair: A lightweight and compact wheelchair designed for short-term use or transport, often with smaller rear wheels and without large hand rims .
       
-      2. Use:
+        Use:
         - Mobility Aid: Wheelchairs provide mobility assistance to individuals who have difficulty walking or standing for extended periods due to various conditions such as paralysis, spinal cord injuries, neuromuscular disorders, or temporary injuries.
         - Independence: Wheelchairs empower users to move around independently, perform daily activities, and participate in social and community interactions.
         - Accessibility: Wheelchairs enable users to access various environments, including homes, workplaces, public buildings, transportation, and outdoor spaces, by overcoming architectural barriers and obstacles.
@@ -72,12 +72,12 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Medical Supplies",
       medicalCategory: "devices",
       text: `
-     1. Device Type:
+      Device Type:
          - Acoustic Stethoscope: The most common type of stethoscope, which uses hollow tubes and a chest piece with a diaphragm and bell to transmit sound from the patient's body to the listener's ears.
          - Electronic Stethoscope: A modern variant of the traditional stethoscope that amplifies and filters sounds, often allowing for better auscultation in noisy environments and enabling recording and playback of sounds.
          - Fetal Stethoscope (Fetoscope): A specialized stethoscope used by healthcare providers to listen to fetal heart sounds during pregnancy, typically with a bell-shaped or flat disk attachment.
       
-     2. Use:
+      Use:
          - Auscultation: Stethoscopes are primarily used for auscultation, the process of listening to sounds produced by the body, such as heart sounds, lung sounds, and bowel sounds, to assess the health and function of various organs and systems.
          - Physical Examination: Stethoscopes are essential tools in physical examinations performed by healthcare providers to evaluate cardiac, respiratory, and gastrointestinal function, identify abnormal sounds, detect murmurs, wheezes, or abnormal rhythms, and monitor changes in patient condition.
          - Diagnosis: Stethoscopes aid in the diagnosis of cardiovascular diseases, respiratory disorders, gastrointestinal issues, and other medical conditions by allowing healthcare providers to listen for specific sounds indicative of underlying pathology or abnormalities.
@@ -94,11 +94,11 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/Surgical Masks.png",
       category: "devices",
       text: `
-1. Device Type:
+ Device Type:
    - Surgical masks are disposable, loose-fitting devices that cover the nose and mouth and provide a barrier to prevent the spread of infectious droplets from the wearer to others and vice versa.
    - They are typically made of multiple layers of non-woven fabric, such as polypropylene, with a metal strip at the top to conform to the shape of the nose and elastic ear loops to secure the mask in place.
 
-2. Use:
+ Use:
    - Infection Control: Surgical masks are primarily used in healthcare settings as part of standard infection control measures to protect healthcare workers, patients, and others from respiratory droplets containing pathogens, such as bacteria and viruses, that may be expelled during coughing, sneezing, or talking.
    - Source Control: Surgical masks serve as a source control measure by containing respiratory secretions from the wearer, reducing the risk of transmitting infectious particles to others, particularly in situations where physical distancing may be challenging, such as hospitals, clinics, and public transportation.
    - Surgical Procedures: Surgical masks are worn by healthcare providers during surgical procedures and other medical interventions to prevent contamination of the surgical field and reduce the risk of postoperative infections by filtering out airborne particles and droplets.
@@ -116,10 +116,10 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/Blood Pressure Monitor.png",
       category: "Blood Donations",
       text: `
-1. Device Type:
+ Device Type:
    - Blood pressure monitors, also known as sphygmomanometers, are medical devices used to measure blood pressure levels. They come in various types, including manual, digital, and ambulatory monitors.
 
-2. Use:
+ Use:
    - Blood Pressure Measurement: The primary purpose of a blood pressure monitor is to measure blood pressure, which refers to the force of blood against the walls of the arteries as the heart pumps it around the body. Blood pressure is expressed in millimeters of mercury (mmHg) and typically consists of two values: systolic pressure (the pressure when the heart beats) and diastolic pressure (the pressure when the heart is at rest between beats).
    - Hypertension Management: Blood pressure monitors are essential tools for diagnosing and monitoring hypertension (high blood pressure) and hypotension (low blood pressure), which are significant risk factors for cardiovascular diseases, including heart attacks and strokes. Regular blood pressure monitoring helps healthcare providers assess the effectiveness of treatment and make adjustments to medication and lifestyle changes as needed to control blood pressure levels and reduce the risk of complications.
    - Home Monitoring: Many individuals with hypertension or other cardiovascular conditions use home blood pressure monitors to track their blood pressure levels regularly outside of clinical settings. Home monitoring allows patients to take more frequent measurements and provides valuable information to healthcare providers for managing blood pressure and optimizing treatment strategies.
@@ -135,10 +135,10 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/Blood Glucose Meter.png",
       category: "Blood Donations",
       text: `
-1. Device Type:
+ Device Type:
    - A blood glucose meter, also known as a glucometer or blood sugar meter, is a small, portable electronic device used to measure the concentration of glucose (sugar) in the blood. These meters are available in various models, ranging from basic models to more advanced ones with additional features.
 
-2. Use:
+ Use:
    - Blood Glucose Monitoring: The primary purpose of a blood glucose meter is to monitor blood sugar levels, which is crucial for individuals with diabetes mellitus. Diabetes is a chronic condition characterized by high levels of glucose in the blood due to the body's inability to produce or properly use insulin, a hormone that regulates blood sugar. Monitoring blood glucose levels regularly helps individuals with diabetes manage their condition effectively and prevent complications.
    - Self-Testing: Blood glucose meters allow individuals with diabetes to perform self-testing of their blood sugar levels at home or on the go. Regular self-monitoring of blood glucose (SMBG) helps individuals track their blood sugar levels throughout the day, identify patterns, and make informed decisions about insulin doses, medication, diet, and physical activity to maintain optimal blood sugar control.
    - Hypoglycemia and Hyperglycemia Detection: Blood glucose meters are used to detect episodes of hypoglycemia (low blood sugar) and hyperglycemia (high blood sugar), which are common complications of diabetes. Prompt identification and management of these conditions are essential for preventing adverse health outcomes, such as diabetic ketoacidosis (DKA) or insulin shock (severe hypoglycemia), and maintaining overall well-being.
@@ -154,10 +154,10 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/Blood Bag.png",
       category: "Blood Donations",
       text: `
-      1. Device Type:
+       Device Type:
          - A blood bag is a sterile, disposable container used for collecting, storing, and transporting blood and its components. It is typically made of medical-grade plastic materials that are compatible with blood products and maintain the integrity and safety of the collected blood. Blood bags come in various sizes and configurations, depending on the specific requirements of blood collection and transfusion procedures.
       
-      2. Use:
+       Use:
          - Blood Collection: Blood bags are used for collecting whole blood donations from voluntary blood donors during blood donation drives or at blood collection centers. The process involves inserting a sterile needle into the donor's vein and allowing blood to flow into the blood bag under gravity or with the assistance of a blood collection device. The collected blood is then sealed in the bag using an airtight closure mechanism to prevent contamination and maintain sterility.
          - Blood Component Separation: After blood collection, the whole blood in the bag is typically processed in a blood bank or laboratory to separate it into various blood components, such as red blood cells (RBCs), platelets, plasma, and cryoprecipitate. This process, known as blood component separation or blood fractionation, allows healthcare providers to obtain specific blood products tailored to the needs of patients requiring transfusion therapy for various medical conditions, such as anemia, bleeding disorders, and blood loss.
          - Blood Storage and Preservation: Blood bags are designed to safely store and preserve blood and its components under controlled conditions, such as refrigeration or freezing, to maintain their viability, quality, and safety for transfusion purposes. Proper storage and temperature monitoring are essential to prevent spoilage, bacterial contamination, or deterioration of blood products during storage and transportation.
@@ -173,10 +173,10 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/Blood Donation Kit.png",
       category: "Blood Donations",
       text: `
-      1. Device Type:
+       Device Type:
          - A blood donation kit is a collection of medical supplies and equipment used to facilitate the process of blood donation from voluntary donors. It typically consists of sterile single-use items, protective gear, and accessories required for safely and hygienically collecting blood samples from donors.
       
-      2. Use:
+       Use:
          - Blood Collection Supplies: The kit includes sterile needles, blood collection tubes or bags, and other disposable items used to collect blood samples from donors. These supplies are designed to meet stringent quality and safety standards to minimize the risk of contamination, infection, or injury during the blood collection process.
          - Phlebotomy Equipment: The kit may contain phlebotomy equipment such as tourniquets, alcohol swabs, adhesive bandages, and gauze pads used to prepare the donor's skin, locate suitable veins for venipuncture, and apply pressure to the puncture site after blood collection to prevent bleeding and promote clotting.
          - Donor Identification and Documentation: Blood donation kits often include forms, labels, and markers for documenting donor information, consent, and medical history. Donors may be required to provide personal details, answer health-related questions, and sign consent forms before blood collection to ensure compliance with regulatory requirements and safeguard donor and recipient safety.
@@ -361,7 +361,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ageMin: 3,
       ageMax: 10,
       ToysCategory: "stuffed toys",
-      text: "d",
+      text: "dddd",
     },
   ];
 
@@ -941,19 +941,17 @@ document.addEventListener("DOMContentLoaded", function () {
         itemElement.classList.add("item-card");
         itemElement.innerHTML = `
         <a ><img src="${item.image}" alt="${item.name}" /><br>
-              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${
-                item.name
-              }</h2><br>
-              <p style="color:color:#0c0f1d;font-size:26px ">Description: ${
-                item.description
-              }</p>
+              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${item.name
+          }</h2><br>
+              <p style="color:color:#0c0f1d;font-size:26px ">Description: ${item.description
+          }</p>
               <a href="./PopUp.html?itemText=${encodeURIComponent(
-                item.text
-              )}&itemName=${encodeURIComponent(
-          item.name
-        )}&itemImage=${encodeURIComponent(
-          item.image
-        )}" style="text-decoration: none;">
+            item.text
+          )}&itemName=${encodeURIComponent(
+            item.name
+          )}&itemImage=${encodeURIComponent(
+            item.image
+          )}" style="text-decoration: none;">
       <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
     </a>
                </a>
@@ -979,19 +977,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
       itemCard.innerHTML = `
       <a ><img src="${item.image}" alt="${item.name}" /><br>
-      <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${
-        item.name
-      }</h2><br>
-      <p style="color:color:#0c0f1d;font-size:26px ">Description: ${
-        item.description
-      }</p>
+      <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${item.name
+        }</h2><br>
+      <p style="color:color:#0c0f1d;font-size:26px ">Description: ${item.description
+        }</p>
       <a href="./PopUp.html?itemText=${encodeURIComponent(
-        item.text
-      )}&itemName=${encodeURIComponent(
-  item.name
-)}&itemImage=${encodeURIComponent(
-  item.image
-)}" style="text-decoration: none;">
+          item.text
+        )}&itemName=${encodeURIComponent(
+          item.name
+        )}&itemImage=${encodeURIComponent(
+          item.image
+        )}" style="text-decoration: none;">
     <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
   </a>
              </a>
