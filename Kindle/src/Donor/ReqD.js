@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   let currentCategory = "all";
+  let currentText;
   const items = [
     // Hospital Items
     {
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/medkit.png",
       category: "Medical Supplies",
       medicalCategory: "medication",
+      text: "d",
     },
     {
       name: "Wheelchair",
@@ -17,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/wheelchair.png",
       category: "Medical Supplies",
       medicalCategory: "equipment",
+      text: "d",
     },
     {
       name: "Stethoscope",
@@ -26,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/Stethoscope.png",
       category: "Medical Supplies",
       medicalCategory: "devices",
+      text: "d",
     },
     {
       name: "Surgical Masks",
@@ -33,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
       description: "Protective masks worn by healthcare professionals.",
       image: "../assets/img/items/Surgical Masks.png",
       category: "devices",
+      text: "d",
     },
     // Blood Donations
     {
@@ -41,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
       description: "Device used to measure blood pressure.",
       image: "../assets/img/items/Blood Pressure Monitor.png",
       category: "Blood Donations",
+      text: "",
     },
     {
       name: "Blood Glucose Meter",
@@ -48,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       description: "Measure concentration of glucose in the blood.",
       image: "../assets/img/items/Blood Glucose Meter.png",
       category: "Blood Donations",
+      text: "d",
     },
     {
       name: "Blood Bag",
@@ -55,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
       description: "Sterile bag used to collect and store blood.",
       image: "../assets/img/items/Blood Bag.png",
       category: "Blood Donations",
+      text: "dd",
     },
     {
       name: "Blood Donation Kit",
@@ -62,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
       description: "Kit containing supplies for blood donation.",
       image: "../assets/img/items/Blood Donation Kit.png",
       category: "Blood Donations",
+      text: "d",
     },
     // School Donations
     {
@@ -71,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/Books.png",
       category: "School Supplies",
       itemType: "books",
+      text: "d",
     },
     {
       name: "Stationery Set",
@@ -80,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/Stationery Set.png",
       category: "School Supplies",
       itemType: "stationary",
+      text: "d",
     },
     {
       name: "Backpack",
@@ -88,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/Backpack.png",
       category: "School Supplies",
       itemType: "stationary",
+      text: "d",
     },
     // Food Donations
     {
@@ -97,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/Canned Food.png",
       category: "Food",
       foodType: "canned",
+      text: "d",
     },
     {
       name: "Rice",
@@ -105,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/Ricepng",
       category: "Food",
       foodType: "fresh",
+      text: "d",
     },
     {
       name: "Fresh Fruits",
@@ -113,6 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/Fresh Fruits.png",
       category: "Food",
       foodType: "fruits",
+      text: "d",
     },
     // Clothing Donations
     {
@@ -125,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
       maxAge: 70,
       gender: "all",
       season: "winter",
+      text: "d",
     },
     {
       name: "Shoes",
@@ -136,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
       maxAge: 80,
       gender: "male",
       season: "winter",
+      text: "d",
     },
     {
       name: "T-shirts",
@@ -147,6 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
       maxAge: 50,
       gender: "female",
       season: "summer",
+      text: "d",
     },
     {
       name: "Stuffed Animals",
@@ -158,6 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ageMin: 0,
       ageMax: 12,
       ToysCategory: "dolls",
+      text: "d",
     },
     {
       name: "Building Blocks",
@@ -169,6 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ageMin: 2,
       ageMax: 8,
       ToysCategory: "dolls",
+      text: "d",
     },
 
     {
@@ -181,6 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ageMin: 5,
       ageMax: 99,
       ToysCategory: "dolls",
+      text: "d",
     },
     {
       name: "Sports Equipment",
@@ -192,6 +213,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ageMin: 5,
       ageMax: 15,
       ToysCategory: "dolls",
+      text: "d",
     },
     {
       name: "Toy Cars",
@@ -203,6 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ageMin: 2,
       ageMax: 12,
       ToysCategory: "stuffed toys",
+      text: "d",
     },
     {
       name: "Jeans",
@@ -225,6 +248,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ageMin: 3,
       ageMax: 10,
       ToysCategory: "stuffed toys",
+      text: "d",
     },
   ];
 
@@ -803,13 +827,21 @@ document.addEventListener("DOMContentLoaded", function () {
         const itemElement = document.createElement("div");
         itemElement.classList.add("item-card");
         itemElement.innerHTML = `
-   <a ><img src="${item.image}" alt="${item.name}" /><br>
-            <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${item.name}</h2><br>
-            <p style="color:color:#0c0f1d;font-size:26px ">Description: ${item.description}</p>
-            <button class="details-button" id="details-Button" style="background-color: #222024;">More Details</button>
-             </a>
-             
-        `;
+        <a ><img src="${item.image}" alt="${item.name}" /><br>
+              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${
+                item.name
+              }</h2><br>
+              <p style="color:color:#0c0f1d;font-size:26px ">Description: ${
+                item.description
+              }</p>
+              <a href="./PopUp.html?itemText=${encodeURIComponent(
+                item.text
+              )}" style="text-decoration: none;">
+      <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
+    </a>
+               </a>
+               
+          `;
         resultsContainer.appendChild(itemElement);
       });
       resultsContainer.style.display = "flex";
@@ -830,9 +862,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
       itemCard.innerHTML = `
       <a ><img src="${item.image}" alt="${item.name}" /><br>
-            <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${item.name}</h2><br>
-            <p style="color:color:#0c0f1d;font-size:26px ">Description: ${item.description}</p>
-            <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
+            <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${
+              item.name
+            }</h2><br>
+            <p style="color:color:#0c0f1d;font-size:26px ">Description: ${
+              item.description
+            }</p>
+            <a href="./PopUp.html?itemText=${encodeURIComponent(
+              item.text
+            )}" style="text-decoration: none;">
+    <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
+  </a>
              </a>
              
         `;
@@ -840,7 +880,7 @@ document.addEventListener("DOMContentLoaded", function () {
       itemContainer.appendChild(itemCard);
     });
   }
-  
+
   function filterInputs(category) {
     const filterInputsDiv = document.getElementById("filterInputs");
     filterInputsDiv.innerHTML = "";
@@ -975,26 +1015,25 @@ document.addEventListener("DOMContentLoaded", function () {
   displayItems();
 
   function centerPopup() {
-    var popup = document.querySelector('.popup-container');
+    var popup = document.querySelector(".popup-container");
     var popupWidth = popup.offsetWidth;
     var popupHeight = popup.offsetHeight;
     var screenWidth = window.innerWidth;
     var screenHeight = window.innerHeight;
-  
+
     var topPos = (screenHeight - popupHeight) / 2;
     var leftPos = (screenWidth - popupWidth) / 2;
-  
-    popup.style.top = topPos + 'px';
-    popup.style.left = leftPos + 'px';
+
+    popup.style.top = topPos + "px";
+    popup.style.left = leftPos + "px";
   }
-  
+
   // Call the centerPopup function when the window is resized or scrolled
-  window.addEventListener('resize', centerPopup);
-  window.addEventListener('scroll', centerPopup);
-  
+  window.addEventListener("resize", centerPopup);
+  window.addEventListener("scroll", centerPopup);
+
   // Call the centerPopup function initially
   centerPopup();
-  
 
   let minAgeClothes = 0;
   let maxAgeClothes = 1000;
@@ -1090,15 +1129,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const detailsButton = document.querySelectorAll(".details-button");
   const closeButton = document.querySelector(".close-button");
 
-    detailsButton.forEach(button => {
-        button.addEventListener('click', function() {
-            // Provide feedback to the user
-            popupContainer.style.display = "block";
-        });
-    });
-    closeButton.addEventListener("click", function() {
-    popupContainer.style.display = "none";
-    });
+  // detailsButton.forEach((button) => {
+  //   button.addEventListener("click", function () {
+  //     // Provide feedback to the user
+  //     popupContainer.style.display = "block";
+  //   });
+  // });
+  // closeButton.addEventListener("click", function () {
+  //   popupContainer.style.display = "none";
+  // });
 
   // document.body.addEventListener("click",function(event) {
   //   if(event.target.id == "detailsButton"){
@@ -1108,5 +1147,4 @@ document.addEventListener("DOMContentLoaded", function () {
   //     alert('You clicked the results button');
   //   }
   // });
-  
 });
