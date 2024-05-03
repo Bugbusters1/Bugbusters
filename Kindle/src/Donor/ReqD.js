@@ -794,10 +794,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const itemElement = document.createElement("div");
         itemElement.classList.add("item-card");
         itemElement.innerHTML = `
-   <a  role="button"><img src="${item.image}" alt="${item.name}" /><br>
+   <a ><img src="${item.image}" alt="${item.name}" /><br>
             <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${item.name}</h2><br>
             <p style="color:color:#0c0f1d;font-size:26px ">Description: ${item.description}</p>
+            <button class="details-button" id="details-Button" style="background-color: #222024;">More Details</button>
              </a>
+             
         `;
         resultsContainer.appendChild(itemElement);
       });
@@ -818,15 +820,18 @@ document.addEventListener("DOMContentLoaded", function () {
       itemCard.classList.add("item-card");
 
       itemCard.innerHTML = `
-      <a  role="button"><img src="${item.image}" alt="${item.name}" /><br>
+      <a ><img src="${item.image}" alt="${item.name}" /><br>
             <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${item.name}</h2><br>
             <p style="color:color:#0c0f1d;font-size:26px ">Description: ${item.description}</p>
+            <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
              </a>
+             
         `;
 
       itemContainer.appendChild(itemCard);
     });
   }
+  
   function filterInputs(category) {
     const filterInputsDiv = document.getElementById("filterInputs");
     filterInputsDiv.innerHTML = "";
@@ -960,6 +965,28 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   displayItems();
 
+  function centerPopup() {
+    var popup = document.querySelector('.popup-container');
+    var popupWidth = popup.offsetWidth;
+    var popupHeight = popup.offsetHeight;
+    var screenWidth = window.innerWidth;
+    var screenHeight = window.innerHeight;
+  
+    var topPos = (screenHeight - popupHeight) / 2;
+    var leftPos = (screenWidth - popupWidth) / 2;
+  
+    popup.style.top = topPos + 'px';
+    popup.style.left = leftPos + 'px';
+  }
+  
+  // Call the centerPopup function when the window is resized or scrolled
+  window.addEventListener('resize', centerPopup);
+  window.addEventListener('scroll', centerPopup);
+  
+  // Call the centerPopup function initially
+  centerPopup();
+  
+
   let minAgeClothes = 0;
   let maxAgeClothes = 1000;
   let genderClothes = "all";
@@ -1049,4 +1076,28 @@ document.addEventListener("DOMContentLoaded", function () {
       filterBloodRequests();
     }
   });
+
+  const popupContainer = document.querySelector(".popup-container");
+  const detailsButton = document.querySelectorAll(".details-button");
+  const closeButton = document.querySelector(".close-button");
+
+    detailsButton.forEach(button => {
+        button.addEventListener('click', function() {
+            // Provide feedback to the user
+            popupContainer.style.display = "block";
+        });
+    });
+    closeButton.addEventListener("click", function() {
+    popupContainer.style.display = "none";
+    });
+
+  // document.body.addEventListener("click",function(event) {
+  //   if(event.target.id == "detailsButton"){
+  //     alert('You clicked the button!');
+  //   }
+  //   else if(event.target.id == "resultDetailsButton"){
+  //     alert('You clicked the results button');
+  //   }
+  // });
+  
 });

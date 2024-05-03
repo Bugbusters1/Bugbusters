@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<title>Kindle</title>
+
+    <!-- Google -->
+    <style>
+        #map {
+          height: 100%;
+        }
+        html, body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }	
+      </style>
+
+    <!--Notifications-->
+    <style>@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap);
+
+        body {
+            font-family: "Roboto", sans-serif;
+            background: #EFF1F3;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .section-50 {
+            padding: 50px 0;
+        }
+        
+        .m-b-50 {
+            margin-bottom: 50px;
+        }
+        
+        .dark-link {
+            color: #333;
+        }
+        
+        .heading-line {
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .heading-line:after {
+            content: "";
+            height: 2.5px;
+            width: 140px;
+            background-color: #222024;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .notification-ui_dd-content {
+            margin-bottom: 30px;
+        }
+        
+        .notification-list {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            padding: 20px;
+            margin-bottom: 7px;
+            background-color: #222024;
+            -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+        }
+        
+        .notification-list--unread {
+            border-left: 2px solid #FCFAF0;
+        }
+        
+        .notification-list .notification-list_content {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+        
+        .notification-list .notification-list_content .notification-list_img img {
+            height: 48px;
+            width: 48px;
+            border-radius: 50px;
+            margin-right: 20px;
+        }
+        
+        .notification-list .notification-list_content .notification-list_detail p {
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+        
+        .notification-list .notification-list_feature-img img {
+            height: 48px;
+            width: 48px;
+            border-radius: 5px;
+            margin-left: 20px;
+        }</style>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="../assets/css/animate.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/media-queries.css">
+    <link rel="stylesheet" href="../Donor/volunteer.css">
+    <link rel="stylesheet" href="./card.css">
+	<!-- Favicon and touch icons -->
+	<link rel="shortcut icon" href="../assets/ico/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://use.fontawesome.com/releases/v6.2.0/js/all.js"></script>
+    <!--Notifications-->
+    <style>@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap);
+
+        body {
+            font-family: "Roboto", sans-serif;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .section-50 {
+            padding: 50px 0;
+        }
+        
+        .m-b-50 {
+            margin-bottom: 50px;
+        }
+        
+        .dark-link {
+            color: #222024;
+            ;
+        }
+        
+        .heading-line {
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .heading-line:after {
+            content: "";
+            height: 2.5px;
+            width: 200px;
+            background-color: #222024;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .notification-ui_dd-content {
+            margin-bottom: 30px;
+        }
+        
+        .notification-list {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            padding: 20px;
+            margin-bottom: 7px;
+            background-color:white;
+            -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+        }
+        
+        .notification-list--unread {
+            border-left: 5px solid #222024;
+        }
+        
+        .notification-list .notification-list_content {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+        
+        .notification-list .notification-list_content .notification-list_img img {
+            height: 48px;
+            width: 48px;
+            border-radius: 50px;
+            margin-right: 20px;
+        }
+        
+        .notification-list .notification-list_content .notification-list_detail p {
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+        
+        .notification-list .notification-list_feature-img img {
+            height: 48px;
+            width: 48px;
+            border-radius: 5px;
+            margin-left: 20px;
+        }</style>
+
+</head>
+
+<body>
+
+	<!-- Wrapper -->
+	<div class="wrapper">
+
+		<!-- Sidebar -->
+		<nav class="sidebar">
+
+			<!-- close sidebar menu -->
+			<div class="dismiss">
+				<i class="fas fa-arrow-left"></i>
+			</div>
+
+			<div class="logo">
+				<h3><a href="OrganizationHome.html">Kindle</a></h3>
+			</div>
+
+			<ul class="list-unstyled menu-elements">
+				<li>
+					<a class="scroll-link" href="OrganizationHome.html"><i class="fas fa-home"></i> Home</a>
+				</li>
+                <li>
+					<a class="scroll-link" href="NewPost.html"><i class="fas fa-pencil-alt"></i> New Post</a>
+				</li>
+                <li>
+					<a class="scroll-link" href="MyPosts.html"><i class="fas fa-book-open"></i> My Posts</a>
+				</li>
+                <li>
+					<a class="scroll-link" href="FulfilledDonations.html"><i class="fas fa-hand-holding-heart"></i> Fulfilled Donations</a>
+				</li>
+				<li>
+					<a class="scroll-link" href="settings.html"><i class="fas fa-cog"></i>Account Settings</a>
+				</li>
+			</ul>
+
+			
+				<a class="btn btn-primary btn-customized-3" href="../HomePage.html" role="button">
+					<i class="fas fa-sign-out-alt"></i> Log out 
+				</a>
+			
+			
+			<!-- <div class="dark-light-buttons">
+				<a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
+				<a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
+			</div> -->
+
+		</nav>
+		<!-- End sidebar -->
+
+		<!-- Dark overlay -->
+		<div class="overlay"></div>
+
+		<!-- Content -->
+		<div class="content">
+
+			<!-- open sidebar menu -->
+			<a class="open-menu" href="#" role="button">
+				<button class="btnMenu">
+					<span class="icon">
+						<svg viewBox="0 0 175 80" width="40" height="40">
+							<rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+							<rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+							<rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+						</svg>
+					</span>
+					<span class="text">Menu</span>
+				</button>
+			</a>
+	
+
+<section class="section-50" style="padding: 50px 0;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+        <h2 style="color:#222024;text-align:left;font-size: 65px;font-weight: 300;">Notifications <i class="fa fa-bell " style="font-size: 50px;color: #212121;"></i></h2>
+        <h3 class="m-b-50 heading-line"></h3>
+
+        <div class="notification-ui_dd-content">
+            <div class="notification-list notification-list--unread" style="display: flex; align-items: center;">
+                <div class="notification-list_content" style="display: flex; align-items: center;">
+                    <div class="notification-list_img" style="text-align: left;">
+                       
+                    </div>
+                    <div class="notification-list_detail" style="text-align: left;">
+                        <p><b>Emily Johnson</b> has chosen to fulfill your donation post.</p>
+                        <p class="text-muted">Your donation post has been successfully fulfilled by a generous donor! 🎉 #MakingADifference</p>
+                        <div style="display: flex; align-items: center;">
+                            <p class="text-muted" style="margin-right: 10px;"><small>2 mins ago</small></p>
+                            <button class="btn btn-primary btn-sm">Schedule Pick-up</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification-list_feature-img" style="text-align: left;">
+                    <i class="fas fa-hand-holding-heart" style="font-size: 50px;color: #212121;"></i>
+                </div>
+            </div>
+            <div class="notification-list notification-list--unread" style="display: flex; align-items: center;">
+                <div class="notification-list_content" style="display: flex; align-items: center;">
+                    <div class="notification-list_img" style="text-align: left;">
+                       
+                    </div>
+                    <div class="notification-list_detail" style="text-align: left;">
+                        <p><b>David Smith</b> has chosen to fulfill your donation post.</p>
+                        <p class="text-muted">Congratulations! Your donation post has been fulfilled. 🌟 Keep spreading kindness!</p>
+                        <div style="display: flex; align-items: center;">
+                            <p class="text-muted" style="margin-right: 10px;"><small>20 mins ago</small></p>
+                            <button class="btn btn-primary btn-sm">Schedule Pick-up</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification-list_feature-img" style="text-align: left;">
+                    <i class="fas fa-hand-holding-heart" style="font-size: 50px;color: #212121;"></i>
+                </div>
+            </div>
+            <div class="notification-list" style="display: flex; align-items: center;">
+                <div class="notification-list_content" style="display: flex; align-items: center;">
+                    <div class="notification-list_img" style="text-align: left;">
+                       
+                    </div>
+                    <div class="notification-list_detail" style="text-align: left;">
+                        <p><b>Sophia Rodriguez</b> has chosen to fulfill your donation post.</p>
+                        <p class="text-muted">Great news! A donor has fulfilled your donation request. 🙌 Thank you for making a difference!</p>
+                        <div style="display: flex; align-items: center;">
+                            <p class="text-muted" style="margin-right: 10px;"><small>3 days ago</small></p>
+                            <button class="btn btn-primary btn-sm">Schedule Pick-up</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification-list_feature-img" style="text-align: left;">
+                    <i class="fas fa-hand-holding-heart" style="font-size: 50px;color: #212121;"></i>
+                </div>
+            </div>
+            <div class="notification-list" style="display: flex; align-items: center;">
+                <div class="notification-list_content" style="display: flex; align-items: center;">
+                    <div class="notification-list_img" style="text-align: left;">
+                       
+                    </div>
+                    <div class="notification-list_detail" style="text-align: left;">
+                        <p><b>Michael Brown</b> has chosen to fulfill your donation post.</p>
+                        <p class="text-muted">You've got mail! Your donation post has been fulfilled by a generous donor. 💌</p>
+                        <div style="display: flex; align-items: center;">
+                            <p class="text-muted" style="margin-right: 10px;"><small>2 weeks ago</small></p>
+                            <button class="btn btn-primary btn-sm">Schedule Pick-up</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification-list_feature-img" style="text-align: left;">
+                    <i class="fas fa-hand-holding-heart" style="font-size: 50px;color: #212121;"></i>
+                </div>
+            </div>
+            <div class="notification-list" style="display: flex; align-items: center;">
+                <div class="notification-list_content" style="display: flex; align-items: center;">
+                    <div class="notification-list_img" style="text-align: left;">
+                       
+                    </div>
+                    <div class="notification-list_detail" style="text-align: left;">
+                        <p><b>Olivia Williams</b> has chosen to fulfill your donation post.</p>
+                        <p class="text-muted">Hooray! Your donation request has been fulfilled. 🎁 Thank you for your generosity!</p>
+                        <div style="display: flex; align-items: center;">
+                            <p class="text-muted" style="margin-right: 10px;"><small>1 month ago</small></p>
+                            <button class="btn btn-primary btn-sm">Schedule Pick-up</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification-list_feature-img" style="text-align: left;">
+                    <i class="fas fa-hand-holding-heart" style="font-size: 50px;color: #212121;"></i>
+                </div>
+            </div>
+        </div>
+        <div class="text-center" style="text-decoration: underline;">
+            <a href="#!" class="dark-link">Load more activity</a>
+        </div>
+        
+    </div>
+</section>
+
+<div class="popup-container">
+    <div class="card">
+        <h4 class="card-title">Schedule Pick-up</h4>
+        <div class="card-body">
+            <p>Please choose a suitable time slot for pick-up:</p>
+            <div class="time-slots">
+                <label>
+                    <input type="radio" name="time-slot" value="morning"> Morning (9:00 AM - 12:00 PM)
+                </label><br>
+                <label>
+                    <input type="radio" name="time-slot" value="afternoon"> Afternoon (1:00 PM - 4:00 PM)
+                </label><br>
+                <label>
+                    <input type="radio" name="time-slot" value="evening"> Evening (5:00 PM - 8:00 PM)
+                </label><br>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary" id="schButton">Schedule</button>
+            </div>
+            <div class="confirmation-message" style="display: none;">
+                <p class="text-success">Schedule time confirmed!</p>
+            </div>
+        </div>
+        <button class="close-button">x</button>
+    </div>
+</div>
+
+            
+			<!-- Footer -->
+			<footer class="footer-container">
+
+				<div class="container">
+					<div class="row">
+
+						<div class="col">
+							&copy; This website perserves your personal information.
+						</div>
+
+					</div>
+				</div>
+
+			</footer>
+
+		</div>
+		<!-- End content -->
+
+	</div>
+	<!-- End wrapper -->
+
+	<!-- Javascript -->
+	<script src="../assets/js/jquery-3.3.1.min.js"></script>
+	<script src="../assets/js/jquery-migrate-3.0.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="../assets/js/jquery.backstretch.min.js"></script>
+	<script src="../assets/js/wow.min.js"></script>
+	<script src="../assets/js/jquery.waypoints.min.js"></script>
+	<script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../assets/js/scripts.js"></script>
+    <script src="./sideBarButtons.js"></script>
+    <script src="./card.js"></script>
+</body>
+
+</html>

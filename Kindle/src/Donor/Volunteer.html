@@ -79,6 +79,9 @@
 					  ><i class="fas fa-envelope"></i> Medical Cases</a
 					>
 				  </li>
+				  <li>
+					<a  href="../Donor/Donations.html"><i class="fas fa-cog"></i> My Donations</a>
+				</li>
 				<li>
 					<a class="scroll-link" href="#section-1"><i class="fas fa-cog"></i>Account Settings</a>
 				</li>
@@ -213,9 +216,9 @@
                 <h3>Please fill in the following form</h3>
                 
                 <div class="section-6-form">
-                    <form role="form" action="../assets/contact.php" method="post">
+                    <form role="form" id="teacher-form" action="../assets/contact.php" method="post">
                         <h4>Upload any documents related to your experience in tutoring :</h4>
-                        <input type="file" />
+                        <input type="file" required />
                         <div class="col-md-6 section-1-box wow fadeInUp">
                             <div class="row">
                                
@@ -224,29 +227,48 @@
                         <div class="form-group">
                             <label class="sr-only" for="contact-email" >Subjects to Tutor</label>
                             <input type="text" name="email" placeholder="Subjects to tutor"
-                                class="contact-email form-control" id="contact-email">
+                                class="contact-email form-control" id="contact-email" required>
                         </div>
                         <div class="form-group">
                             <h4 style="font-weight: bold;">Please note that all pro-bono classes needed will be sent to you by email , according to your preferences , to choose from</h4>
                             <label class="sr-only" for="contact-subject">days</label>
                             <input type="text" name="subject" placeholder="Number of classes available to tutor per week"
-                                class="contact-subject form-control" id="contact-subject">
+                                class="contact-subject form-control" id="contact-subject" required>
                         </div>
 
                         <div class="form-group">
                             
                             <label class="sr-only" for="contact-subject">students</label>
                             <input type="text" name="subject" placeholder="Number of Students class"
-                                class="contact-subject form-control" id="contact-subject">
+                                class="contact-subject form-control" id="contact-subject" required>
                         </div>
 
 
-                        <button type="submit" class="btn btn-primary btn-customized" ><i class="fas fa-check-circle"></i> Submit</button>
+                        <button type="submit" id="submit-post-btn" class="btn btn-primary btn-customized" ><i class="fas fa-check-circle"></i> Submit</button>
+						<p id="message" class="text-success"></p>
                     </form>
                 </div>
             </div>
     </div>
 </div>
+<div id="submission-message" class="alert alert-success d-none" role="alert">
+	Post Submitted Successfully
+</div>
+
+<script>
+	document.getElementById('submit-post-btn').addEventListener('click', function(event) {
+        // Check if the form is valid
+        if (document.getElementById('teacher-form').checkValidity()) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+        // Show the submission message if the form is valid
+        document.getElementById('submission-message').classList.remove('d-none');
+        setTimeout(function() {
+        document.getElementById('submission-message').classList.add('d-none');
+        }, 3000);
+        }
+        });
+</script>
 
 			<!-- Section 3 -->
 <div class="section-3-container section-container" id="section-3" style="background-color: #FCFAF0;">
@@ -262,9 +284,9 @@
                 <h3>Please fill in the following form</h3>
                 
                 <div class="section-6-form">
-                    <form role="form" action="../assets/contact.php" method="post">
+                    <form role="form" id="doctor-form" action="../assets/contact.php" method="post">
                         <h4>Upload CV and any other related documents :</h4>
-                        <input type="file" />
+                        <input type="file" required />
                         <div class="col-md-6 section-1-box wow fadeInUp">
                             <div class="row">
                                
@@ -273,12 +295,12 @@
                         <div class="form-group">
                             <label class="sr-only" for="contact-email" >speciality</label>
                             <input type="text" name="email" placeholder="Specialty"
-                                class="contact-email form-control" id="contact-email">
+                                class="contact-email form-control" id="contact-email" required>
                         </div>
                         <div class="form-group">
                             <label class="sr-only" for="contact-subject">days</label>
                             <input type="text" name="subject" placeholder="Number of visits available per week"
-                                class="contact-subject form-control" id="contact-subject">
+                                class="contact-subject form-control" id="contact-subject" required>
                         </div>
 
                         <h4>Please Enter Address Details :</h4>
@@ -286,32 +308,50 @@
                             
                             <label class="sr-only" for="contact-subject">students</label>
                             <input type="text" name="subject" placeholder="address"
-                                class="contact-subject form-control" id="contact-subject">
+                                class="contact-subject form-control" id="contact-subject" required>
                         </div>
 
                         <div class="form-group">
                             
                             <label class="sr-only" for="contact-subject">students</label>
                             <input type="text" name="subject" placeholder="Area"
-                                class="contact-subject form-control" id="contact-subject">
+                                class="contact-subject form-control" id="contact-subject" required>
                         </div>
 
                         <div class="form-group">
                             
                             <label class="sr-only" for="contact-subject">students</label>
                             <input type="text" name="subject" placeholder="governorate"
-                                class="contact-subject form-control" id="contact-subject">
+                                class="contact-subject form-control" id="contact-subject" required>
                         </div>
 						<h4>Please pinpoint your address on map:</h4>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d708.1388568256748!2d31.281328141854207!3d30.067719408090635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583f9ec9b02a01%3A0x3c19ee8d3652e00d!2z2LXZitiv2YTZitipINin2YTYsdit2YXZhg!5e0!3m2!1sen!2seg!4v1714328201328!5m2!1sen!2seg" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <br>
 
-                        <button type="submit" class="btn btn-primary btn-customized" ><i class="fas fa-check-circle"></i> Submit</button>
+                        <button type="submit" id="submit-post-btn2" class="btn btn-primary btn-customized" ><i class="fas fa-check-circle"></i> Submit</button>
+						<p id = "message2" class="text-success"></p>
                     </form>
                 </div>
             </div>
     </div>
 </div>
+<div id="submission-message2" class="alert alert-success d-none" role="alert">
+	Post Submitted Successfully
+</div>
+<script>
+	document.getElementById('submit-post-btn2').addEventListener('click', function(event) {
+        // Check if the form is valid
+        if (document.getElementById('doctor-form').checkValidity()) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+        // Show the submission message if the form is valid
+        document.getElementById('submission-message2').classList.remove('d-none');
+        setTimeout(function() {
+        document.getElementById('submission-message2').classList.add('d-none');
+        }, 3000);
+        }
+        });
+</script>
 			<!-- Section 6 -->
 			<!-- <div class="section-6-container section-container " id="section-6">
 				<div class="container">
