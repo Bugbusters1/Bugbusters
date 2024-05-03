@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Rice",
       quantity: 100,
       description: "Staple food grain,a fundamental source of sustenance.",
-      image: "../assets/img/items/Ricepng",
+      image: "../assets/img/items/Rice.png",
       category: "Food",
       foodType: "fresh",
       text: "d",
