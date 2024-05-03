@@ -6,6 +6,8 @@
   <body>
     <h1>Item Details</h1>
     <div id="itemName"></div>
+    <div id="itemText"></div>
+    <div id="itemImage"></div>
 
     <script>
       // Function to retrieve query parameters from URL
@@ -14,11 +16,19 @@
         return urlParams.get(param);
       }
 
-      // Get the item name from the URL
+      // Get the item name, text, and image from the URL
+      const itemName = getQueryParam("itemName");
       const itemText = getQueryParam("itemText");
+      const itemImage = getQueryParam("itemImage");
 
-      // Display the item name
-      document.getElementById("itemName").textContent = itemText;
+      // Display the item name, text, and image
+      document.getElementById("itemName").textContent = itemName;
+      document.getElementById("itemText").textContent = itemText;
+      document.getElementById(
+        "itemImage"
+      ).innerHTML = `<img src="${decodeURIComponent(
+        itemImage
+      )}" alt="${itemName}" />`;
     </script>
   </body>
 </html>

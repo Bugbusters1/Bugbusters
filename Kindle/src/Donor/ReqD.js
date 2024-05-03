@@ -24,8 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       name: "Stethoscope",
       quantity: 20,
-      description:
-        "A device for listening to the internal sounds of the body.",
+      description: "A device for listening to the internal sounds of the body.",
       image: "../assets/img/items/Stethoscope.png",
       category: "Medical Supplies",
       medicalCategory: "devices",
@@ -85,8 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       name: "Stationery Set",
       quantity: 12,
-      description:
-        "Includes pens, pencils and other essentials for school.",
+      description: "Includes pens, pencils and other essentials for school.",
       image: "../assets/img/items/Stationery Set.png",
       category: "School Supplies",
       itemType: "stationary",
@@ -836,7 +834,11 @@ document.addEventListener("DOMContentLoaded", function () {
               }</p>
               <a href="./PopUp.html?itemText=${encodeURIComponent(
                 item.text
-              )}" style="text-decoration: none;">
+              )}&itemName=${encodeURIComponent(
+          item.name
+        )}&itemImage=${encodeURIComponent(
+          item.image
+        )}" style="text-decoration: none;">
       <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
     </a>
                </a>

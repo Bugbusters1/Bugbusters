@@ -73,6 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
               <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.subject}</h2><br>
               <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.area}</h2><br>
               <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.governorate}</h2><br>
+              <a href="./PopUp.html2?itemText=${encodeURIComponent(
+                item.text
+              )}" style="text-decoration: none;">
+      <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
+    </a>
           `;
 
       PostContainer.appendChild(itemCard);
@@ -94,6 +99,11 @@ document.addEventListener("DOMContentLoaded", function () {
         <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.subject}</h2><br>
         <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.area}</h2><br>
         <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.governorate}</h2><br>
+        <a href="./PopUp.html2?itemText=${encodeURIComponent(
+          item.text
+        )}" style="text-decoration: none;">
+<button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
+</a>
       `;
         resultsContainer.appendChild(itemElement);
       });

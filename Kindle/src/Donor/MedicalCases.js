@@ -9,6 +9,7 @@ let Cases = [
     governorate: "all",
     specialty: "dentist",
     organization: "ain",
+    text: "d",
   },
   {
     name: "two",
@@ -16,6 +17,7 @@ let Cases = [
     governorate: "cairo",
     specialty: "surgeon",
     organization: "damascus",
+    text: "d",
   },
   {
     name: "three",
@@ -23,6 +25,7 @@ let Cases = [
     governorate: "giza",
     specialty: "pediatrics",
     organization: "radiology",
+    text: "d",
   },
   {
     name: "four",
@@ -30,6 +33,7 @@ let Cases = [
     governorate: "giza",
     specialty: "hematologist",
     organization: "medical",
+    text: "d",
   },
   {
     name: "five",
@@ -37,6 +41,7 @@ let Cases = [
     governorate: "cairo",
     subject: "hematologist",
     organization: "damascus",
+    text: "d",
   },
 ];
 
@@ -79,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.subject}</h2><br>
               <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.area}</h2><br>
               <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.governorate}</h2><br>
+              
           `;
 
       PostContainer.appendChild(itemCard);
@@ -101,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.area}</h2><br>
         <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.governorate}</h2><br>
         <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.organization}</h2><br>
+       
       `;
         resultsContainer.appendChild(itemElement);
       });
