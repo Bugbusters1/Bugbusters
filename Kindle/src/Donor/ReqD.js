@@ -873,10 +873,10 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="./PopUp.html?itemText=${encodeURIComponent(
                 item.text
               )}&itemName=${encodeURIComponent(
-        item.name
-      )}&itemImage=${encodeURIComponent(
-        item.image
-      )}" style="text-decoration: none;">
+          item.name
+        )}&itemImage=${encodeURIComponent(
+          item.image
+        )}" style="text-decoration: none;">
     <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
   </a>
              </a>
