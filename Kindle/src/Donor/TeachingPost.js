@@ -5,8 +5,7 @@ let img = "../assets/img/items/pov2.jpg";
 let posts = [
   {
     name: "Biology Teacher",
-    description:
-      "Description: Biology teacher with a passion for teaching and a strong background in the biology field.",
+    description:"Description: Biology teacher with a passion for teaching and a strong background in the biology field.",
     area: "dokki",
     governorate: "cairo",
     subject: "science",
@@ -90,15 +89,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       itemCard.innerHTML = `
               <img src="../assets/img/items/pov2.jpg" alt="Doctor" />
-              <h2 style="color:#0c0f1d;font-size:28px;text-align:center">${
-                post.name
-              }</h2>
-              <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${
-                post.description
-              }</h2><br>
-              <a href="./PopUp2.html?itemText=${encodeURIComponent(
-                post.text
-              )}&itemImage=${encodeURIComponent(img)}">
+              <h2 style="color:#0c0f1d;font-size:28px;text-align:center">${post.name
+        }</h2>
+              <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${post.description
+        }</h2><br>
+              <a href="./PopUp3.html?itemText=${encodeURIComponent(
+          post.text
+        )}&itemImage=${encodeURIComponent(img)}">
               <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
               </a>
           `;
@@ -119,15 +116,14 @@ document.addEventListener("DOMContentLoaded", function () {
         itemElement.classList.add("item-card");
         itemElement.innerHTML = `
         <img src="../assets/img/items/pov2.jpg" alt="Doctor" />
-        <h2 style="color:#0c0f1d;font-size:28px;text-align:center">${
-          post.name
-        }</h2>
-        <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${
-          post.description
-        }</h2><br>
-        <a href="./PopUp2.html?itemText=${encodeURIComponent(
-          post.text
-        )}" style="text-decoration: none;">
+        <h2 style="color:#0c0f1d;font-size:28px;text-align:center">${post.name
+          }</h2>
+        <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${post.description
+          }</h2><br>
+        <a href="./PopUp3.html?itemText=${encodeURIComponent(
+            post.text
+          )}&itemImage=${encodeURIComponent(img)}">"
+           style="text-decoration: none;">
 <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
 </a>
       `;
