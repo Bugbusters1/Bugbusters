@@ -3,34 +3,46 @@ let CurrArea = "all";
 let CurrGovernorate = "all";
 let posts = [
   {
-    name: "one",
-    area: "all",
-    governorate: "all",
-    subject: "all",
+    name: "Biology Teacher",
+    description:"Description: Biology teacher with a passion for teaching and a strong background in the biology field.",
+    area: "dokki",
+    governorate: "cairo",
+    subject: "science",
   },
   {
-    name: "two",
+    name: "Mathematics Teacher",
+    description:"Description: Dynamic mathematics teacher experienced in creating engaging lesson plans and fostering a positive learning environment. ",
     area: "fifth",
     governorate: "cairo",
     subject: "math",
   },
   {
-    name: "three",
+    name: "English Literature Instructor",
+    description:"Description: English literature instructor with a passion for teaching and a strong background in the English language.",
     area: "zayed",
     governorate: "giza",
     subject: "english",
   },
   {
-    name: "four",
+    name: "Science Educator",
+    description:"Description: Science educator with a passion for teaching and a strong background in the science field.",
     area: "octobor",
     governorate: "giza",
     subject: "science",
   },
   {
-    name: "five",
+    name: "History Teacher",
+    description:"Description: History teacher with a passion for teaching and a strong background in the history field.",
     area: "downtown",
     governorate: "cairo",
     subject: "history",
+  },
+  {
+    name: "Physics Teacher",
+    description:"Description: Physics teacher with a passion for teaching and a strong background in the physics field.",
+    area: "downtown",
+    governorate: "cairo",
+    subject: "science",
   },
 ];
 
@@ -69,12 +81,11 @@ document.addEventListener("DOMContentLoaded", function () {
       itemCard.classList.add("item-card");
 
       itemCard.innerHTML = `
-              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.name}</h2><br>
-              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.subject}</h2><br>
-              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.area}</h2><br>
-              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.governorate}</h2><br>
-              <a href="./PopUp.html2?itemText=${encodeURIComponent(
-                post.name
+              <img src="../assets/img/items/pov2.jpg" alt="Doctor" />
+              <h2 style="color:#0c0f1d;font-size:28px;text-align:center">${post.name}</h2>
+              <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${post.description}</h2><br>
+              <a href="./PopUp2.html?itemText=${encodeURIComponent(
+                post.text
               )}">
               <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
               </a>
@@ -95,12 +106,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const itemElement = document.createElement("div");
         itemElement.classList.add("item-card");
         itemElement.innerHTML = `
-        <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.name}</h2><br>
-        <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.subject}</h2><br>
-        <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.area}</h2><br>
-        <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.governorate}</h2><br>
-        <a href="./PopUp.html2?itemText=${encodeURIComponent(
-          item.text
+        <img src="../assets/img/items/pov2.jpg" alt="Doctor" />
+        <h2 style="color:#0c0f1d;font-size:28px;text-align:center">${post.name}</h2>
+        <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${post.description}</h2><br>
+        <a href="./PopUp2.html?itemText=${encodeURIComponent(
+          post.text
         )}" style="text-decoration: none;">
 <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
 </a>

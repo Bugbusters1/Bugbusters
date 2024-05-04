@@ -4,44 +4,59 @@ let CurrGovernorate = "all";
 let CurrArea = "all";
 let Cases = [
   {
-    name: "one",
+    name: "Emergency Surgery for Child",
+    Description:"Description:A 5-year-old child requires urgent surgery due to appendicitis.",
     area: "heliopolis",
     governorate: "all",
     specialty: "dentist",
     organization: "ain",
-    text: "d",
+    text: "A 5-year-old child named Sarah requires urgent surgery due to appendicitis. Sarah's health is at risk without immediate intervention. Donations are crucial to cover the surgical expenses and post-operative care needed for Sarah's recovery. Your support will ensure Sarah receives the necessary medical attention to overcome this life-threatening condition.",
   },
   {
-    name: "two",
+    name: "Elderly Patient in Need of Dialysis",
+    Description:"Description:Elderly patient diagnosed with kidney failure requires treatment.",
     area: "fifth",
     governorate: "cairo",
     specialty: "surgeon",
     organization: "damascus",
-    text: "d",
+    text: "John Smith, an elderly patient diagnosed with kidney failure, relies on regular dialysis treatment to sustain his health. Donations will support John's ongoing dialysis sessions and provide essential medical supplies. Your contribution will make a significant difference in ensuring John's continued access to life-saving dialysis treatment.",
   },
   {
-    name: "three",
+    name: "Pediatric Cancer Treatment",
+    Description:"Description:A 10-year-old child with cancer requires treatment.",
     area: "dokki",
     governorate: "giza",
     specialty: "pediatrics",
     organization: "radiology",
-    text: "d",
+    text: "Emily, a young patient diagnosed with leukemia, is in need of chemotherapy and supportive care. Donations will assist in covering the medical expenses associated with Emily's treatment and provide support to her family during this challenging time. Your generosity will help provide Emily with the necessary resources to fight cancer and improve her chances of recovery.",
   },
   {
-    name: "four",
+    name: "Emergency Medical Aid",
+    Description:"Description: A refugee camp in the middle of the desert needs medical aid.",
     area: "octobor",
     governorate: "giza",
     specialty: "hematologist",
     organization: "medical",
-    text: "d",
+    text: "Urgent medical aid is required for refugees in a camp facing an outbreak of infectious diseases. Donations will provide essential medical supplies, vaccines, and healthcare services to prevent the spread of disease and save lives. Your support will make a significant impact on the health and well-being of vulnerable populations in the refugee camp.",
   },
   {
-    name: "five",
+    name: "Maternal Health Initiative",
+    Description:"Description: A pregnant woman in a remote area needs medical care.",
     area: "downtown",
     governorate: "cairo",
     subject: "hematologist",
     organization: "damascus",
-    text: "d",
+    text: "A community-based initiative is dedicated to improving maternal health by offering prenatal care, safe childbirth services, and postnatal support to pregnant women in rural areas. Donations will help ensure access to essential maternal healthcare services, reducing maternal mortality rates and promoting healthy pregnancies and childbirth outcomes. Your contribution will empower women and families with access to quality healthcare services.",
+  },
+  //copied
+  {
+    name: "Surgery for Accident Victim",
+    Description:"Description: An accident victim needs orthopedic surgery.",
+    area: "dokki",
+    governorate: "cairo",
+    subject: "hematologist",
+    organization: "damascus",
+    text: "Michael Anderson, a young adult involved in a serious accident, sustained multiple fractures and requires orthopedic surgery for recovery. Donations will cover the surgical costs and rehabilitation expenses necessary for Michael's recovery journey. Your support will aid in restoring Michael's mobility and quality of life following this traumatic event.",
   },
 ];
 
@@ -79,12 +94,15 @@ document.addEventListener("DOMContentLoaded", function () {
       const itemCard = document.createElement("div");
       itemCard.classList.add("item-card");
 
-      itemCard.innerHTML = `
-              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.name}</h2><br>
-              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.subject}</h2><br>
-              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.area}</h2><br>
-              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.governorate}</h2><br>
-              
+      itemCard.innerHTML = ` <img src="../assets/img/items/pov1.jpg" alt="Doctor" />
+      <h2 style="color:#0c0f1d;font-size:28px;text-align:center">${post.name}</h2>
+        <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${post.Description}</h2><br>
+       
+      <a href="./PopUp2.html?itemText=${encodeURIComponent(
+        post.text
+      )}" style="text-decoration: none;">
+      <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
+</a>
           `;
 
       PostContainer.appendChild(itemCard);
@@ -101,13 +119,15 @@ document.addEventListener("DOMContentLoaded", function () {
       results.forEach((post) => {
         const itemElement = document.createElement("div");
         itemElement.classList.add("item-card");
-        itemElement.innerHTML = `
-        <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.name}</h2><br>
-        <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.specialty}</h2><br>
-        <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.area}</h2><br>
-        <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.governorate}</h2><br>
-        <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.organization}</h2><br>
-       
+        itemElement.innerHTML = `<img src="../assets/img/items/pov1.jpg" alt="Doctor" />
+        <h2 style="color:#0c0f1d;font-size:28px;text-align:center">${post.name}</h2>
+        <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${post.Description}</h2><br>
+        
+        <a href="./PopUp2.html?itemText=${encodeURIComponent(
+          post.text
+        )}" style="text-decoration: none;">
+        <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
+        </a>
       `;
         resultsContainer.appendChild(itemElement);
       });

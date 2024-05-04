@@ -50,21 +50,37 @@
 			</div>
 
 			<ul class="list-unstyled menu-elements">
-				<li>
-					<a class="scroll-link" href="OrganizationHome.html"><i class="fas fa-home"></i> Home</a>
-				</li>
-                <li>
-					<a class="scroll-link" href="NewPost.html"><i class="fas fa-pencil-alt"></i> New Post</a>
-				</li>
-                <li>
-					<a class="scroll-link" href="MyPosts.html"><i class="fas fa-book-open"></i> My Posts</a>
-				</li>
-                <li>
-					<a class="scroll-link" href="FulfilledDonations.html"><i class="fas fa-hand-holding-heart"></i> Fulfilled Donations</a>
-				</li>
 				<li class="active">
-					<a class="scroll-link active" href="#"><i class="fas fa-cog"></i>Account Settings</a>
-				</li>
+                    <a href="../DonorPage.html"><i class="fas fa-home"></i> Home</a>
+                  </li>
+                  <li>
+                    <a class="Sidebar" href="../Donor/ReqD.html"
+                      ><i class="fas fa-cog"></i> Requested Donations</a
+                    >
+                  </li>
+                  <li>
+                    <a  href="../Donor/Volunteer.html"
+                      ><i class="fas fa-user"></i> Volunteer</a
+                    >
+                  </li>
+                  <li>
+                    <a href="../Donor/TeachingPosts.html"
+                      ><i class="fas fa-pencil-alt"></i> Teaching Posts</a
+                    >
+                  </li>
+                  <li>
+                    <a  href="../Donor/MedicalCases.html"
+                      ><i class="fas fa-envelope"></i> Medical Cases</a
+                    >
+                  </li>
+                  <li>
+                    <a  href="../Donor/Donations.html"><i class="fas fa-cog"></i> My Donations</a>
+                  </li>
+                  <li>
+                    <a  href="../Donor/AccountSettings.html"
+                      ><i class="fas fa-cog"></i>Account Settings</a
+                    >
+                  </li>
 			</ul>
 
 			
@@ -125,14 +141,14 @@
                         <div class="account-settings">
                             <div class="user-profile">
                                 <div class="user-avatar">
-                                    <img src="./assets/img/avatars/pngwing.com.png" alt="Organization Avatar">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Maxwell Admin">
                                 </div>
-                                <h5 class="user-name">Hope Harbor</h5>
-                                <h6 class="user-email">HopeHarbor@example.com</h6>
+                                <h5 class="user-name">John Doe</h5>
+                                <h6 class="user-email">JohnDoe@example.com</h6>
                             </div>
                             <div class="about">
                                 <h5 class="mb-2 text-primary">About</h5>
-                                <p>Hope Harbor is a non-profit organization dedicated to providing educational opportunities to underserved communities worldwide.</p>
+                                <p>I'm John. Full Stack Designer I enjoy creating user-centric, delightful and human experiences.</p>
                             </div>
                         </div>
                     </div>
@@ -147,14 +163,14 @@
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
-                                    <label for="fullName">Organization Name</label>
-                                    <input type="text" class="form-control" id="fullName" value="Hope Harbor">
+                                    <label for="fullName">Name</label>
+                                    <input type="text" class="form-control" id="fullName" value="John Doe">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-group">
                                     <label for="eMail">Email</label>
-                                    <input type="email" class="form-control" id="eMail" value="HopeHarbor@example.com">
+                                    <input type="email" class="form-control" id="eMail" value=" JohnDoe@example.com">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
@@ -163,12 +179,7 @@
                                     <input type="text" class="form-control" id="phone" value="+20123456789">
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="form-group">
-                                    <label for="website">Website URL</label>
-                                    <input type="url" class="form-control" id="website" placeholder="Website url">
-                                </div>
-                            </div>
+                            
                         </div>
                         <div class="row gutters">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -274,7 +285,7 @@
     <script src="../assets/js/jquery.waypoints.min.js"></script>
     <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../assets/js/scripts.js"></script>    
-    <script src="./sideBarButtons.js"></script>
+    <script src="../Organization/sideBarButtons.js"></script>
     <script>
 
         document.getElementById("updateSubmit").addEventListener("click", function() {
