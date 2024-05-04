@@ -1,36 +1,42 @@
 let CurrOrganization = "all";
 let CurrArea = "all";
 let CurrGovernorate = "all";
+let img = "../assets/img/items/pov1.jpg";
 let posts = [
   {
     name: "one",
     area: "all",
     governorate: "all",
     Organization: "all",
+    text: "d",
   },
   {
     name: "two",
     area: "fifth",
     governorate: "cairo",
     Organization: "ain",
+    text: "d",
   },
   {
     name: "three",
     area: "zayed",
     governorate: "giza",
     Organization: "damascus",
+    text: "d",
   },
   {
     name: "four",
     area: "octobor",
     governorate: "giza",
     Organization: "radiology",
+    text: "d",
   },
   {
     name: "five",
     area: "downtown",
     governorate: "cairo",
     Organization: "medical",
+    text: "d",
   },
 ];
 
@@ -61,19 +67,21 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   function displayItems() {
     const PostContainer = document.getElementById("CasesContainer");
-
-    alert(posts);
     PostContainer.innerHTML = "";
     posts.forEach((post) => {
       const itemCard = document.createElement("div");
       itemCard.classList.add("item-card");
 
-      itemCard.innerHTML = `
-              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.name}</h2><br>
-              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.Organization}</h2><br>
-              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.area}</h2><br>
-              <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.governorate}</h2><br>
-              
+      itemCard.innerHTML = ` <img src="../assets/img/items/pov1.jpg" alt="Doctor" />
+    
+          <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${
+            (post.Organization, post.governorate, post.name)
+          }</h2><br>
+      <a href="./PopUp4.html?itemText=${encodeURIComponent(
+        post.text
+      )}&itemImage=${encodeURIComponent(img)}" style="text-decoration: none;">
+      <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
+</a>
           `;
 
       PostContainer.appendChild(itemCard);
@@ -90,13 +98,18 @@ document.addEventListener("DOMContentLoaded", function () {
       results.forEach((post) => {
         const itemElement = document.createElement("div");
         itemElement.classList.add("item-card");
-        itemElement.innerHTML = `
-        <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.name}</h2><br>
-        <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.Organization}</h2><br>
-        <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.area}</h2><br>
-        <h2 style="color:#0c0f1d;font-size:36px;text-align:center">${post.governorate}</h2><br>
-
-      `;
+        itemElement.innerHTML = ` <img src="../assets/img/items/pov1.jpg" alt="Doctor" />
+          <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${
+            (post.Organization, post.governorate, post.name)
+          }</h2><br>
+        
+         
+        <a href="./PopUp4.html?itemText=${encodeURIComponent(
+          post.text
+        )}&itemImage=${encodeURIComponent(img)}" style="text-decoration: none;">
+        <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
+  </a>
+            `;
         resultsContainer.appendChild(itemElement);
       });
       resultsContainer.style.display = "flex";
