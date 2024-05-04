@@ -1,6 +1,7 @@
 let CurrSubject = "all";
 let CurrArea = "all";
 let CurrGovernorate = "all";
+let img = "../assets/img/items/pov2.jpg";
 let posts = [
   {
     name: "Biology Teacher",
@@ -77,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     displayResults(results);
   }
-  let img = "../assets/img/items/pov2.jpg";
+
   function displayItems() {
     const PostContainer = document.getElementById("PostContainer");
 

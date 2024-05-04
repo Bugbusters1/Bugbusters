@@ -2,6 +2,7 @@ let CurrSpecialty = "all";
 let CurrOrganization = "all";
 let CurrGovernorate = "all";
 let CurrArea = "all";
+let img = "../assets/img/items/pov1.jpg";
 let Cases = [
   {
     name: "Emergency Surgery for Child",
@@ -90,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     displayResults(results);
   }
-  let img = "../assets/img/items/pov1.jpg";
+
   function displayItems() {
     const PostContainer = document.getElementById("CasesContainer");
 
