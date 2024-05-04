@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         <a href="./PopUp2.html?itemText=${encodeURIComponent(
           post.text
-        )}" style="text-decoration: none;">
+        )}&itemImage=${encodeURIComponent(img)}" style="text-decoration: none;">
         <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
         </a>
       `;
