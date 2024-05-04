@@ -4,35 +4,48 @@ let CurrGovernorate = "all";
 let img = "../assets/img/items/pov1.jpg";
 let posts = [
   {
-    name: "one",
+    name: "Hope for Tomorrow Foundation",
+    description:"Description:Providing essentials to underprivileged communities",
     area: "all",
     governorate: "all",
     Organization: "all",
-    text: "d",
+    text: "",
   },
   {
-    name: "two",
+    name: "Unity in Diversity Outreach",
+    description:"Description: Fostering equality through community engagement",
     area: "fifth",
     governorate: "cairo",
     Organization: "ain",
     text: "d",
   },
   {
-    name: "three",
+    name: "Compassionate Hearts Relief",
+    description:"Description: Providing humanitarian aid  to vulnerable populations.",
     area: "zayed",
     governorate: "giza",
     Organization: "damascus",
     text: "d",
   },
   {
-    name: "four",
+    name: "Healing Hands Medical Outreach",
+    description:"Description: Providing medical care and treatment to those in need.",
     area: "octobor",
     governorate: "giza",
     Organization: "radiology",
     text: "d",
   },
   {
-    name: "five",
+    name: "Brighter Futures Initiative",
+    description:"Description: Providing education and training to youth and young adults.",
+    area: "downtown",
+    governorate: "cairo",
+    Organization: "Description: medical",
+    text: "d",
+  },
+  {
+    name: "Sheltering Hope Foundation",
+    description:"Description: Offering  support to individuals experiencing homelessness.",
     area: "downtown",
     governorate: "cairo",
     Organization: "medical",
@@ -72,11 +85,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const itemCard = document.createElement("div");
       itemCard.classList.add("item-card");
 
-      itemCard.innerHTML = ` <img src="../assets/img/items/pov1.jpg" alt="Doctor" />
+      itemCard.innerHTML = ` <img src="../assets/img/items/og.png" alt="Doctor" />
     
           <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${
-            (post.Organization, post.governorate, post.name)
+            ( post.name)
           }</h2><br>
+          <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${
+            ( post.description)
+          }</h2>
       <a href="./PopUp4.html?itemText=${encodeURIComponent(
         post.text
       )}&itemImage=${encodeURIComponent(img)}" style="text-decoration: none;">
@@ -98,10 +114,13 @@ document.addEventListener("DOMContentLoaded", function () {
       results.forEach((post) => {
         const itemElement = document.createElement("div");
         itemElement.classList.add("item-card");
-        itemElement.innerHTML = ` <img src="../assets/img/items/pov1.jpg" alt="Doctor" />
-          <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${
-            (post.Organization, post.governorate, post.name)
-          }</h2><br>
+        itemElement.innerHTML = ` <img src="../assets/img/items/og.png" alt="Doctor" />
+        <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${
+          ( post.name)
+        }</h2><br>
+        <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${
+          ( post.description)
+        }</h2>
         
          
         <a href="./PopUp4.html?itemText=${encodeURIComponent(

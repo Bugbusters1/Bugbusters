@@ -5,7 +5,7 @@ let img = "../assets/img/items/pov2.jpg";
 let posts = [
   {
     name: "Biology Teacher",
-    description:"Description: Biology teacher with a passion for teaching and a strong background in the biology field.",
+    description: "Description: Biology teacher with a passion for teaching in the biology field.",
     area: "dokki",
     governorate: "cairo",
     subject: "science",
@@ -13,7 +13,7 @@ let posts = [
   {
     name: "Mathematics Teacher",
     description:
-      "Description: Dynamic mathematics teacher experienced in creating engaging lesson plans and fostering a positive learning environment. ",
+      "Description: Maths teacher experienced in creating engaging lesson plans. ",
     area: "fifth",
     governorate: "cairo",
     subject: "math",
@@ -21,7 +21,7 @@ let posts = [
   {
     name: "English Literature Instructor",
     description:
-      "Description: English literature instructor with a passion for teaching and a strong background in the English language.",
+      "Description: English  instructor with a passion for teaching English.",
     area: "zayed",
     governorate: "giza",
     subject: "english",
@@ -29,7 +29,7 @@ let posts = [
   {
     name: "Science Educator",
     description:
-      "Description: Science educator with a passion for teaching and a strong background in the science field.",
+      "Description: Science educator with a strong background in the science field.",
     area: "octobor",
     governorate: "giza",
     subject: "science",
@@ -37,7 +37,7 @@ let posts = [
   {
     name: "History Teacher",
     description:
-      "Description: History teacher with a passion for teaching and a strong background in the history field.",
+      "Description: History teacher with a strong background in the history field.",
     area: "downtown",
     governorate: "cairo",
     subject: "history",
@@ -45,7 +45,7 @@ let posts = [
   {
     name: "Physics Teacher",
     description:
-      "Description: Physics teacher with a passion for teaching and a strong background in the physics field.",
+      "Description: Physics teacher with a strong background in the physics field.",
     area: "downtown",
     governorate: "cairo",
     subject: "science",
@@ -116,15 +116,13 @@ document.addEventListener("DOMContentLoaded", function () {
         itemElement.classList.add("item-card");
         itemElement.innerHTML = `
         <img src="../assets/img/items/pov2.jpg" alt="Doctor" />
-        <h2 style="color:#0c0f1d;font-size:28px;text-align:center">${
-          post.name
-        }</h2>
-        <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${
-          post.description
-        }</h2><br>
-        <a href="./PopUp2.html?itemText=${encodeURIComponent(
-          post.text
-        )}&itemImage=${encodeURIComponent(img)}" style="text-decoration: none;">
+        <h2 style="color:#0c0f1d;font-size:28px;text-align:center">${post.name
+          }</h2>
+        <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${post.description
+          }</h2><br>
+        <a href="./PopUp3.html?itemText=${encodeURIComponent(
+            post.text
+          )}&itemImage=${encodeURIComponent(img)}" style="text-decoration: none;">
 <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
 </a>
       `;
