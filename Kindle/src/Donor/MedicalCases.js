@@ -5,7 +5,8 @@ let CurrArea = "all";
 let Cases = [
   {
     name: "Emergency Surgery for Child",
-    Description:"Description:A 5-year-old child requires urgent surgery due to appendicitis.",
+    Description:
+      "Description:A 5-year-old child requires urgent surgery due to appendicitis.",
     area: "heliopolis",
     governorate: "all",
     specialty: "dentist",
@@ -14,7 +15,8 @@ let Cases = [
   },
   {
     name: "Elderly Patient in Need of Dialysis",
-    Description:"Description:Elderly patient diagnosed with kidney failure requires treatment.",
+    Description:
+      "Description:Elderly patient diagnosed with kidney failure requires treatment.",
     area: "fifth",
     governorate: "cairo",
     specialty: "surgeon",
@@ -23,7 +25,8 @@ let Cases = [
   },
   {
     name: "Pediatric Cancer Treatment",
-    Description:"Description:A 10-year-old child with cancer requires treatment.",
+    Description:
+      "Description:A 10-year-old child with cancer requires treatment.",
     area: "dokki",
     governorate: "giza",
     specialty: "pediatrics",
@@ -32,7 +35,8 @@ let Cases = [
   },
   {
     name: "Emergency Medical Aid",
-    Description:"Description: A refugee camp in the middle of the desert needs medical aid.",
+    Description:
+      "Description: A refugee camp in the middle of the desert needs medical aid.",
     area: "octobor",
     governorate: "giza",
     specialty: "hematologist",
@@ -41,7 +45,8 @@ let Cases = [
   },
   {
     name: "Maternal Health Initiative",
-    Description:"Description: A pregnant woman in a remote area needs medical care.",
+    Description:
+      "Description: A pregnant woman in a remote area needs medical care.",
     area: "downtown",
     governorate: "cairo",
     subject: "hematologist",
@@ -51,7 +56,7 @@ let Cases = [
   //copied
   {
     name: "Surgery for Accident Victim",
-    Description:"Description: An accident victim needs orthopedic surgery.",
+    Description: "Description: An accident victim needs orthopedic surgery.",
     area: "dokki",
     governorate: "cairo",
     subject: "hematologist",
@@ -85,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     displayResults(results);
   }
+  let img = "../assets/img/items/pov1.jpg";
   function displayItems() {
     const PostContainer = document.getElementById("CasesContainer");
 
@@ -95,12 +101,16 @@ document.addEventListener("DOMContentLoaded", function () {
       itemCard.classList.add("item-card");
 
       itemCard.innerHTML = ` <img src="../assets/img/items/pov1.jpg" alt="Doctor" />
-      <h2 style="color:#0c0f1d;font-size:28px;text-align:center">${post.name}</h2>
-        <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${post.Description}</h2><br>
+      <h2 style="color:#0c0f1d;font-size:28px;text-align:center">${
+        post.name
+      }</h2>
+        <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${
+          post.Description
+        }</h2><br>
        
       <a href="./PopUp2.html?itemText=${encodeURIComponent(
         post.text
-      )}" style="text-decoration: none;">
+      )}&itemImage=${encodeURIComponent(img)}" style="text-decoration: none;">
       <button class="details-button" id="details-button" style="background-color: #222024;">More Details</button>
 </a>
           `;
@@ -120,8 +130,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const itemElement = document.createElement("div");
         itemElement.classList.add("item-card");
         itemElement.innerHTML = `<img src="../assets/img/items/pov1.jpg" alt="Doctor" />
-        <h2 style="color:#0c0f1d;font-size:28px;text-align:center">${post.name}</h2>
-        <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${post.Description}</h2><br>
+        <h2 style="color:#0c0f1d;font-size:28px;text-align:center">${
+          post.name
+        }</h2>
+        <h2 style="color:#0c0f1d;font-size:24px;text-align:center">${
+          post.Description
+        }</h2><br>
         
         <a href="./PopUp2.html?itemText=${encodeURIComponent(
           post.text
