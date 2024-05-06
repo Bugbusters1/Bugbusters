@@ -100,7 +100,7 @@
 			</a>
 			
 			<!-- Section for viewing details of fulfilled donation posts -->
-<div class="section-7-container section-container section-container-image-bg" id="section-7">
+<div class="section-7-container section-container" id="section-7">
     <div class="container">
         <div class="row">
             <div class="col section-7 section-description wow fadeIn">
@@ -193,6 +193,66 @@
                                     <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <span class="donor-name">Elena Garcia</span>
+                                    <!-- Button to access donor details -->
+                                    <button class="btn btn-sm btn-primary view-donor-details-btn" data-donor-details='{"name": "Elena Garcia", "occupation": "Nurse", "email": "elena.garcia@example.com", "phone": "+1234567890"}'><i class="fas fa-eye"></i>View Donor</button>
+                                </td>
+                                <td>Medical Supplies</td>
+                                <td>Gauze, adhesive bandages</td>
+                                <td>2024-04-15</td>
+                                <td>
+                                    <!-- Add buttons or links for further actions -->
+                                    <button class="btn btn-success"><i class="fas fa-check"></i>Acknowledge</button>
+                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="donor-name">Carlos Martinez</span>
+                                    <!-- Button to access donor details -->
+                                    <button class="btn btn-sm btn-primary view-donor-details-btn" data-donor-details='{"name": "Carlos Martinez", "occupation": "Doctor", "email": "carlos.martinez@example.com", "phone": "+1234567890"}'><i class="fas fa-eye"></i>View Donor</button>
+                                </td>
+                                <td>First Aid Supplies</td>
+                                <td>Antiseptic wipes, gloves</td>
+                                <td>2024-04-12</td>
+                                <td>
+                                    <!-- Add buttons or links for further actions -->
+                                    <button class="btn btn-success"><i class="fas fa-check"></i>Acknowledge</button>
+                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="donor-name">Jessica Lopez</span>
+                                    <!-- Button to access donor details -->
+                                    <button class="btn btn-sm btn-primary view-donor-details-btn" data-donor-details='{"name": "Jessica Lopez", "occupation": "Nurse", "email": "jessica.lopez@example.com", "phone": "+1234567890"}'><i class="fas fa-eye"></i>View Donor</button>
+                                </td>
+                                <td>Food</td>
+                                <td>Dry goods, vegetables</td>
+                                <td>2024-04-10</td>
+                                <td>
+                                    <!-- Add buttons or links for further actions -->
+                                    <button class="btn btn-success"><i class="fas fa-check"></i>Acknowledge</button>
+                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="donor-name">Gabriel Fernandez</span>
+                                    <!-- Button to access donor details -->
+                                    <button class="btn btn-sm btn-primary view-donor-details-btn" data-donor-details='{"name": "Gabriel Fernandez", "occupation": "Teacher", "email": "gabriel.fernandez@example.com", "phone": "+1234567890"}'><i class="fas fa-eye"></i>View Donor</button>
+                                </td>
+                                <td>Hygiene Products</td>
+                                <td>Soap, toothpaste, shampoo</td>
+                                <td>2024-04-08</td>
+                                <td>
+                                    <!-- Add buttons or links for further actions -->
+                                    <button class="btn btn-success"><i class="fas fa-check"></i>Acknowledge</button>
+                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
+                                </td>
+                            </tr>                            
                             <!-- Add more rows as needed -->
                         </tbody>
                     </table>
@@ -401,19 +461,19 @@
 <style>
     /* CSS for the table */
 .table {
-    color: #333333;
-    background-color: #FFFDD0;
-    margin-bottom: 50px;
+    color: #FCFAF0;
+    background-color: #222024;
+    border: 1px solid #222024;
 }
 
 /* CSS for table headers */
 .table thead th {
-    color: #333333;
+    color: white;
 }
 
 /* CSS for table rows */
 .table tbody td {
-    color: #333333;
+    color: white;
 }
 /* CSS to position the button next to the donor name */
 .donor-name {
