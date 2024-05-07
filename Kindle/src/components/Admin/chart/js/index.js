@@ -7,13 +7,13 @@ var options1 = {
     id: "chart2",
     type: "area",
     height: 230,
-    foreColor: "#ccc",
+    foreColor: "#a7a69f",
     toolbar: {
       autoSelected: "pan",
       show: false
     }
   },
-  colors: ["#6d9771"],
+  colors: ["#98A5E9"],
   stroke: {
     width: 3
   },
@@ -39,7 +39,7 @@ var options1 = {
   markers: {
     size: 5,
     colors: ["#000524"],
-    strokeColor: "#6d9771",
+    strokeColor: "#98A5E9",
     strokeWidth: 3
   },
   series: [
@@ -84,7 +84,7 @@ var options2 = {
     id: "chart1",
     height: 130,
     type: "bar",
-    foreColor: "#ccc",
+    foreColor: "#a7a69f",
     brush: {
       target: "chart2",
       enabled: true

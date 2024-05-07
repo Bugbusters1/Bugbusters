@@ -1,0 +1,283 @@
+:root {
+  --primary-color: #3a5efd;
+  --primary-hover-color: #3d5adb;
+  --header-color: #0c0f1d;
+  --background-color: #FCFAF0;
+  --container-background-color: #333;
+  --form-background-color: #444;
+  --border-color: #8096f4;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --text-color: #0c0f1d;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+.containerView {
+  max-width: 1500px;
+  margin: 20px auto;
+  padding: 20px;
+  
+  border-radius: 8px;
+  
+  background: none;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+h1 {
+  text-align: center;
+  color: var(--header-color);
+}
+
+.item-card {
+  flex: 0 0 465px; /* Each item card takes up one-third of the container width with a margin between them */
+  margin: 10px; /* Adjust the margin between item cards */
+  width: 500px;
+  height:500px;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding and border in the total width */
+  box-shadow: 0 0 10px var(--box-shadow-color);
+  background:none;
+}
+
+@media (max-width: 768px) {
+  .item-card {
+    flex: 1 1 100%; /* Each item takes up full width on smaller screens */
+  }
+}
+
+.item-card img {
+  width:300px;
+  height:200px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.item-card h2 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.item-card p {
+  margin-bottom: 10px;
+}
+
+.item-card button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.item-card button:hover {
+  background-color: var(--primary-hover-color);
+}
+
+.search-bar {
+  margin-bottom: 20px;
+  background-color: var(--background-color);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.search-bar input[type="text"] {
+  width: calc(100% - 100px);
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.search-bar input[type="submit"] {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-bar input[type="submit"]:hover {
+  background-color: var(--primary-hover-color);
+}
+** Sidebar **/ .sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -255px;
+  z-index: 999;
+  background: #333;
+  color: #fff;
+  transition: all 0.3s;
+  box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.5);
+  text-align: left;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.dismiss {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: all 0.3s;
+  background: #444;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+}
+
+.dismiss:hover,
+.dismiss:focus {
+  background: #555;
+  color: #fff;
+}
+
+.container-input {
+  position: relative;
+}
+
+.input {
+  width: 150px;
+  padding: 10px 0px 10px 40px;
+  border-radius: 9999px;
+  border: solid 1px #333;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  opacity: 0.8;
+}
+
+.container-input svg {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+}
+
+.input:focus {
+  opacity: 1;
+  width: 250px;
+}
+.buttons {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.container-input {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+.input {
+  margin-right: 5px; /* Adjust margin as needed */
+}
+.center-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.top-content {
+  height: 370px; /* Set the desired height */
+}
+#filterInputs {
+  display: flex;
+  align-items: center;
+}
+
+#filterInputs label {
+  margin-right: 10px;
+}
+
+.age-inputs {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.age-inputs input {
+  width: 50px; /* Adjust width as needed */
+}
+
+
+.dropdown-item:hover{
+  background-color: black;
+}
+
+.card {
+  width: 500px;
+  height: 600px;
+  background: #FFF7E4;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.popup-container {
+    position: fixed; /* Change from fixed to absolute */
+    top: 50%; /* Center the popup vertically */
+    left: 50%; /* Center the popup horizontally */
+    transform: translate(-50%, -50%); /* Center the popup both vertically and horizontally */
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 9999; /* Ensure the popup appears on top of other elements */
+    animation: popupAppear 0.5s ease-in-out;
+}
+
+/* Centering the card */
+.popup-container .card {
+  position: absolute;  /* Make the card positioned absolutely within the container */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* Center the card horizontally and vertically */
+}
+
+.card-text {
+  font-weight: bold;  
+  text-align: center;  /* Center the text horizontally */
+  padding: 20px;  /* Add some padding for better separation from the card edges */
+  color: #594D2B;  /* Change the text color to a darker shade for better readability */
+}
+
+.close-button {  /* Target the existing close button */
+  right:10px;
+  position: absolute;  /* Required for the X and Y elements */
+  width: 2em;  /* Adjust width if needed */
+  height: 2em;  /* Adjust height if needed */
+  border: none;
+  background-color: rgba(180, 83, 107, 0.11);  /* Adjust background color if needed */
+  border-radius: 5px;
+  transition: background 0.5s;
+  cursor: pointer;  /* Indicate clickable element */
+  display: flex;  /* Align content within the button */
+  align-items: center;  /* Center content vertically */
+  justify-content: center;  /* Center content horizontally */
+}
+
+.close-button:hover {  /* Hover effect for the close button */
+  background-color: rgb(211, 21, 21);  /* Change to red on hover */
+}
+
+.close-button:active {
+  background-color: rgb(130, 0, 0);  /* Change on button press (optional) */
+}

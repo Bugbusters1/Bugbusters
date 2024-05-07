@@ -1,11 +1,11 @@
 body {
-  background: #212121;
+  background: #fcfaf0;
 }
 
 #wrapper {
   position: relative;
   padding-top: 20px;
-  background: #212121;
+  background: #fcfaf0;
   border: 1px solid #000;
   box-shadow: 0 22px 35px -16px rgba(0, 0, 0, 0.71);
   max-width: 850px;
@@ -16,7 +16,7 @@ body {
   text-align: left;
   margin-left: 15px;
   font-weight: bolder;
-  color: #b7c3b8;
+  color: #52514e;
   font-size: 20px;
   margin-bottom: 20px;
 }
