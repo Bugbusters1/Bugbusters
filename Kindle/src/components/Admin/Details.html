@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <title>Kindle</title>
+
+  <!-- Google -->
+  <style>
+    #map {
+      height: 100%;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <style>
+ .wrapperRadio {
+  --font-color-dark: #323232;
+  --font-color-light: #FFF;
+  --bg-color: #fff;
+  --main-color: #323232;
+  position: relative;
+  width: 370px;
+  height: 36px;
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 34px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 4px 4px var(--main-color);
+}
+
+.option {
+  width: 120px;
+  height: 28px;
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  appearance: none;
+  cursor: pointer;
+}
+
+.btnRadio {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spanRadio {
+  color: var(--font-color-dark);
+}
+
+.input:checked + .btnRadio {
+  background-color: var(--main-color);
+}
+
+.input:checked + .btnRadio .spanRadio {
+  color: var(--font-color-light);
+}
+  </style>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../../assets/css/animate.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/media-queries.css">
+  <!-- Favicon and touch icons -->
+  <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="../../assets/ico/apple-touch-icon-57-precomposed.png">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script src="https://use.fontawesome.com/releases/v6.2.0/js/all.js"></script>
+  <script type="module" src="../../Donor/GoogleMarker.js"></script>
+</head>
+
+<body>
+
+  <!-- Wrapper -->
+  <div class="wrapper">
+
+    <!-- Sidebar -->
+    <nav class="sidebar" style="background-color: #212121">
+
+      <!-- close sidebar menu -->
+      <div class="dismiss">
+        <i class="fas fa-arrow-left"></i>
+      </div>
+
+      <div class="logo">
+        <h3><a href="index.html">Kindle</a></h3>
+      </div>
+
+      <ul class="list-unstyled menu-elements">
+        <li class>
+            <a class="button" href="Admin.html"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li>
+            <a class="button" href="AdminViewOrg.html"><i class="fas fa-building"></i> Show Organizations</a>
+        </li>
+        <li>
+            <a class="button" href="AdminViewDon.html"><i class="fas fa-users"></i> Show Donors</a>
+        </li>
+        <li>
+            <a class="button" href="AdminReviewSub.html"><i class="fas fa-list-alt"></i> Review submissions</a>
+        </li>
+        <li>
+            <a class="button" href="AdminManageReq.html"><i class="fas fa-tasks"></i> Manage requests</a>
+        </li>
+        <li>
+            <a class="button" href="AdminSetting.html"><i class="fas fa-cog"></i>Account Settings</a>
+        </li>
+        <li>
+            <a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"
+                role="button" aria-controls="otherSections">
+                <i class="fas fa-sync"></i>Other sections
+            </a>
+            <ul class="collapse list-unstyled" id="otherSections">
+                <li>
+                    <a class="scroll-link" href="#section-3">Our projects</a>
+                </li>
+                <li>
+                    <a class="scroll-link" href="#section-4">We think that../...</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    
+
+      <div class="to-top">
+        <a class="btn btn-primary btn-customized-3" href="#" role="button">
+          <i class="fas fa-sign-out-alt"></i> Log out
+        </a>
+      </div>
+
+      <!-- <div class="dark-light-buttons">
+				<a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
+				<a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
+			</div> -->
+
+    </nav>
+    <!-- End sidebar -->
+
+    <!-- Dark overlay -->
+    <div class="overlay"></div>
+
+    <!-- Content -->
+    <div class="content">
+
+      <!-- open sidebar menu -->
+      <a class="open-menu" href="#" role="button">
+        <button class="btnMenu" style="background-color: #212121">
+          <span class="icon">
+            <svg viewBox="0 0 175 80" width="40" height="40">
+              <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+              <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+              <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+            </svg>
+          </span>
+          <span class="text">Menu</span>
+        </button>
+      </a>
+
+      <!-- Top content -->
+      <div class="top-content section-container" id="top-content">
+
+        <div class="container">
+          <div class="row">
+            <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 ">
+              <h1 class="wow fadeIn">Kindle</h1>
+              <div class="description wow fadeInLeft">
+                <h3>
+                  <p>
+                    Together, Make a Difference.
+                  </p>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="section-2-container section-container section-container-gray-bg " id="section-2"
+          style="background-color: #FCFAF0; color:black">
+          <div class="container">
+            <div class="row">
+              <div class="col section-2 section-description wow fadeIn">
+                <h2 style="color:black">Registered Organization Details</h2>
+                <div class="divider-1 wow fadeInUp"><span></span></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-8 section-2-box wow fadeInLeft">
+                <h3 style="font-size: 40px;">Hope for Tomorrow Foundation</h3><br>
+                <p class="medium-paragraph">
+                  Hope for Tomorrow Foundation is a nonprofit organization dedicated to providing essential resources and support to underprivileged communities worldwide. Through our multifaceted programs, we strive to address the critical needs of marginalized populations, including access to food, clean water, healthcare, education, and shelter. Our initiatives are designed to alleviate poverty, promote sustainable development, and empower individuals to build better lives for themselves and their families. From distributing emergency relief supplies during times of crisis to implementing long-term community development projects, we are committed to fostering positive change and creating a brighter future for all. Join us in our mission to bring hope, dignity, and opportunity to those in need.
+                </p>
+              </div>
+              <div class="col-4 section-2-box wow fadeInUp">
+               <img src="../../assets/img/items/og.png">
+              </div>
+              
+            </div>
+            <div class="row">
+              <div class="col-md-6 section-6-box wow fadeInUp">
+                <h3><b>Organization Type : </b>Humanitarian Aid and Development </h3>
+                
+                <h3><b>Contact Details : </b></h3>
+                <p class="medium-paragraph">
+                  <b>Email:</b> info@hopefortomorrowfoundation.org<br>
+                <b>Phone:</b> +20 (555) 123-4567</b></p>
+                    <h3><b>Address : </b></h3>
+                    <p class="medium-paragraph">
+                      456 Nile Street, Cairo, Egypt
+                        </p>
+                        <br>
+                        <br>
+                        <button class="btn btn-danger js-delete" style="width: 300px;">Delete Organization</button>
+                      </div>
+                      <div class="col-md-6 section-6-box wow fadeInUp">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.742533239544!2d31.43877087466414!3d29.986828474952624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583cb2bfafbe73%3A0x6e7220116094726d!2sGerman%20University%20in%20Cairo%20(GUC)!5e0!3m2!1sen!2seg!4v1714844123432!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                      </div>
+              </div>
+            </div>
+          </div>
+        
+
+
+          <!-- Footer -->
+          <footer class="footer-container">
+
+            <div class="container">
+              <div class="row">
+
+                <div class="col">
+                  &copy; This website perserves your personal information.
+                </div>
+
+              </div>
+            </div>
+
+          </footer>
+
+        <!-- End content -->
+
+      </div>
+      <!-- End wrapper -->
+
+      <!-- Javascript -->
+      <script src="../../assets/js/jquery-3.3.1.min.js"></script>
+      <script src="../../assets/js/jquery-migrate-3.0.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+      <script src="../../assets/js/jquery.backstretch.min.js"></script>
+      <script src="../../assets/js/wow.min.js"></script>
+      <script src="../../assets/js/jquery.waypoints.min.js"></script>
+      <script src="../../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="../../assets/js/scripts.js"></script>
+      <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
+          ({ key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly" });</script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+      <script src="../Donor/GoogleMarker.js"></script>
+    <script>
+      // Function to retrieve query parameters from URL
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      // Get the item name from the URL
+      const itemText = getQueryParam("itemText");
+      const itemImage = getQueryParam("itemImage");
+
+      // Display the item name
+      document.getElementById("itemText").textContent = itemText;
+      document.getElementById(
+        "itemImage"
+      ).innerHTML = `<img src="${decodeURIComponent(itemImage)}" alt="img" />`;
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $(".js-delete").on("click", function () {
+          var confirmed = window.confirm("Are you sure you want to delete the selected rows?");
+          if (confirmed) {
+            window.location.href = "AdminViewOrg.html";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
