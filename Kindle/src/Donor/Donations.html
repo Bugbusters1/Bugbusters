@@ -454,22 +454,39 @@
 </body>
 <style>
     /* CSS for the table */
+/* CSS for the table */
 .table {
-    color: #FCFAF0;
-    background-color: #222024;
-    margin-bottom: 50px;
-    border: 1px solid #222024;
+    color: #333; /* Text color */
+    background-color: #f8f9fa; /* Background color */
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Take up full width of container */
 }
 
 /* CSS for table headers */
-.table thead th {
-    color: white;
+.table th {
+    background-color: #212121; /* Header background color */
+    color: #fff; /* Header text color */
+    font-weight: bold; /* Bold font weight */
+    padding: 10px; /* Padding around header content */
+    text-align: left; /* Align text to the left */
 }
 
 /* CSS for table rows */
-.table tbody td {
-    color: white;
+.table td {
+    padding: 10px; /* Padding around cell content */
+    border-bottom: 1px solid #ddd; /* Bottom border for each row */
 }
+
+/* CSS for alternating row colors */
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row background color */
+}
+
+/* CSS for hover effect on rows */
+.table tbody tr:hover {
+    background-color: #e9ecef; /* Hovered row background color */
+}
+
 /* CSS to position the button next to the donor name */
 .donor-name {
     display: inline-block;
