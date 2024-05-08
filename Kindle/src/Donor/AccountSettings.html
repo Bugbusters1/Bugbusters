@@ -207,7 +207,7 @@
                         <div class="row gutters">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="text-right">
-                                    <button type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</button>
+                                    <a href="../DonorPage.html" ><button type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</button></a>
                                     <button type="button" id="updateSubmit" name="submit" class="btn btn-primary">Update</button>
                                 </div>
                             </div>
@@ -258,7 +258,7 @@
                   
                 </button>
                 <button type="button" class="success-button-secondary" id="dismissButton">
-                  Dismiss
+                  Ok
                 </button>
               </div>
             </div>
@@ -289,6 +289,7 @@
         // Function to close (hide) the popup
         function closePopup() {
         popup.style.display = "none";
+        window.location.href="../DonorPage.html"
         }
 
         // Listen for clicks on the dismiss button
