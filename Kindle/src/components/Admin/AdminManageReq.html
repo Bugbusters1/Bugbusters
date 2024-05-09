@@ -96,28 +96,23 @@
                     <a class="button" href="AdminViewDon.html"><i class="fas fa-users"></i> Show Donors</a>
                 </li>
                 <li>
-                    <a class="button" href="AdminReviewSub.html"><i class="fas fa-list-alt"></i> Review submissions</a>
-                </li>
-                <li class="active">
-                    <a class="scroll-link" href="#section-1"><i class="fas fa-tasks"></i> Manage requests</a>
+                    <a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"
+                        role="button" aria-controls="otherSections">
+                        <i class="fas fa-tasks"></i>Manage Requests
+                    </a>
+                    <ul class="collapse list-unstyled" id="otherSections">
+                        <li>
+                            <a class="button" href="AdminManageReq.html">Organizations</a>
+                        </li>
+                        <li>
+                            <a class="button" href="AdminReviewSub.html">Donors</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a class="button" href="AdminSetting.html"><i class="fas fa-cog"></i>Account Settings</a>
                 </li>
-                <li>
-                    <a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"
-                        role="button" aria-controls="otherSections">
-                        <i class="fas fa-sync"></i>Other sections
-                    </a>
-                    <ul class="collapse list-unstyled" id="otherSections">
-                        <li>
-                            <a class="scroll-link" href="#section-3">Our projects</a>
-                        </li>
-                        <li>
-                            <a class="scroll-link" href="#section-4">We think that../...</a>
-                        </li>
-                    </ul>
-                </li>
+                
             </ul>
 
             <div class="to-top">
@@ -177,7 +172,7 @@
             <!-- Section 1 -->
             <div class="container">
                 <div class="row justify-content-between">
-                    <h2 class="mb-0">Submissions</h2>
+                    <h2 class="mb-0">Requests</h2>
                     <div class="col-md-1">
                         <div class="input_container">
                             <input type="text" name="text" id="searchInput" class="input" required="" placeholder="Type to search...">
@@ -198,16 +193,16 @@
                         <tr>
                             <th scope="col">
                                 <label class="control control--checkbox">
-                                    <input type="checkbox" class="js-check-all"/>
+                                    <input type="checkbox" class="js-check-all" id="check-all"/>
                                     <div class="control__indicator"></div>
                                 </label>
                             </th>
                             <th scope="col">ID</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Occupation</th>
+                            <th scope="col">Organization</th>
+                            <th scope="col">Type</th>
                             <th scope="col">Contact</th>
                             <th scope="col">Location</th>
-                            <th scope="col"></th>
+                            <th scope="col">Submissions</th>
                         </tr>
                         </thead>
                         <tbody id="tableBody">
@@ -233,8 +228,9 @@
                             <td>+63 983 0962 971</td>
                             <td>NY University</td>
                             <td>
-                                <a href="#" class="btn btn-info mr-2">Details</a>
-                                <button class="btn btn-danger js-delete">Delete</button>
+                                <button type="button" class="btn btn-primary" style="margin-right: 10px;" onclick="downloadPdf('info.pdf')">Download INFO</button>
+                                <a href="#" class="btn btn-info mr-2">Accept</a>
+                                <button class="btn btn-danger js-delete">Reject</button>
                             </td>
         
                         </tr>
@@ -261,8 +257,9 @@
                             <td>+02 020 3994 929</td>
                             <td>London College</td>
                             <td>
-                                <a href="#" class="btn btn-info mr-2">Details</a>
-                                <button class="btn btn-danger js-delete">Delete</button>
+                                <button type="button" class="btn btn-primary" style="margin-right: 10px;" onclick="downloadPdf('pdf_filename.pdf')">Download INFO</button>
+                                <a href="#" class="btn btn-info mr-2">Accept</a>
+                                <button class="btn btn-danger js-delete">Reject</button>
                             </td>
                         </tr>
                         <!-- Add more rows here -->
@@ -348,11 +345,25 @@
                     $(".input_container").removeClass("shifted");
                 }
             });
-    
-    
             
     
+            $(document).ready(function () {
+  $("#check-all").on("click", function () {
+    var checked = this.checked;
+    $(".custom-table tbody tr td input[type='checkbox']").each(function () {
+      this.checked = checked;
+    });
+  });
+});
+    
         });
+
+        function downloadPdf(filename) {
+    var link = document.createElement('a');
+    link.href = 'assets/' + filename;
+    link.download = filename;
+    link.click();
+  }
     </script>
     
 </body>
