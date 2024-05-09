@@ -148,10 +148,17 @@
                                             // Prevent the default form submission behavior
                                             event.preventDefault();
                                             // Show the submission message if the form is valid
-                                            document.getElementById('submission-message').classList.remove('d-none');
-                                            setTimeout(function() {
-                                            document.getElementById('submission-message').classList.add('d-none');
-                                        }, 3000);
+                                            Swal.fire({
+											title: "Good job!",
+											text: "Post Submitted Successfully!",
+											icon: "success",
+											showConfirmButton: false,
+											timer:2500
+											});	
+
+										setTimeout(function() {
+										window.location.href = "./OrganizationHome.html";
+									}, 2500);
                                         }
                                     });
                                 </script>
@@ -212,6 +219,8 @@
 	<script src="../assets/js/scripts.js"></script>
 	<script src="./sideBarButtons.js"></script>
 	<script src="./notifyButton.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>	 
+	<script src="sweetalert2.all.min.js"></script> 
 
 <style>
 .section-7-container{

@@ -122,22 +122,23 @@ img {
 }
 
 .sidebar .logo {
-	padding: 40px 20px;
+	padding: 10px 35px;
 	border-bottom: 1px solid #444;
 	transition: all .3s;
 }
 
 .sidebar .logo a {
 	display: inline-block;
-	width: 172px;
-	height: 34px;
+	width: 250px;
+	height: 175px;
 	background: url(../img/logo.png) left top no-repeat;
 	border: 0;
 	text-indent: -999999px;
+	background-size: 57%; 
 }
 
 .sidebar ul.menu-elements {
-	padding: 10px 0;
+	padding: 30px 0;
 	border-bottom: 1px solid #444;
 	transition: all .3s;
 }
@@ -991,5 +992,23 @@ footer {
   
   .input-box:focus + .underline {
 	transform: scaleX(1);
+  }
+  
+  /* Scrollbar Styling */
+  body::-webkit-scrollbar {
+	width: 12px; /* Width of the scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+	background: #FCFAF0 !important; /* Color of the scrollbar track */
+	border-radius: 6px;
+	margin: 0px; /* Adjust the margin */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+	background-color: #222024; /* Color of the scrollbar thumb */
+	border-radius: 6px; /* Radius of the scrollbar thumb */
+	border: 3px solid #f7f8fd; /* Border around the scrollbar thumb */
+	margin: 2px; /* Adjust the margin */
   }
   

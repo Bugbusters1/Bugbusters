@@ -116,7 +116,7 @@
       </div>
 
       <div class="logo">
-        <h3><a href="index.html">Kindle</a></h3>
+        <h3><a href="../DonorPage.html">Kindle</a></h3>
       </div>
 
       <ul class="list-unstyled menu-elements">
@@ -147,11 +147,11 @@
         </li>
     </ul>
 
-      <div class="to-top">
-        <a class="btn btn-primary btn-customized-3" href="#" role="button">
+     
+        <a class="btn btn-primary btn-customized-3" href="../HomePage.html" role="button">
           <i class="fas fa-sign-out-alt"></i> Log out
         </a>
-      </div>
+     
 
       <!-- <div class="dark-light-buttons">
 				<a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
@@ -533,6 +533,8 @@
           ({ key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly" });</script>
       <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
       <script src="../Donor/GoogleMarker.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="sweetalert2.all.min.js"></script>
     <script>
       // Function to retrieve query parameters from URL
       function getQueryParam(param) {
@@ -550,5 +552,28 @@
         "itemImage"
       ).innerHTML = `<img src="${decodeURIComponent(itemImage)}" alt="img" />`;
     </script>
+
+<script>
+	document.getElementById('submit-post-btn').addEventListener('click', function(event) {
+        // Check if the form is valid
+        if (document.getElementById('teacher-form').checkValidity()) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+        // Show the submission message if the form is valid
+        Swal.fire({
+				title: "Good job!",
+				text: "Post Fulfilled Successfully!",
+				icon: "success",
+				showConfirmButton: false,
+				timer:2500
+				});	
+
+		setTimeout(function() {
+        window.location.href = "./MedicalCases.html";
+      }, 2500);
+        }
+        });
+</script>
+
   </body>
 </html>

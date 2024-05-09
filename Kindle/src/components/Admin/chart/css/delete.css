@@ -1,0 +1,61 @@
+.button2 {
+    position: relative;
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 3px solid #cc0000;
+    background-color: #e50000;
+    overflow: hidden;
+    border-radius: 25px; /* Add border-radius for rounded edges */
+  }
+  
+  .button2,
+  .button2__icon,
+  .button2__text {
+    transition: all 0.3s;
+  }
+  
+  .button2 .button2__text {
+    transform: translateX(40px);
+    color: #fff;
+    font-weight: 900;
+  }
+  
+  .button2 .button2__icon {
+    position: absolute;
+    transform: translateX(207px);
+    height: 100%;
+    width: 39px;
+    background-color: #cc0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button2 .svg {
+    width: 29px;
+  }
+  
+  .button2:hover {
+    background: #cc0000;
+  }
+  
+  .button2:hover .button2__text {
+    color: transparent;
+  }
+  
+  .button2:hover .button2__icon {
+    width: 250px;
+    transform: translateX(0);
+  }
+  
+  .button2:active .button2__icon {
+    background-color: #b20000;
+  }
+  
+  .button2:active {
+    border: 1px solid #b20000;
+  }
+  

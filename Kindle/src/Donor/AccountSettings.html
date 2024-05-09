@@ -208,7 +208,7 @@
                         <div class="row gutters">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="text-right">
-                                    <button type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</button>
+                                    <button type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</button></a>
                                     <button type="button" id="updateSubmit" name="submit" class="btn btn-primary">Update</button>
                                 </div>
                             </div>
@@ -259,7 +259,7 @@
                   
                 </button>
                 <button type="button" class="success-button-secondary" id="dismissButton">
-                  Dismiss
+                  Ok
                 </button>
               </div>
             </div>
@@ -279,23 +279,43 @@
     <script src="../assets/js/wow.min.js"></script>
     <script src="../assets/js/jquery.waypoints.min.js"></script>
     <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../assets/js/scripts.js"></script>    
+    <script src="../assets/js/scripts.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>	 
+	<script src="sweetalert2.all.min.js"></script>   
     <script>
 
         document.getElementById("updateSubmit").addEventListener("click", function() {
-        popup.style.display = "block";
-    });
-        var dismissButton = document.getElementById("dismissButton");
 
-        // Function to close (hide) the popup
-        function closePopup() {
-        popup.style.display = "none";
-        }
+            Swal.fire({
+            title: "Do you want to save the changes?",
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: "Save",
+            denyButtonText: `Don't save`
+            }).then((result) => {            
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Saved!",
+                    text: "",
+                    icon: "success",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                setTimeout(function() {
+                window.location.href = "../DonorPage.html";
+                }, 1500);
+            } else if (result.isDenied) {
+                Swal.fire("Changes are not saved", "", "info");
+            }
+            });
 
-        // Listen for clicks on the dismiss button
-        dismissButton.addEventListener("click", closePopup);
+        });
 
-    </script>
+        document.getElementById("submit").addEventListener("click", function() {
+            window.location.href = "../DonorPage.html";
+
+        });
+    </script>    
     
 <style>
     

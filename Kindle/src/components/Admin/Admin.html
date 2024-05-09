@@ -32,7 +32,44 @@
 </head>
 
 <body>
+    <style>
+        html {
+            width: 100%; /* Set width to 100% */
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
 
+        body {
+            margin: 200; /* Remove default margin */
+            padding: 300;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%; /* Set width to 100% of the viewport width */
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+
+        /* Your other CSS styles here */
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 200px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0px;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
     <!-- Wrapper -->
     <div class="wrapper">
 
@@ -45,7 +82,7 @@
             </div>
 
             <div class="logo">
-                <h3><a href="index.html">Kindle</a></h3>
+                <h3><a href="Admin.html">Kindle</a></h3>
             </div>
 
             <ul class="list-unstyled menu-elements">
@@ -59,28 +96,23 @@
                     <a class="button" href="AdminViewDon.html"><i class="fas fa-users"></i> Show Donors</a>
                 </li>
                 <li>
-                    <a class="button" href="AdminReviewSub.html"><i class="fas fa-list-alt"></i> Review submissions</a>
-                </li>
-                <li>
-                    <a class="button" href="AdminManageReq.html"><i class="fas fa-tasks"></i> Manage requests</a>
+                    <a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"
+                        role="button" aria-controls="otherSections">
+                        <i class="fas fa-tasks"></i>Manage Requests
+                    </a>
+                    <ul class="collapse list-unstyled" id="otherSections">
+                        <li>
+                            <a class="button" href="AdminManageReq.html">Organizations</a>
+                        </li>
+                        <li>
+                            <a class="button" href="AdminReviewSub.html">Donors</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a class="button" href="AdminSetting.html"><i class="fas fa-cog"></i>Account Settings</a>
                 </li>
-                <li>
-                    <a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"
-                        role="button" aria-controls="otherSections">
-                        <i class="fas fa-sync"></i>Other sections
-                    </a>
-                    <ul class="collapse list-unstyled" id="otherSections">
-                        <li>
-                            <a class="scroll-link" href="#section-3">Our projects</a>
-                        </li>
-                        <li>
-                            <a class="scroll-link" href="#section-4">We think that../...</a>
-                        </li>
-                    </ul>
-                </li>
+                
             </ul>
 
             <div class="to-top">
