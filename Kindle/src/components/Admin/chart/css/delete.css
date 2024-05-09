@@ -1,4 +1,4 @@
-.button {
+.button2 {
     position: relative;
     width: 250px;
     height: 50px;
@@ -11,19 +11,19 @@
     border-radius: 25px; /* Add border-radius for rounded edges */
   }
   
-  .button,
-  .button__icon,
-  .button__text {
+  .button2,
+  .button2__icon,
+  .button2__text {
     transition: all 0.3s;
   }
   
-  .button .button__text {
+  .button2 .button2__text {
     transform: translateX(40px);
     color: #fff;
     font-weight: 900;
   }
   
-  .button .button__icon {
+  .button2 .button2__icon {
     position: absolute;
     transform: translateX(207px);
     height: 100%;
@@ -34,28 +34,28 @@
     justify-content: center;
   }
   
-  .button .svg {
+  .button2 .svg {
     width: 29px;
   }
   
-  .button:hover {
+  .button2:hover {
     background: #cc0000;
   }
   
-  .button:hover .button__text {
+  .button2:hover .button2__text {
     color: transparent;
   }
   
-  .button:hover .button__icon {
+  .button2:hover .button2__icon {
     width: 250px;
     transform: translateX(0);
   }
   
-  .button:active .button__icon {
+  .button2:active .button2__icon {
     background-color: #b20000;
   }
   
-  .button:active {
+  .button2:active {
     border: 1px solid #b20000;
   }
   
