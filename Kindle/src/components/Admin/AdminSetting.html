@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<title>Kindle</title>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/settingsStyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="../../assets/css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="../../assets/css/animate.css">
+	<link rel="stylesheet" href="../../assets/css/style.css">
+	<link rel="stylesheet" href="../../assets/css/media-queries.css">
+    <link rel="stylesheet" href="assets/pop-up.css">
+    <link rel="stylesheet" href="assets/error.css">
+
+
+    <!-- Favicon and touch icons -->
+	<link rel="shortcut icon" href="../../assets/ico/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="../../assets/ico/apple-touch-icon-57-precomposed.png">
+
+
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js'></script>
+</head>
+<body>
+
+    <!-- Wrapper -->
+	<div class="wrapper">
+
+		<!-- Sidebar -->
+		<nav class="sidebar" style="background-color: #212121">
+
+			<!-- close sidebar menu -->
+			<div class="dismiss">
+				<i class="fas fa-arrow-left"></i>
+			</div>
+
+			<div class="logo">
+				<h3><a href="Admin.html">Kindle</a></h3>
+			</div>
+
+			<ul class="list-unstyled menu-elements">
+                <li class>
+                    <a class="button" href="Admin.html"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li>
+                    <a class="button" href="AdminViewOrg.html"><i class="fas fa-building"></i> Show Organizations</a>
+                </li>
+                <li>
+                    <a class="button" href="AdminViewDon.html"><i class="fas fa-users"></i> Show Donors</a>
+                </li>
+                <li>
+                    <a class="button" href="AdminReviewSub.html"><i class="fas fa-list-alt"></i> Review submissions</a>
+                </li>
+                <li>
+                    <a class="button" href="AdminManageReq.html"><i class="fas fa-tasks"></i> Manage requests</a>
+                </li>
+                <li class="active">
+                    <a class="scroll-link" href="#section-1"><i class="fas fa-cog"></i>Account Settings</a>
+                </li>
+                <li>
+                    <a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"
+                        role="button" aria-controls="otherSections">
+                        <i class="fas fa-sync"></i>Other sections
+                    </a>
+                    <ul class="collapse list-unstyled" id="otherSections">
+                        <li>
+                            <a class="scroll-link" href="#section-3">Our projects</a>
+                        </li>
+                        <li>
+                            <a class="scroll-link" href="#section-4">We think that../...</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            
+
+			
+				<a class="btn btn-primary btn-customized-3" href="../HomePage.html" role="button">
+					<i class="fas fa-sign-out-alt"></i> Log out 
+				</a>
+			
+			
+			<!-- <div class="dark-light-buttons">
+				<a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
+				<a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
+			</div> -->
+
+		</nav>
+		<!-- End sidebar -->
+
+		<!-- Dark overlay -->
+		<div class="overlay"></div>
+
+		<!-- Content -->
+		<div class="content">
+
+			<!-- open sidebar menu -->
+			<a class="open-menu" href="#" role="button">
+				<button class="btnMenu" style="background-color: #212121">
+					<span class="icon">
+						<svg viewBox="0 0 175 80" width="40" height="40">
+							<rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+							<rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+							<rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+						</svg>
+					</span>
+					<span class="text">Menu</span>
+				</button>
+			</a>
+        <!-- Section 1 -->
+			<div class="section-1-container section-container" id="section-1">
+				<div class="container">
+					<div class="row">
+                        <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2" >
+							<h1 class="wow fadeIn" style="color:#FCFAF0;"></h1>
+							<div class="description wow fadeInLeft">
+								<h3>
+									<p style="color:#FCFAF0;"></p>
+								</h3>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+    
+    <div class="container wow fadeInUp">
+        <div class="row gutters">
+            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="account-settings">
+                            <div class="user-profile">
+                                <div class="user-avatar">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Maxwell Admin">
+                                </div>
+                                <h5 class="user-name">John Doe</h5>
+                                <h6 class="user-email">JohnDoe@example.com</h6>
+                            </div>
+                            <div class="about">
+                                <h5 class="mb-2 text-primary">About</h5>
+                                <p>Kindle website Admin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <h6 class="mb-3 text-primary">Personal Details</h6>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="fullName">Name</label>
+                                    <input type="text" class="form-control" id="fullName" value="John Doe">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="eMail">Email</label>
+                                    <input type="email" class="form-control" id="eMail" value=" JohnDoe@example.com">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="text" class="form-control" id="phone" value="+20123456789">
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <h6 class="mb-3 text-primary">Change password</h6>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="currentPassword">Current Password</label>
+                                    <input type="password" class="form-control" id="currentPassword" placeholder="Enter current password">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="newPassword">New Password</label>
+                                    <input type="password" class="form-control" id="newPassword" placeholder="Enter new password">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirm Password</label>
+                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm new password">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="text-right">
+                                    <button type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</button>
+                                    <button type="button" id="updateSubmit" name="submit" class="btn btn-primary">Update</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>  
+
+        <!-- Footer -->
+			<footer class="footer-container">
+
+				<div class="container">
+					<div class="row">
+
+						<div class="col">
+							&copy; This website perserves your personal information.
+						</div>
+
+					</div>
+				</div>
+
+			</footer>
+
+    </div>
+    <!-- End content -->
+
+</div>
+<!-- End wrapper -->
+
+<!-- Pop up -->
+<div class="popup-wrapper">
+    <div class="notifications-container">
+        <div class="success" id="popup">  <div class="flex">
+            <div class="flex-shrink-0">
+              <svg class="succes-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div class="success-prompt-wrap">
+              <p class="success-prompt-heading">Account Updated Successfully</p>
+              <div class="success-prompt-prompt">
+                <p></p>
+              </div>
+              <div class="success-button-container">
+                <button type="button" class="success-button-main">
+                  
+                </button>
+                <button type="button" class="success-button-secondary" id="dismissButton">
+                  Dismiss
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-wrapper">
+        <div class="notifications-container">
+            <div class="error" id="errorPopup">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V8m0 8h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                          </svg>
+                          
+                          
+                    </div>
+                    <div class="error-prompt-wrap">
+                        <p class="error-prompt-heading">Error: Passwords Do Not Match</p>
+                        <div class="error-prompt-prompt">
+                            <p>Please make sure the new password and confirm password fields match.</p>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="error-button-container">
+                            <button type="button" class="error-button-secondary" id="dismissErrorButton">Dismiss</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-wrapper">
+        <div class="notifications-container">
+            <div class="error" id="errorPop">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V8m0 8h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                          </svg>
+                          
+                          
+                    </div>
+                    <div class="error-prompt-wrap">
+                        <p class="error-prompt-heading">Error: Current password isn't correct</p>
+                        <div class="error-prompt-prompt">
+                            <p></p>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="error-button-container">
+                            <button type="button" class="error-button-secondary" id="dismissErrorButton2">Dismiss</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!-- End of pop up -->    
+
+<!-- JavaScript -->
+    <script src="../../assets/js/jquery-3.3.1.min.js"></script>
+	<script src="../../assets/js/jquery-migrate-3.0.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+    <script src="../../assets/js/jquery.backstretch.min.js"></script>
+    <script src="../../assets/js/wow.min.js"></script>
+    <script src="../../assets/js/jquery.waypoints.min.js"></script>
+    <script src="../../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../assets/js/scripts.js"></script>    
+    <script>
+        document.getElementById("submit").addEventListener("click", function(){
+            window.location.href = "AdminSetting.html";
+        });
+        document.getElementById("updateSubmit").addEventListener("click", function() {
+            // Check if passwords match
+            if(checkOldPassword()){
+                if (checkPasswordMatch()) {
+                    var fullName = document.getElementById("fullName");
+                    var email = document.getElementById("eMail");
+                    var phone = document.getElementById("phone");
+                    
+                    var emailPattern =/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                    // Reset error messages and border colors
+                    resetErrorMessages([fullName, email, phone]);
+            
+                    var emptyFields = [];
+                    
+            
+                    // Check if any of the fields are empty
+                    if (fullName.value === "") {
+                        fullName.style.borderColor = "red";
+                        fullName.insertAdjacentHTML('afterend', '<span class="error-msg" style="color: red;">Please fill in your full Name field.</span>');
+                        emptyFields.push("full name");
+                        
+                    }
+                    if (email.value === "") {
+                        email.style.borderColor = "red";
+                        email.insertAdjacentHTML('afterend', '<span class="error-msg" style="color: red;">Please fill in your email field.</span>');
+                        emptyFields.push("email");
+                        
+                    }
+                    if (phone.value === "") {
+                        phone.style.borderColor = "red";
+                        phone.insertAdjacentHTML('afterend', '<span class="error-msg" style="color: red;">Please fill in your phone field.</span>');
+                        emptyFields.push("phone");
+                        
+                    }
+            
+                    // If there are any empty fields, prevent form submission and indicate the empty fields
+                    if (emptyFields.length > 0) {
+                        
+                        return; // Prevent form submission
+                    }
+            
+                    // If all fields are filled, display success popup message
+                    if (!emailPattern.test(email.value)) {
+        // Display error message and prevent further actions
+                        var emailInput = document.getElementById("eMail");
+                        emailInput.style.borderColor = "red";
+                        emailInput.insertAdjacentHTML('afterend', '<span class="error-msg" style="color: red;">Please enter a valid email address.</span>');
+                        return;
+                    } else {
+                        // If email is valid, remove any existing error messages
+                        var errorMessage = document.querySelector('#eMail + .error-msg');
+                        if (errorMessage) {
+                            errorMessage.remove();
+                        }
+                    
+                    popup.style.display = "block";
+                    document.getElementById("currentPassword").value = "";
+                    document.getElementById("newPassword").value = "";
+                    document.getElementById("confirmPassword").value = "";
+                } }else {
+                    // If passwords don't match, display error message
+                    errorPopup.style.display = "block";
+                }
+            }
+            else{
+                errorPop.style.display = "block";
+            }
+        });
+        
+        function checkPasswordMatch() {
+            var newPassword = document.getElementById("newPassword").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+        
+            // Check if the passwords match
+            return newPassword === confirmPassword;
+        }
+        
+        function checkOldPassword(){
+            var oldPassword = document.getElementById("currentPassword").value;
+            var newPassword = document.getElementById("newPassword").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            if(oldPassword.trim() === "" || oldPassword.trim() === "kindle123"){
+                return true;
+            }else{
+                if(newPassword.trim() === ""){
+                    var newIn = document.getElementById("newPassword");
+                    newIn.style.borderColor = "red";
+                    newIn.insertAdjacentHTML('afterend', '<span class="error-msg" style="color: red;">Please enter a valid password.</span>');
+                }
+                return false;
+            }
+        }
+        var dismissButton = document.getElementById("dismissButton");
+        var dismissButton2 = document.getElementById("dismissErrorButton");
+        var dismissButton2 = document.getElementById("dismissErrorButton2");
+        
+        // Function to close (hide) the popup
+        function closePopup() {
+            popup.style.display = "none";
+            errorPopup.style.display = "none";
+            errorPop.style.display = "none";
+            var inputs = document.querySelectorAll('input[type="text"], input[type="email"]');
+            inputs.forEach(function(input) {
+                input.style.borderColor = ""; // Reset border color
+            });
+            var errorMessages = document.querySelectorAll('.error-msg');
+            errorMessages.forEach(function(message) {
+                message.remove(); // Remove error messages
+            });
+        }
+        
+        // Listen for clicks on the dismiss button
+        dismissButton.addEventListener("click", closePopup);
+        dismissButton2.addEventListener("click", closePopup);
+        dismissButton3.addEventListener("click", closePopup);
+        
+        // Reset error messages and border colors
+        function resetErrorMessages(inputs) {
+            inputs.forEach(function(input) {
+                input.style.borderColor = ""; // Reset border color
+                var errorMessage = input.nextElementSibling;
+                if (errorMessage && errorMessage.classList.contains('error-msg')) {
+                    errorMessage.remove(); // Remove error message if exists
+                }
+            });
+        }
+        </script>
+        
+        
+        
+    
+<style>
+    
+/* Add styling for active menu item */
+.menu-elements .active {
+	background: rgba(255, 255, 255, 0.31);
+}
+
+.menu-elements .active a {
+    color: #555; 
+}
+
+</style>
+    
+</body>
+</html>

@@ -8,8 +8,17 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <style type="text/css">
+    
 
-
+  
+.most-contributer {
+    position: absolute;
+    right: 0;
+    top: 2%;
+    transform: translateX(-200%);
+    min-width: 50px;
+    font-size: 5000px;
+}
 .search-result-categories>li>a {
     color: #b6b6b6;
     font-weight: 400
@@ -71,7 +80,8 @@
 }
 
 .search-result-item .image {
-    max-width: 100%
+    max-width: 100%;
+    margin-top: 0 !important;
 }
 
 .search-result-item .info {
@@ -95,11 +105,14 @@
 }
 
 .search-result-item-heading {
-    font-weight: 400
+    font-weight: bolder;
+
 }
 
 .search-result-item-heading>a {
-    color: #555
+    font-weight: 1000;
+    color: #555;
+    
 }
 
 @media (min-width:768px) {
@@ -107,6 +120,51 @@
         margin: 0
     }
 }
+
+.number-selector {
+  width: 250px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+}
+
+input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  background: #d3d3d3;
+  border-radius: 10px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #5bc5f7;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #5bc5f7;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+output {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 30px;
+  min-width: 50px;
+}
+
     </style>
     <title>Kindle</title>
 
@@ -181,7 +239,7 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
     <title>Kindle</title>
 
     <!-- CSS -->
@@ -268,18 +326,18 @@
         </div>
 
         <div class="logo">
-          <h3><a href="index.html">Kindle</a></h3>
+          <h3><a href="Admin.html">Kindle</a></h3>
         </div>
 
         <ul class="list-unstyled menu-elements">
           <li class>
               <a class="button" href="Admin.html"><i class="fas fa-home"></i> Home</a>
           </li>
-          <li class="active">
-              <a class="scroll-link" href="#section-1"><i class="fas fa-building"></i> Show Organizations</a>
-          </li>
           <li>
-              <a class="button" href="AdminViewDon.html"><i class="fas fa-users"></i> Show Donors</a>
+              <a class="button" href="AdminViewOrg.html"><i class="fas fa-building"></i> Show Organizations</a>
+          </li>
+          <li class="active">
+              <a class="scroll-link" href="#section-1"><i class="fas fa-users"></i> Show Donors</a>
           </li>
           <li>
               <a class="button" href="AdminReviewSub.html"><i class="fas fa-list-alt"></i> Review submissions</a>
@@ -402,7 +460,7 @@
           id="section-2" style="background-color: #fcfaf0;"
           >
           <BR>
-          <h1 style="font-family: roboto; font-weight: bolder;text-align: justify;margin-left:240px ;font-size: 48px;">Registered Donors</h1>
+          <h1 style="font-family: roboto; font-weight: bolder;text-align: justify;margin-left:15% ;font-size: 48px;">Registered Donors</h1>
           <div class="divider-1 wow fadeInUp" style="margin-right:1220px"> <span></span> </div>
           <button class="filter-button" onclick="toggleFilterSidebar()">
             <i class="fas fa-filter filter-icon"></i> Filter
@@ -435,14 +493,17 @@
                 <div class="search-result-item-body">
                     <div class="row user-info">
                         <div class="col-md-9">
-                            <h4 class="search-result-item-heading"><a href="#">john doe</a></h4>
-                            <p class="info">New York, NY 20188</p>
+                            <h4 class="search-result-item-heading"><a href="#">John Doe</a></h4>
+                            <p class="info">Heliopolis, Aziz Fahmy</p>
                             <p class="description">Not just usual Metro. But something bigger. Not just usual widgets, but real widgets. Not just yet another admin template, but next generation admin template.</p>
                         </div>
                         <div class="col-md-3 text-align-center">
-                            <p class="value3 mt-sm">$9, 700</p>
-                            <p class="fs-mini text-muted">PER WEEK</p>
-                            <a class="btn btn-primary btn-info btn-sm" href="#">Learn More</a>
+                            <p class="value3 mt-sm">51 Donations</p>
+                            <p class="fs-mini text-muted">PER Month</p>
+                            <a class="btn btn-primary btn-info btn-sm" href="DetailsDonor.html">Learn More</a>
+
+                            
+
                         </div>
                     </div>
                 </div>
@@ -456,13 +517,13 @@
             <div class="search-result-item-body">
             <div class="row">
             <div class="col-sm-9">
-            <h4 class="search-result-item-heading"><a href="#" class = "text-end">john doe</a> <span class="badge bg-danger fw-normal float-right">Most Contributer!</span></h4>
-            <p class="info">Los Angeles, NY 20188</p>
+            <h4 class="search-result-item-heading" ><a href="#" class = "text-end">Mostafa Mohammed</a> </h4>
+            <p class="info">Fifth Settlement</p>
             <p class="description">You will never know exactly how something will go until you try it. You can think three hundred times and still have no precise result.</p>
             </div>
             <div class="col-sm-3 text-align-center">
-            <p class="value3 mt-sm">$10, 300</p>
-            <p class="fs-mini text-muted">PER WEEK</p><a class="btn btn-primary btn-info btn-sm" href="#">Learn More</a>
+            <p class="badge bg-danger fw-normal most-contributer">Most Contributer!</p>            <p class="value3 mt-sm">91 Donations</p>
+            <p class="fs-mini text-muted">PER MONTH</p><a class="btn btn-primary btn-info btn-sm" href="DetailsDonor.html">Learn More</a>
             </div>
             </div>
             </div>
@@ -473,13 +534,13 @@
             <div class="search-result-item-body">
             <div class="row">
             <div class="col-sm-9">
-            <h4 class="search-result-item-heading"><a href="#">john doe</a></h4>
-            <p class="info">New York, NY 20188</p>
+            <h4 class="search-result-item-heading"><a href="#">Ahmed Elsayed</a></h4>
+            <p class="info">6th October</p>
             <p class="description">The Great Prince of the Grand Duchy of Lithuania he had stopped the invasion to Europe of Timur (Tamerlan) from Asia heading a big Army of Belarusians, Lithuanians.</p>
             </div>
             <div class="col-sm-3 text-align-center">
-            <p class="value3 mt-sm">$3, 200</p>
-            <p class="fs-mini text-muted">PER WEEK</p><a class="btn btn-info btn-sm" href="#">Learn More</a>
+            <p class="value3 mt-sm">5 Donations</p>
+            <p class="fs-mini text-muted">PER MONTH</p><a class="btn btn-info btn-sm" href="DetailsDonor.html">Learn More</a>
             </div>
             </div>
             </div>
@@ -490,38 +551,43 @@
             <div class="search-result-item-body">
             <div class="row">
             <div class="col-sm-9">
-            <h4 class="search-result-item-heading"><a href="#">john doe</a></h4>
-            <p class="info">Minsk, NY 20188</p>
+            <h4 class="search-result-item-heading"><a href="#">Mariam Mohammed</a></h4>
+            <p class="info">Dokki, Saleh st.</p>
             <p class="description">Yes you can! Further more, you should! It let's you create really beautiful images either for elements or for the entire background.</p>
             </div>
             <div class="col-sm-3 text-align-center">
-            <p class="value3 mt-sm">$2, 400</p>
-            <p class="fs-mini text-muted">PER MONTH</p><a class="btn btn-info btn-sm" href="#">Learn More</a>
+            <p class="value3 mt-sm">31 Donations</p>
+            <p class="fs-mini text-muted">PER MONTH</p><a class="btn btn-info btn-sm" href="DetailsDonor.html">Learn More</a>
             </div>
             </div>
             </div>
             </section>
+            <section class="search-result-item">
+              <a class="image-link" href="#">
+                  <img class="image" src="https://bootdey.com/img/Content/avatar/avatar1.png">
+              </a>
+              <div class="search-result-item-body">
+                  <div class="row user-info">
+                      <div class="col-md-9">
+                          <h4 class="search-result-item-heading"><a href="#">Hassan Amr</a></h4>
+                          <p class="info">Heliopolis, Hegaz St.</p>
+                          <p class="description">Not just usual Metro. But something bigger. Not just usual widgets, but real widgets. Not just yet another admin template, but next generation admin template.</p>
+                      </div>
+                      <div class="col-md-3 text-align-center">
+                          <p class="value3 mt-sm">7 Donations</p>
+                          <p class="fs-mini text-muted">PER WEEK</p>
+                          <a class="btn btn-primary btn-info btn-sm" href="DetailsDonor.html">Learn More</a>
+                      </div>
+                  </div>
+              </div>
+          </section>
             <br>
-            <div class="text-align-center">
-                <div class="pagination-container text-center d-flex justify-content-center">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Prev</a>
-                        </li>
-                        <li class="page-item active" aria-current="page">
-                            <a class="page-link" href="#">1</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            
           </div>
         </div>
         </div>
+        
+      
 
         <!-- Footer -->
         <footer class="footer-container">
@@ -546,56 +612,33 @@
     
               <div style="margin-left: 40px; margin-top: 20px;">
 
-                <div id ="organization"class="radio-container">
-                    <h3 style="text-align: left;color: white;">Organization Type :</h3>
-                    <div class="radio-wrapper">
-                        <label class="radio-button">
-                            <input value="all" name="organization" type="radio" checked>
-                            <span class="radio-checkmark"></span>
-                            <span class="radio-label">All</span>
-                        </label>
-                    </div>
-                  
-                    <div class="radio-wrapper">
-                        <label class="radio-button">
-                            <input value="ain" name="organization" type="radio">
-                            <span class="radio-checkmark"></span>
-                            <span class="radio-label">Educational Institutions</span>
-                        </label>
-                    </div>
-
-                    <div class="radio-wrapper">
-                        <label class="radio-button">
-                            <input value="damascus" name="organization" type="radio">
-                            <span class="radio-checkmark"></span>
-                            <span class="radio-label">Charitable Foundations </span>
-                        </label>
-                    </div>
-
-                    <div class="radio-wrapper">
-                        <label class="radio-button">
-                            <input value="radiology" name="organization" type="radio">
-                            <span class="radio-checkmark"></span>
-                            <span class="radio-label">Healthcare Organizations</span>
-                        </label>
-                    </div>
-                  
-                    <div class="radio-wrapper">
-                        <label class="radio-button">
-                            <input value="medical" name="organization" type="radio">
-                            <span class="radio-checkmark"></span>
-                            <span class="radio-label">Humanitarian Aid Agencies</span>
-                        </label>
-                    </div>
-                    <!-- Add more radio buttons for areas -->
-            
-                </div>
+                <div id="organization1" class="radio-container">
+                  <h3 style="text-align: left; color: white;">Min. weekly donations:</h3>
+                  <div class="number-selector">
+                      <input type="range" min="0" max="100" value="0" id="numberRange1">
+                      <output for="numberRange1" id="selectedNumber1">0</output>
+                  </div>
+                  <!-- Add more radio buttons for areas -->
+              
+              
+             <br>
+             <br>
+             <br>
+             <br>
+                  <h3 style="text-align: left; color: white;">Max. weekly donations:</h3>
+                  <div class="number-selector">
+                      <input type="range" min="0" max="100" value="100" id="numberRange2">
+                      <output for="numberRange2" id="selectedNumber2">100</output>
+                  </div>
+                  <!-- Add more radio buttons for areas -->
+              </div>
+              
 
                 <div id = "area"class="radio-container">
                     <h3 style="text-align: left;color: white;">Area :</h3>
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input value="all" name="area" type="radio" checked>
+                            <input value="" name="area" type="radio" checked>
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">All</span>
                         </label>
@@ -603,7 +646,7 @@
                   
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input value="fifth" name="area" type="radio">
+                            <input value="fifth Settlement" name="area" type="radio">
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">Fifth Settlement</span>
                         </label>
@@ -619,7 +662,7 @@
 
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input value="octobor" name="area" type="radio">
+                            <input value="6th octobor" name="area" type="radio">
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">6th Octobor</span>
                         </label>
@@ -640,7 +683,7 @@
                     <h3 style="text-align: left;color: white;">Governorate :</h3>
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input value="all" name="governorate" type="radio" checked>
+                            <input value="" name="governorate" type="radio" checked>
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">All</span>
                         </label>
@@ -685,6 +728,10 @@
             </div>
         </div>
       </div>
+
+      
+
+  
     <!-- Javascript -->
     <script src="../../assets/js/jquery-3.3.1.min.js"></script>
     <script src="../../assets/js/jquery-migrate-3.0.0.min.js"></script>
@@ -704,5 +751,97 @@
     
 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script type="text/javascript"> </script>
+
+<script>
+    // Function to toggle the sidebar for filters
+    function toggleFilterSidebar() {
+      document.getElementById("sidebar2").classList.toggle("active");
+    }
+  
+    // Function to close the sidebar
+    function closeSidebar() {
+      document.getElementById("sidebar2").classList.remove("active");
+    }
+  
+    // Function to perform search
+    function performSearch() {
+      var input, filter, sections, section, i, txtValue;
+      input = document.getElementById("searchInput");
+      filter = input.value.toUpperCase();
+      sections = document.getElementsByClassName("search-result-item");
+
+      for (i = 0; i < sections.length; i++) {
+        section = sections[i];
+        var name = section.querySelector('.search-result-item-heading').textContent.toUpperCase();
+        var info = section.querySelector('.info').textContent.toUpperCase();
+        txtValue = name + ' ' + info;
+
+        if (txtValue.indexOf(filter) > -1) {
+          sections[i].style.display = "";
+        } else {
+          sections[i].style.display = "none";
+        }
+      }
+    }
+
+    document.querySelectorAll('input[name="governorate"]').forEach(input => {
+  input.addEventListener("change", () => {
+    const governorate = document.querySelector('input[name="governorate"]:checked');
+    if (governorate) {
+      performFilter(governorate.value);
+    }
+  });
+});
+
+  
+function performFilter() {
+  var minDonations = parseInt(document.getElementById('numberRange1').value);
+  var maxDonations = parseInt(document.getElementById('numberRange2').value);
+  var area = document.querySelector('input[name="area"]:checked').value;
+  var governorate = document.querySelector('input[name="governorate"]:checked').value;
+  var sections = document.getElementsByClassName("search-result-item");
+
+  // Reset display styles for all sections
+  Array.from(sections).forEach(section => section.style.display = "");
+
+  Array.from(sections).forEach(function(section) {
+    var donationCount = parseInt(section.querySelector('.value3')?.textContent.match(/\d+/)[0]);
+    var areaText = section.querySelector('.info').textContent.toUpperCase();
+    
+    var isVisible = donationCount >= minDonations && donationCount <= maxDonations &&
+                    (area === 'all' || areaText.includes(area.toUpperCase())) &&
+                    (governorate === 'all' || governorate === governorate.toUpperCase()|| governorate === 'cairo');
+
+    section.style.display = isVisible ? "" : "none";
+  });
+}
+
+// Add event listeners for filter inputs
+document.getElementById("numberRange1").addEventListener("input", performFilter);
+document.getElementById("numberRange2").addEventListener("input", performFilter);
+document.querySelectorAll('input[name="area"]').forEach(input => input.addEventListener("change", performFilter));
+document.querySelectorAll('input[name="governorate"]').forEach(input => input.addEventListener("change", performFilter));
+
+    // Add event listeners for search and filter inputs
+    document.getElementById("searchInput").addEventListener("keyup", performSearch);
+    document.getElementById("filterInputs").addEventListener("change", performFilter);
+    
+    
+    const rangeInput1 = document.getElementById('numberRange1');
+    const output1 = document.getElementById('selectedNumber1');
+    const rangeInput2 = document.getElementById('numberRange2');
+    const output2 = document.getElementById('selectedNumber2');
+
+    rangeInput1.addEventListener('input', function() {
+      output1.textContent = this.value;
+    });
+
+    rangeInput2.addEventListener('input', function() {
+      output2.textContent = this.value;
+    });
+
+  
+  </script>
+  
   </body>
 </html>

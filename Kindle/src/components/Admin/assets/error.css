@@ -1,0 +1,117 @@
+/* CSS for pop up message */
+.popup-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.notifications-container {
+    width: 320px;
+    height: auto;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+@keyframes popupAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Error message */
+.error {
+    background-color: #721c24; /* Red background color */
+    font-weight: bold;
+    display: none;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    color: #f8d7da; /* Red text color */
+    animation: popupAppear 0.5s ease-in-out forwards;
+    animation-fill-mode: forwards;
+}
+
+.error-svg {
+    color: #f5c6cb; /* Red icon color */
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.error-prompt-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 0.75rem;
+}
+
+.error-prompt-heading {
+    font-weight: bold;
+    color: #ffffff; /* Red heading color */
+}
+
+.error-prompt-prompt {
+    font-weight: normal;
+    margin-top: 0.5rem;
+    color: #ffffff; /* Red text color */
+}
+
+.error-button-container {
+    display: flex;
+    margin-top: 0.875rem;
+    margin-bottom: -0.375rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+}
+
+.error-button-main {
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: #f8d7da; /* Light red background color */
+    color: #721c24; /* Red text color */
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    border-radius: 0.375rem;
+    border: none;
+}
+
+.error-button-main:hover {
+    background-color: #f3b7bb; /* Darker red background color on hover */
+}
+
+.error-button-secondary {
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-left: 0.75rem;
+    background-color: #f8d7da; /* Light red background color */
+    color: #721c24; /* Red text color */
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border-radius: 0.375rem;
+    border: none;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    margin-bottom: 0.5rem;
+}
