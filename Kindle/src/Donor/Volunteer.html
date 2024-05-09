@@ -60,31 +60,32 @@
 			</div>
 
 			<ul class="list-unstyled menu-elements">
-				<li class="active">
-					<a href="../DonorPage.html"><i class="fas fa-home"></i> Home</a>
-				</li>
-				<li>
-					<a href="./ReqD.html"><i class="fas fa-hand-holding-heart"></i> Requested Donations</a>
-				</li>
-				<li>
-					<a href="./Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
-				</li>
-				<li>
-					<a href="../Donor/TeachingPosts.html"><i class="fas fa-chalkboard-teacher"></i> Teaching Posts</a>
-				</li>
-				<li>
-					<a href="../Donor/MedicalCases.html"><i class="fas fa-notes-medical"></i> Medical Cases</a>
-				</li>
-				<li>
-					<a href="../Donor/Donations.html"><i class="fas fa-donate"></i> My Donations</a>
-				</li>
-				<li>
-					<a href="../Donor/AccountSettings.html"><i class="fas fa-cogs"></i> Account Settings</a>
-				</li>
-				<li>
-					<a href="../Donor/RegOrganizations.html"><i class="fas fa-users"></i> Registered Organizations</a>
-				</li>
-			</ul>
+                <li class="active">
+                    <a href="../DonorPage.html"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li>
+                    <a href="../Donor/Donations.html"><i class="fas fa-donate"></i> My Donations</a>
+                </li>
+                <li>
+                    <a href="./ReqD.html"><i class="fas fa-hand-holding-heart"></i> Requested Donations</a>
+                </li>
+                <li>
+                    <a href="./Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
+                </li>
+                <li>
+                    <a href="../Donor/TeachingPosts.html"><i class="fas fa-chalkboard-teacher"></i> Teaching Posts</a>
+                </li>
+                <li>
+                    <a href="../Donor/MedicalCases.html"><i class="fas fa-notes-medical"></i> Medical Cases</a>
+                </li>
+                
+                <li>
+                    <a href="../Donor/RegOrganizations.html"><i class="fas fa-users"></i> Registered Organizations</a>
+                </li>
+                <li>
+                    <a href="../Donor/AccountSettings.html"><i class="fas fa-cogs"></i> Account Settings</a>
+                </li>
+            </ul>
 			
 			<div class="to-top">
 				<a class="btn btn-primary btn-customized-3" href="#" role="button">
@@ -239,7 +240,9 @@
 <div id="submission-message" class="alert alert-success d-none" role="alert">
 	Post Submitted Successfully
 </div>
-
+<div id="popup" class="popup">
+	Submitted successfully!
+  </div>
 <script>
 	document.getElementById('submit-post-btn').addEventListener('click', function(event) {
         // Check if the form is valid
@@ -296,8 +299,10 @@
 									<input type="text" name="subject" placeholder="Governorate" class="contact-subject form-control" id="contact-subject" required>
 								</div>
 								<button type="submit" id="submit-post-btn2" class="btn btn-primary btn-customized"><i class="fas fa-check-circle"></i> Submit</button>
+								
 						<p id="message2" class="text-success"></p>
 							</div>
+							
 							<div class="form-side map-side">
 								<h4>Please pinpoint your address on map:</h4>
 								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d708.1388568256748!2d31.281328141854207!3d30.067719408090635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583f9ec9b02a01%3A0x3c19ee8d3652e00d!2z2LXZitiv2YTZitipINin2YTYsdit2YXZhg!5e0!3m2!1sen!2seg!4v1714328201328!5m2!1sen!2seg" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -314,6 +319,59 @@
 <div id="submission-message2" class="alert alert-success d-none" role="alert">
 	Post Submitted Successfully
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the submit button
+        var submitButton = document.getElementById("submit-post-btn2");
+
+        // Get the form
+        var form = document.getElementById("doctor-form");
+
+        // Get all required fields
+        var requiredFields = form.querySelectorAll(".required");
+
+        // Function to check if all required fields are filled
+        function checkRequiredFields() {
+            var allFilled = true;
+            requiredFields.forEach(function(field) {
+                if (field.value.trim() === '') { 
+                    allFilled = false;
+                }
+            });
+            // Enable or disable the button based on whether all required fields are filled
+            submitButton.disabled = !allFilled;
+        }
+
+        // Add event listeners to required fields to check if they are filled
+        requiredFields.forEach(function(field) {
+            field.addEventListener('input', checkRequiredFields);
+        });
+    });
+</script>
+
+
+<script>
+	document.getElementById("submit-post-btn2").addEventListener("click", function() {
+	  // Show popup
+	  document.getElementById("popup").style.display = "block";
+	
+	  // Redirect after 2 seconds
+	  setTimeout(function() {
+		window.location.href = "../DonorPage.html"; // Replace with your desired URL
+	  }, 1500); // Adjust the time as needed (in milliseconds)
+	});
+	</script>
+	<script>
+	document.getElementById("submit-post-btn").addEventListener("click", function() {
+	  // Show popup
+	  document.getElementById("popup").style.display = "block";
+	
+	  // Redirect after 2 seconds
+	  setTimeout(function() {
+		window.location.href = "../DonorPage.html"; // Replace with your desired URL
+	  }, 1500); // Adjust the time as needed (in milliseconds)
+	});
+	</script>
 <script>
 	document.getElementById('submit-post-btn2').addEventListener('click', function(event) {
         // Check if the form is valid
