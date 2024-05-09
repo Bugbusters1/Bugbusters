@@ -120,10 +120,10 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Organization Name</th>
-                                <th>Donation Category</th>
-                                <th>Donation Details</th>
-                                <th>Action</th>
+                                <th style="padding-left: 80px;">Organization Name</th>
+                                <th style="padding-left: 80px;">Donation Category</th>
+                                <th style="padding-left: 80px;">Donation Details</th>
+                                <th style="padding-left: 80px;">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -223,30 +223,36 @@
                             button.addEventListener('click', function() {
                                 // Get the parent row of the button
                                 const row = this.closest('tr');
-                                
-                                // Apply CSS transition to fade out the row gradually
-                                row.style.transition = 'opacity 0.5s ease';
-                                row.style.opacity = '0'; // Set opacity to 0
-                                
-                                // After the transition duration, remove the row from the DOM
-                                setTimeout(function() {
-                                    row.remove();
-                                    // Create a message element
-                                    const message = document.createElement('div');
-                                    message.textContent = 'Donation post deleted successfully';
-                                    message.classList.add('alert', 'alert-success', 'text-dark', 'font-weight-bold');
-                                    // Insert the message after the table
-                                    const table = document.querySelector('.table');
-                                    table.parentNode.insertBefore(message, table.nextSibling);
-                                    // Remove the message after a certain duration (e.g., 3 seconds)
-                                    setTimeout(function() {
-                                        message.remove();
-                                    }, 3000); // 3 seconds
-                                    if (document.querySelectorAll('tbody tr').length === 0) {
-                                        document.getElementById('no-posts-message').classList.remove('d-none');
-                                    }
+                            
+                                    Swal.fire({
+                                        title: "Are you sure?",
+                                        text: "You won't be able to revert this!",
+                                        icon: "warning",
+                                        showCancelButton: true,
+                                        confirmButtonColor: "#3085d6",
+                                        cancelButtonColor: "#d33",
+                                        confirmButtonText: "Yes, delete it!"
+                                        }).then((result) => {
+                                        if (result.isConfirmed) {
+                                            Swal.fire({
+                                            title: "Deleted!",
+                                            text: "Donation post has been deleted.",
+                                            icon: "success"
+                                            });
+                                            // Apply CSS transition to fade out the row gradually
+                                            row.style.transition = 'opacity 0.5s ease';
+                                            row.style.opacity = '0'; // Set opacity to 0
+                                            setTimeout(function() {
+                                                row.remove();
+                                                if (document.querySelectorAll('tbody tr').length === 0) {
+                                                document.getElementById('no-posts-message').classList.remove('d-none');
+                                            }
+                                            },1000);
+                                        }
+                                        });
                                     
-                                }, 1000); // 1.0s transition duration
+                                    
+                            
                             });
                         });
 
@@ -307,34 +313,43 @@
 	<script src="../assets/js/scripts.js"></script>
     <script src="./sideBarButtons.js"></script>
     <script src="./notifyButton.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>	 
+	<script src="sweetalert2.all.min.js"></script> 
 
 </body>
 
 <style>
     /* CSS for the table */
-.table {
-    color: #FCFAF0;
-    background-color: #222024;
-    border: 1px solid #222024;
+    .table {
+    color: #333; /* Text color */
+    background-color: #f8f9fa; /* Background color */
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Take up full width of container */
 }
 
 /* CSS for table headers */
-.table thead th {
-    color: white; 
+.table th {
+    background-color: #212121; /* Header background color */
+    color: #fff; /* Header text color */
+    font-weight: bold; /* Bold font weight */
+    padding: 10px; /* Padding around header content */
+    text-align: left; /* Align text to the left */
 }
 
 /* CSS for table rows */
-.table tbody td {
-    color: white; 
+.table td {
+    padding: 10px; /* Padding around cell content */
+    border-bottom: 1px solid #ddd; /* Bottom border for each row */
 }
-/* CSS to position the button next to the donor name */
-.donor-name {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px; /* Adjust the margin as needed */
+
+/* CSS for alternating row colors */
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row background color */
 }
-.view-donor-details-btn {
-    vertical-align: middle;
+
+/* CSS for hover effect on rows */
+.table tbody tr:hover {
+    background-color: #e9ecef; /* Hovered row background color */
 }
 
 /* Add styling for active menu item */

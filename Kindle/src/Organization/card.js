@@ -15,10 +15,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     closeButton.addEventListener("click", function() {
         popupContainer.style.display = "none";
-        document.querySelector(".confirmation-message").style.display = "none";
         });
     schButton.addEventListener("click", function() {
-        document.querySelector(".confirmation-message").style.display = "block";
+        popupContainer.style.display = "none";
+        Swal.fire({
+            title: "Good job!",
+            text: "Pick-up Scheduled Successfully",
+            icon: "success",
+            showConfirmButton: false,
+            timer: 2000
+          });
     });    
 
 });

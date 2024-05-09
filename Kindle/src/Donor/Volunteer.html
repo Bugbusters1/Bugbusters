@@ -56,7 +56,7 @@
 			</div>
 
 			<div class="logo">
-				<h3><a href="index.html">Kindle</a></h3>
+				<h3><a href="../DonorPage.html">Kindle</a></h3>
 			</div>
 
 			<ul class="list-unstyled menu-elements">
@@ -86,11 +86,10 @@
 				</li>
 			</ul>
 			
-			<div class="to-top">
-				<a class="btn btn-primary btn-customized-3" href="#" role="button">
+			
+				<a class="btn btn-primary btn-customized-3" href="../HomePage.html" role="button">
 					<i class="fas fa-sign-out-alt"></i> Log out 
 				</a>
-			</div>
 			
 			<!-- <div class="dark-light-buttons">
 				<a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
@@ -247,10 +246,17 @@
         // Prevent the default form submission behavior
         event.preventDefault();
         // Show the submission message if the form is valid
-        document.getElementById('submission-message').classList.remove('d-none');
-        setTimeout(function() {
-        document.getElementById('submission-message').classList.add('d-none');
-        }, 3000);
+        Swal.fire({
+				title: "Good job!",
+				text: "Application Submitted Successfully!",
+				icon: "success",
+				showConfirmButton: false,
+				timer:2000
+				});	
+
+		setTimeout(function() {
+        window.location.href = "../DonorPage.html";
+      }, 2500);
         }
         });
 </script>
@@ -324,10 +330,17 @@
         // Prevent the default form submission behavior
         event.preventDefault();
         // Show the submission message if the form is valid
-        document.getElementById('submission-message2').classList.remove('d-none');
-        setTimeout(function() {
-        document.getElementById('submission-message2').classList.add('d-none');
-        }, 3000);
+		Swal.fire({
+				title: "Good job!",
+				text: "Application Submitted Successfully!",
+				icon: "success",
+				showConfirmButton: false,
+				timer:2500
+				});	
+
+		setTimeout(function() {
+        window.location.href = "../DonorPage.html";
+      }, 2500);
         }
         });
 </script>
@@ -419,6 +432,8 @@
         ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly"});</script>
           <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
           <script src="../Donor/GoogleMarker.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>	 
+	<script src="sweetalert2.all.min.js"></script> 
 </body>
 
 </html>

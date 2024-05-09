@@ -275,21 +275,41 @@
     <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../assets/js/scripts.js"></script>    
     <script src="./sideBarButtons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>	 
+	<script src="sweetalert2.all.min.js"></script> 
     <script>
 
         document.getElementById("updateSubmit").addEventListener("click", function() {
-        popup.style.display = "block";
-    });
-        var dismissButton = document.getElementById("dismissButton");
 
-        // Function to close (hide) the popup
-        function closePopup() {
-        popup.style.display = "none";
-        }
+            Swal.fire({
+            title: "Do you want to save the changes?",
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: "Save",
+            denyButtonText: `Don't save`
+            }).then((result) => {            
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Saved!",
+                    text: "",
+                    icon: "success",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                setTimeout(function() {
+                window.location.href = "./OrganizationHome.html";
+                }, 1500);
+            } else if (result.isDenied) {
+                Swal.fire("Changes are not saved", "", "info");
+            }
+            });
 
-        // Listen for clicks on the dismiss button
-        dismissButton.addEventListener("click", closePopup);
+        });
 
+        document.getElementById("submit").addEventListener("click", function() {
+            window.location.href = "./OrganizationHome.html";
+
+        });
     </script>
     
 <style>
