@@ -993,3 +993,21 @@ footer {
 	transform: scaleX(1);
   }
   
+  /* Scrollbar Styling */
+  body::-webkit-scrollbar {
+	width: 12px; /* Width of the scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+	background: #FCFAF0 !important; /* Color of the scrollbar track */
+	border-radius: 6px;
+	margin: 0px; /* Adjust the margin */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+	background-color: #222024; /* Color of the scrollbar thumb */
+	border-radius: 6px; /* Radius of the scrollbar thumb */
+	border: 3px solid #f7f8fd; /* Border around the scrollbar thumb */
+	margin: 2px; /* Adjust the margin */
+  }
+  

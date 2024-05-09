@@ -118,6 +118,51 @@
         margin: 0
     }
 }
+
+.number-selector {
+  width: 250px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+}
+
+input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  background: #d3d3d3;
+  border-radius: 10px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #5bc5f7;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #5bc5f7;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+output {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 30px;
+  min-width: 50px;
+}
+
     </style>
     <title>Kindle</title>
 
@@ -451,8 +496,8 @@
                             <p class="description">Not just usual Metro. But something bigger. Not just usual widgets, but real widgets. Not just yet another admin template, but next generation admin template.</p>
                         </div>
                         <div class="col-md-3 text-align-center">
-                            <p class="value3 mt-sm">10 Donations</p>
-                            <p class="fs-mini text-muted">PER WEEK</p>
+                            <p class="value3 mt-sm">51 Donations</p>
+                            <p class="fs-mini text-muted">PER Month</p>
                             <a class="btn btn-primary btn-info btn-sm" href="#">Learn More</a>
                         </div>
                     </div>
@@ -472,8 +517,8 @@
             <p class="description">You will never know exactly how something will go until you try it. You can think three hundred times and still have no precise result.</p>
             </div>
             <div class="col-sm-3 text-align-center">
-            <p class="badge bg-danger fw-normal most-contributer">Most Contributer!</p>            <p class="value3 mt-sm">15 Donations</p>
-            <p class="fs-mini text-muted">PER WEEK</p><a class="btn btn-primary btn-info btn-sm" href="#">Learn More</a>
+            <p class="badge bg-danger fw-normal most-contributer">Most Contributer!</p>            <p class="value3 mt-sm">91 Donations</p>
+            <p class="fs-mini text-muted">PER MONTH</p><a class="btn btn-primary btn-info btn-sm" href="#">Learn More</a>
             </div>
             </div>
             </div>
@@ -490,7 +535,7 @@
             </div>
             <div class="col-sm-3 text-align-center">
             <p class="value3 mt-sm">5 Donations</p>
-            <p class="fs-mini text-muted">PER WEEK</p><a class="btn btn-info btn-sm" href="#">Learn More</a>
+            <p class="fs-mini text-muted">PER MONTH</p><a class="btn btn-info btn-sm" href="#">Learn More</a>
             </div>
             </div>
             </div>
@@ -506,7 +551,7 @@
             <p class="description">Yes you can! Further more, you should! It let's you create really beautiful images either for elements or for the entire background.</p>
             </div>
             <div class="col-sm-3 text-align-center">
-            <p class="value3 mt-sm">3 Donations</p>
+            <p class="value3 mt-sm">31 Donations</p>
             <p class="fs-mini text-muted">PER MONTH</p><a class="btn btn-info btn-sm" href="#">Learn More</a>
             </div>
             </div>
@@ -557,56 +602,33 @@
     
               <div style="margin-left: 40px; margin-top: 20px;">
 
-                <div id ="organization"class="radio-container">
-                    <h3 style="text-align: left;color: white;">No. of weekly donations :</h3>
-                    <div class="radio-wrapper">
-                        <label class="radio-button">
-                            <input value="all" name="organization" type="radio" checked>
-                            <span class="radio-checkmark"></span>
-                            <span class="radio-label">All</span>
-                        </label>
-                    </div>
-                  
-                    <div class="radio-wrapper">
-                        <label class="radio-button">
-                            <input value="ain" name="organization" type="radio">
-                            <span class="radio-checkmark"></span>
-                            <span class="radio-label">Educational Institutions</span>
-                        </label>
-                    </div>
-
-                    <div class="radio-wrapper">
-                        <label class="radio-button">
-                            <input value="damascus" name="organization" type="radio">
-                            <span class="radio-checkmark"></span>
-                            <span class="radio-label">Charitable Foundations </span>
-                        </label>
-                    </div>
-
-                    <div class="radio-wrapper">
-                        <label class="radio-button">
-                            <input value="radiology" name="organization" type="radio">
-                            <span class="radio-checkmark"></span>
-                            <span class="radio-label">Healthcare Organizations</span>
-                        </label>
-                    </div>
-                  
-                    <div class="radio-wrapper">
-                        <label class="radio-button">
-                            <input value="medical" name="organization" type="radio">
-                            <span class="radio-checkmark"></span>
-                            <span class="radio-label">Humanitarian Aid Agencies</span>
-                        </label>
-                    </div>
-                    <!-- Add more radio buttons for areas -->
-            
-                </div>
+                <div id="organization1" class="radio-container">
+                  <h3 style="text-align: left; color: white;">Min. weekly donations:</h3>
+                  <div class="number-selector">
+                      <input type="range" min="0" max="100" value="0" id="numberRange1">
+                      <output for="numberRange1" id="selectedNumber1">0</output>
+                  </div>
+                  <!-- Add more radio buttons for areas -->
+              
+              
+             <br>
+             <br>
+             <br>
+             <br>
+                  <h3 style="text-align: left; color: white;">Max. weekly donations:</h3>
+                  <div class="number-selector">
+                      <input type="range" min="0" max="100" value="100" id="numberRange2">
+                      <output for="numberRange2" id="selectedNumber2">100</output>
+                  </div>
+                  <!-- Add more radio buttons for areas -->
+              </div>
+              
 
                 <div id = "area"class="radio-container">
                     <h3 style="text-align: left;color: white;">Area :</h3>
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input value="all" name="area" type="radio" checked>
+                            <input value="" name="area" type="radio" checked>
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">All</span>
                         </label>
@@ -614,7 +636,7 @@
                   
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input value="fifth" name="area" type="radio">
+                            <input value="fifth Settlement" name="area" type="radio">
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">Fifth Settlement</span>
                         </label>
@@ -630,7 +652,7 @@
 
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input value="octobor" name="area" type="radio">
+                            <input value="6th octobor" name="area" type="radio">
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">6th Octobor</span>
                         </label>
@@ -651,7 +673,7 @@
                     <h3 style="text-align: left;color: white;">Governorate :</h3>
                     <div class="radio-wrapper">
                         <label class="radio-button">
-                            <input value="all" name="governorate" type="radio" checked>
+                            <input value="" name="governorate" type="radio" checked>
                             <span class="radio-checkmark"></span>
                             <span class="radio-label">All</span>
                         </label>
@@ -747,32 +769,64 @@
         }
       }
     }
-  
-    // Function to apply filters
-    function applyFilters() {
-      var organization = document.querySelector('input[name="organization"]:checked').value;
-      var area = document.querySelector('input[name="area"]:checked').value;
-      var governorate = document.querySelector('input[name="governorate"]:checked').value;
-      var sections = document.getElementsByClassName("search-result-item");
-  
-      for (var i = 0; i < sections.length; i++) {
-        var orgType = sections[i].querySelector('.info').textContent.trim();
-        var areaName = sections[i].querySelector('.info').textContent.trim();
-        var govName = sections[i].querySelector('.info').nextElementSibling.nextElementSibling.textContent.trim();
-  
-        if ((organization === 'all' || orgType === organization) &&
-          (area === 'all' || areaName === area) &&
-          (governorate === 'all' || govName === governorate)) {
-          sections[i].style.display = "";
-        } else {
-          sections[i].style.display = "none";
-        }
-      }
+
+    document.querySelectorAll('input[name="governorate"]').forEach(input => {
+  input.addEventListener("change", () => {
+    const governorate = document.querySelector('input[name="governorate"]:checked');
+    if (governorate) {
+      performFilter(governorate.value);
     }
+  });
+});
+
   
+function performFilter() {
+  var minDonations = parseInt(document.getElementById('numberRange1').value);
+  var maxDonations = parseInt(document.getElementById('numberRange2').value);
+  var area = document.querySelector('input[name="area"]:checked').value;
+  var governorate = document.querySelector('input[name="governorate"]:checked').value;
+  var sections = document.getElementsByClassName("search-result-item");
+
+  // Reset display styles for all sections
+  Array.from(sections).forEach(section => section.style.display = "");
+
+  Array.from(sections).forEach(function(section) {
+    var donationCount = parseInt(section.querySelector('.value3')?.textContent.match(/\d+/)[0]);
+    var areaText = section.querySelector('.info').textContent.toUpperCase();
+    
+    var isVisible = donationCount >= minDonations && donationCount <= maxDonations &&
+                    (area === 'all' || areaText.includes(area.toUpperCase())) &&
+                    (governorate === 'all' || governorate === governorate.toUpperCase()|| governorate === 'cairo');
+
+    section.style.display = isVisible ? "" : "none";
+  });
+}
+
+// Add event listeners for filter inputs
+document.getElementById("numberRange1").addEventListener("input", performFilter);
+document.getElementById("numberRange2").addEventListener("input", performFilter);
+document.querySelectorAll('input[name="area"]').forEach(input => input.addEventListener("change", performFilter));
+document.querySelectorAll('input[name="governorate"]').forEach(input => input.addEventListener("change", performFilter));
+
     // Add event listeners for search and filter inputs
     document.getElementById("searchInput").addEventListener("keyup", performSearch);
-    document.getElementById("filterInputs").addEventListener("change", applyFilters);
+    document.getElementById("filterInputs").addEventListener("change", performFilter);
+    
+    
+    const rangeInput1 = document.getElementById('numberRange1');
+    const output1 = document.getElementById('selectedNumber1');
+    const rangeInput2 = document.getElementById('numberRange2');
+    const output2 = document.getElementById('selectedNumber2');
+
+    rangeInput1.addEventListener('input', function() {
+      output1.textContent = this.value;
+    });
+
+    rangeInput2.addEventListener('input', function() {
+      output2.textContent = this.value;
+    });
+
+  
   </script>
   
   </body>
