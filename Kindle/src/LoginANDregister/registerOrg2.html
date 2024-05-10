@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kindle</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
+
+</head>
+<body>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <form method="POST" class="register-form" id="register-form" action="registerOrg3.html">
+                            <div class="form-group">
+                                <label for="address"><i class="zmdi zmdi-pin material-icons-name"></i></label>
+                                <input type="text" name="address" id="address" placeholder="Organization Address" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="area"><i class="zmdi zmdi-city material-icons-name"></i></label>
+                                <input type="text" name="area" id="area" placeholder="Organization Area" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="city"><i class="zmdi zmdi-map"></i></label>
+                                <input type="text" name="city" id="city" placeholder="Organization Governorate" required/>
+                            </div>
+                            <div class="form-group">                                
+                                <div id="map" style="height: 400px;"></div>
+                            </div>
+                        
+                        <div class="form-group form-button">
+                            <input type="submit" name="signup" id="signup" class="form-submit" value="Next"/>
+                        </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="images/signup2-image.jpg" alt="sing up image"></figure>
+                        <a href="login.html" class="signup-image-link">I am already a member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 0, lng: 0},
+                zoom: 8
+            });
+
+            var marker = new google.maps.Marker({
+                position: {lat: 0, lng: 0},
+                map: map,
+                draggable: true
+            });
+
+            
+        }
+        
+        // Call initMap when the page loads
+        initMap();
+
+                const form = document.getElementById('register-form');
+
+        // Add an event listener for the form submission
+        form.addEventListener('submit', function(event) {
+        // Prevent the form from submitting normally
+        event.preventDefault();
+
+        // Redirect the user to the desired page
+        window.location.href = 'registerOrg3.html';
+        });
+    </script>
+
+</body>
+</html>

@@ -127,5 +127,20 @@ jQuery(document).ready(function() {
 	        }
 	    });
 	});
+
+	// Get the logout button element
+const logoutButton = document.querySelector('.to-top a');
+
+// Add a click event listener to the logout button
+logoutButton.addEventListener('click', (event) => {
+  // Prevent the default behavior of the button (which is to navigate to the href attribute)
+  event.preventDefault();
+
+  // Clear any authentication tokens or cookies
+  // (This will depend on how you have implemented authentication in your application)
+
+  // Redirect the user to the login page
+  window.location.href = '../../LoginANDregister/login.html';
+});
 	
 });
