@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <title>Kindle</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../../assets/css/animate.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/media-queries.css">
+    <link rel="stylesheet" href="table/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="table/css/search.css">
+    <link rel="stylesheet" href="table/css/bootstrap.min.css">
+    <link rel="stylesheet" href="table/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="assets/pop-up.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="table/css/style.css">
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/apple-touch-icon-57-precomposed.png">
+
+</head>
+
+<body>
+    <style>
+        html {
+             /* Set width to 100% */
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+
+        body {
+            margin: 200; /* Remove default margin */
+            padding: 300;
+            font-family: Arial, sans-serif;
+        }
+
+        
+
+        /* Your other CSS styles here */
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 200px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 0px;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        
+    </style>
+
+<style>
+    
+   
+   @keyframes bounce {
+       0%, 20%, 50%, 80%, 100% {
+           transform: translateY(0);
+       }
+       40% {
+           transform: translateY(-30px);
+       }
+       60% {
+           transform: translateY(-15px);
+       }
+   }
+   
+   .animate-bounce:hover {
+       animation: bounce 1s infinite;
+   }
+   
+   
+   
+     </style>
+   
+    <!-- Wrapper -->
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+        <nav class="sidebar">
+
+            <!-- close sidebar menu -->
+            <div class="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="logo">
+                <h3><a href="Admin.html">Kindle</a></h3>
+            </div>
+
+            <ul class="list-unstyled menu-elements">
+                <li>
+                    <a class="button" href="Admin.html"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li>
+                    <a class="button" href="AdminViewOrg.html"><i class="fas fa-building"></i> Show Organizations</a>
+                </li>
+                <li>
+                    <a class="button" href="AdminViewDon.html"><i class="fas fa-users"></i> Show Donors</a>
+                </li>
+                <li>
+                    <a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"
+                        role="button" aria-controls="otherSections">
+                        <i class="fas fa-tasks"></i>Manage Requests
+                    </a>
+                    <ul class="collapse list-unstyled" id="otherSections">
+                        <li>
+                            <a class="button" href="AdminManageReq.html">Organizations</a>
+                        </li>
+                        <li>
+                            <a class="button" href="AdminReviewSub.html">Donors</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="button" href="AdminSetting.html"><i class="fas fa-cog"></i>Account Settings</a>
+                </li>
+                
+            </ul>
+
+            <div class="to-top">
+                <a class="btn btn-primary btn-customized-3" href="#" role="button">
+                    <i class="fas fa-sign-out-alt"></i> Log out
+                </a>
+            </div>
+            <!-- <div class="dark-light-buttons">
+                <a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
+                <a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
+            </div> -->
+
+        </nav>
+        <!-- End sidebar -->
+
+        <!-- Dark overlay -->
+        <div class="overlay"></div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <!-- open sidebar menu -->
+            <a class="open-menu" href="#" role="button">
+                <button class="btnMenu">
+                    <span class="icon">
+                        <svg viewBox="0 0 175 80" width="40" height="40">
+                            <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                            <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                            <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                        </svg>
+                    </span>
+                    <span class="text">Menu</span>
+                </button>
+            </a>
+
+            <!-- Top content -->
+            <div class="top-content section-container" id="top-content">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                            <h1 class="wow fadeIn">Kindle</h1>
+                            <div class="description wow fadeInLeft">
+                                <h3><p>
+                                        Together, Make a Difference.
+                                    </p>
+                                </h3>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<br>
+<br>
+            <!-- Section 1 -->
+            <div class="container">
+                <div class="row justify-content-between">
+                    <h2 class="mb-0">Requests</h2>
+                    <div class="col-md-1">
+                        <div class="input_container">
+                            <input type="text" name="text" id="searchInput" class="input" required="" placeholder="Type to search...">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                                    <title>Search</title>
+                                    <path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path>
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+        
+                    <table class="table table-striped custom-table">
+                        <thead>
+                        <tr>
+                            <th scope="col">
+                                <label class="control control--checkbox">
+                                    <input type="checkbox" class="js-check-all" id="check-all"/>
+                                    <div class="control__indicator"></div>
+                                </label>
+                            </th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Donor</th>
+                            <th scope="col">Request Type</th>
+                            <th scope="col">Contact</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Submissions</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                        <tr>
+                            <td>
+                                <label class="control control--checkbox">
+                                    <input type="checkbox"/>
+                                    <div class="control__indicator"></div>
+                                </label>
+                            </td>
+                            <td>
+                                1392
+                            </td>
+                            <td class="pl-0">
+                                <div class="d-flex align-items-center">
+                                    <a href="#">James Yates</a>
+                                </div>
+                            </td>
+                            <td>
+                                Doctor
+                            </td>
+                            <td>+201023456789</td>
+                            <td> Cairo, Egypt</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" style="margin-right: 10px;" onclick="downloadPdf('info.pdf')">Download INFO</button>
+                                <button class="btn btn-info js-accept" style="margin-right: 10px;">Accept</a>
+                                <button class="btn btn-danger js-delete">Reject</button>
+                            </td>
+        
+                        </tr>
+        
+                        <tr>
+        
+                            <td>
+                                <label class="control control--checkbox">
+                                    <input type="checkbox"/>
+                                    <div class="control__indicator"></div>
+                                </label>
+                            </td>
+        
+                            <td>4616</td>
+                            <td class="pl-0">
+                                <div class="d-flex align-items-center">
+                                    <a href="#">Matthew Wasil</a>
+                                </div>
+                            </td>
+                            <td>
+                               Physics Teacher
+                            </td>
+                            <td>+201198765432</td>
+                            <td> Cairo, Egypt</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" style="margin-right: 10px;" onclick="downloadPdf('pdf_filename.pdf')">Download INFO</button>
+                                <button class="btn btn-info js-accept" style="margin-right: 10px;">Accept</a>                                <button class="btn btn-danger js-delete">Reject</button>
+                            </td>
+
+                            
+                        </tr>
+                        <tr>
+        
+                            <td>
+                                <label class="control control--checkbox">
+                                    <input type="checkbox"/>
+                                    <div class="control__indicator"></div>
+                                </label>
+                            </td>
+        
+                            <td>3689</td>
+                            <td class="pl-0">
+                                <div class="d-flex align-items-center">
+                                    <a href="#">Ahmed Amr</a>
+                                </div>
+                            </td>
+                            <td>
+                               Math Teacher
+                            </td>
+                            <td>+201223455675</td>
+                            <td> Cairo, Egypt</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" style="margin-right: 10px;" onclick="downloadPdf('pdf_filename.pdf')">Download INFO</button>
+                                <button class="btn btn-info js-accept" style="margin-right: 10px;">Accept</a>                                <button class="btn btn-danger js-delete">Reject</button>
+                            </td>
+
+                            
+                        </tr>
+                        <tr>
+        
+                            <td>
+                                <label class="control control--checkbox">
+                                    <input type="checkbox"/>
+                                    <div class="control__indicator"></div>
+                                </label>
+                            </td>
+        
+                            <td>9513</td>
+                            <td class="pl-0">
+                                <div class="d-flex align-items-center">
+                                    <a href="#">Aly Hassan</a>
+                                </div>
+                            </td>
+                            <td>
+                               Doctor
+                            </td>
+                            <td>+201229856321</td>
+                            <td> Cairo, Egypt</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" style="margin-right: 10px;" onclick="downloadPdf('pdf_filename.pdf')">Download INFO</button>
+                                <button class="btn btn-info js-accept" style="margin-right: 10px;">Accept</a>                                <button class="btn btn-danger js-delete">Reject</button>
+                            </td>
+
+                            
+                        </tr>
+                        <!-- Add more rows here -->
+        
+                        </tbody>
+                    </table>
+                </div>
+        
+                <div class="mt-3">
+                    <button class="btn btn-danger" id="js-delete-selected">Delete Selected</button>
+                </div>
+        <br>
+        <br>
+            </div>
+        
+                
+              
+        <!-- End content -->
+
+   
+    <!-- End wrapper -->
+    <div class="popup-wrapper">
+        <div class="notifications-container">
+            <div class="success" id="popup">  <div class="flex">
+                <div class="flex-shrink-0">
+                  <svg class="succes-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <div class="success-prompt-wrap">
+                  <p class="success-prompt-heading">Organization accepted Successfully</p>
+                  <div class="success-prompt-prompt">
+                    <p></p>
+                  </div>
+                  <div class="success-button-container">
+                    <button type="button" class="success-button-main">
+                      
+                    </button>
+                    <button type="button" class="success-button-secondary" id="dismissButton">
+                      Dismiss
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!-- Javascript -->
+    <script src="../../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../../assets/js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="../../assets/js/jquery.backstretch.min.js"></script>
+    <script src="../../assets/js/wow.min.js"></script>
+    <script src="../../assets/js/jquery.waypoints.min.js"></script>
+    <script src="../../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../assets/js/scripts.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/apexcharts'></script>
+    
+
+    <script>
+        // JavaScript to handle delete button functionality
+        $(document).ready(function () {
+            $(".js-accept").on("click", function () {
+                var rowToAccept = $(this).closest("tr");
+                rowToAccept.remove();
+                popup.style.display = "block";
+            });
+
+
+            $(".js-delete").on("click", function () {
+    // Show the custom confirmation popup
+    $("#customConfirmation").show();
+
+    // Store the reference to the row to be deleted
+    var rowToDelete = $(this).closest("tr");
+
+    // Handle cancel button click
+    $("#cancelBtn").on("click", function () {
+        $("#customConfirmation").hide();
+    });
+
+    // Handle confirm button click
+    $("#confirmBtn").on("click", function () {
+        // Remove the row if confirmed
+        rowToDelete.remove();
+        $("#customConfirmation").hide();
+    });
+});
+
+    
+    
+    
+            $("#js-delete-selected").on("click", function () {
+        var checkedRows = $(".custom-table tbody tr").filter(function () {
+            return $(this).find("input[type='checkbox']").prop("checked");
+        });
+        if (checkedRows.length > 0) {
+            $("#customConfirmation").show();
+            
+            $("#cancelBtn").on("click", function () {
+        $("#customConfirmation").hide();
+    });
+
+    // Handle confirm button click
+    $("#confirmBtn").on("click", function () {
+        // Remove the row if confirmed
+        checkedRows.remove();
+        $("#customConfirmation").hide();
+    });
+        }
+    });
+    
+    
+            $("#searchInput").on("keyup", function () {
+                var searchText = $(this).val().toLowerCase();
+                $("#tableBody tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(searchText) > -1)
+                });
+            });
+    
+    
+            $("#searchInput").on("focus", function () {
+                $(".input_container").addClass("shifted");
+            });
+    
+    
+            $("#searchInput").on("blur", function () {
+                if ($(this).val().trim() === '') {
+                    $(".input_container").removeClass("shifted");
+                }
+            });
+    
+            $(".dismiss").on("click", function () {
+                if ($(this).val().trim() === '') {
+                    $(".input_container").removeClass("shifted");
+                }
+            });
+            
+    
+            
+                $("#check-all").on("click", function () {
+                    var checked = this.checked;
+                    $(".custom-table tbody tr td input[type='checkbox']").each(function () {
+                    this.checked = checked;
+                    });
+                });
+
+                $(".js-delete").on("click", function () {
+        // Show the custom confirmation popup
+        $("#customConfirmation").show();
+
+        // Handle cancel button click
+        $("#cancelBtn").on("click", function () {
+            $("#customConfirmation").hide();
+        });
+
+        // Handle confirm button click
+        $("#confirmBtn").on("click", function () {
+            // Remove the row if confirmed
+            $(this).closest("tr").remove();
+            $("#customConfirmation").hide();
+        });
+    });
+                
+    var dismissButton = document.getElementById("dismissButton");
+    function closePopup() {
+            popup.style.display = "none";}
+
+            dismissButton.addEventListener("click", closePopup);
+            
+    
+        });
+
+        function downloadPdf(filename) {
+    var link = document.createElement('a');
+    link.href = 'assets/' + filename;
+    link.download = filename;
+    link.click();
+  }
+    </script>
+
+    <!-- Custom confirmation message -->
+<div id="customConfirmation" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999; background-color: #F5F5F5; height: auto;" class="group select-none w-[250px] flex flex-col p-4 relative items-center justify-center border-gray shadow-lg rounded-2xl">
+  <!-- Custom confirmation message content -->
+  <div class="text-center p-3 flex-auto justify-center">
+    <svg fill="red" viewBox="0 0 20 20" class="animate-bounce w-12 h-12 flex items-center text-red mx-auto" xmlns="http://www.w3.org/2000/svg" style="width: 60px; height: 60px">
+      <path clip-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" fill-rule="evenodd"></path>
+  </svg>
+  
+    <h2 class="text-xl font-bold py-4 text-black" >Are you sure?</h2>
+    <p class="font-bold text-sm text-gray-500 px-2">
+      Do you really want to continue? This process cannot be undone.
+    </p>
+  </div>
+  <div class="p-2 mt-2 text-center space-x-1 md:block">
+    <br>
+    <br>
+    &nbsp; &nbsp;&nbsp;<button id="cancelBtn" style="background-color: gray; border-color: gray; color: white; border-radius: 10px;" class="mb-2 md:mb-0 px-5 py-2 text-sm shadow-sm font-medium tracking-wider rounded-full hover:shadow-lg hover:bg-darkgray transition ease-in duration-300">
+      Cancel
+    </button>
+    <button id="confirmBtn" style="background-color: red; border-color: red; color: white; border-radius: 10px;" class="px-5 ml-4 py-2 text-sm shadow-sm hover:shadow-lg font-medium tracking-wider rounded-full transition ease-in duration-300">
+      Confirm
+    </button>
+  </div>
+</div>
+
+  
+    
+</body>
+
+</html>
