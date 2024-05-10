@@ -222,4 +222,19 @@ input[type="file"]::file-selector-button:active {
   margin-right: 100px; /* Adjust margin between form side and map */
 }
 
-
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #5cb85c; /* Green color */
+  color: white; /* Text color */
+  padding: 20px 30px; /* Adjust padding */
+  border: 1px solid #4cae4c; /* Darker green border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow */
+  z-index: 9999;
+  text-align: center; /* Center text */
+  max-width: 300px; /* Limit width */
+}
