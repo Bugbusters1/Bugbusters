@@ -1,55 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <title>Kindle</title>
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <title>Kindle</title>
 
     <!-- CSS -->
-    
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous" />
-      <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <title>Kindle</title>
-
-    <!-- CSS -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous" />
-    <link
-      rel="stylesheet"
-      href="../assets/css/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="../assets/css/animate.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/media-queries.css" />
@@ -57,212 +37,154 @@
     <link rel="stylesheet" href="../Donor/TeachingPosts.css">
     <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="../assets/ico/favicon.png" />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="144x144"
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
       href="../assets/ico/apple-touch-icon-144-precomposed.png" />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="114x114"
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
       href="../assets/ico/apple-touch-icon-114-precomposed.png" />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="72x72"
-      href="../assets/ico/apple-touch-icon-72-precomposed.png" />
-    <link
-      rel="apple-touch-icon-precomposed"
-      href="../assets/ico/apple-touch-icon-57-precomposed.png" />
-        <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <title>Kindle</title>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png" />
 
-    <!-- CSS -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous" />
-    <link
-      rel="stylesheet"
-      href="../assets/css/jquery.mCustomScrollbar.min.css" />
-    <link rel="stylesheet" href="../assets/css/animate.css" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/media-queries.css" />
-    <link rel="stylesheet" href="./ReqD.css" />
-    <!-- Favicon and touch icons -->
-    <link rel="shortcut icon" href="../assets/ico/favicon.png" />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="144x144"
-      href="../assets/ico/apple-touch-icon-144-precomposed.png" />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="114x114"
-      href="../assets/ico/apple-touch-icon-114-precomposed.png" />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="72x72"
-      href="../assets/ico/apple-touch-icon-72-precomposed.png" />
-    <link
-      rel="apple-touch-icon-precomposed"
-      href="../assets/ico/apple-touch-icon-57-precomposed.png" />
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+      <title>Kindle</title>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+      <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css" />
+      <link rel="stylesheet" href="../assets/css/animate.css" />
+      <link rel="stylesheet" href="../assets/css/style.css" />
+      <link rel="stylesheet" href="../assets/css/media-queries.css" />
+      <link rel="stylesheet" href="./ReqD.css" />
+      <!-- Favicon and touch icons -->
+      <link rel="shortcut icon" href="../assets/ico/favicon.png" />
+      <link rel="apple-touch-icon-precomposed" sizes="144x144"
+        href="../assets/ico/apple-touch-icon-144-precomposed.png" />
+      <link rel="apple-touch-icon-precomposed" sizes="114x114"
+        href="../assets/ico/apple-touch-icon-114-precomposed.png" />
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png" />
+      <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png" />
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
       <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
       <title>Bootstrap Example</title>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
       <script src="ReqD.js" defer></script>
-      
-  </head>
-      <link
-      rel="stylesheet"
-      href="../assets/css/jquery.mCustomScrollbar.min.css" />
+
+    </head>
+    <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="../assets/css/animate.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/media-queries.css" />
     <link rel="stylesheet" href="./ReqD.css" />
     <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="../assets/ico/favicon.png" />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="144x144"
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
       href="../assets/ico/apple-touch-icon-144-precomposed.png" />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="114x114"
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
       href="../assets/ico/apple-touch-icon-114-precomposed.png" />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="72x72"
-      href="../assets/ico/apple-touch-icon-72-precomposed.png" />
-    <link
-      rel="apple-touch-icon-precomposed"
-      href="../assets/ico/apple-touch-icon-57-precomposed.png" />
-      
-      <script src="ReqD.js" defer></script>
-      
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png" />
+
+    <script src="ReqD.js" defer></script>
+
   </head>
 
-  <body>
-    <!-- Wrapper -->
-    <div class="wrapper">
-      <!-- Sidebar -->
-      <nav class="sidebar" style="background-color: #212121">
-        <!-- close sidebar menu -->
-        <div class="dismiss">
-          <i class="fas fa-arrow-left"></i>
-        </div>
+<body>
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <nav class="sidebar" style="background-color: #212121">
+      <!-- close sidebar menu -->
+      <div class="dismiss">
+        <i class="fas fa-arrow-left"></i>
+      </div>
 
-        <div class="logo">
-          <h3><a href="../DonorPage.html">Kindle</a></h3>
-        </div>
+      <div class="logo">
+        <h3><a href="../DonorPage.html">Kindle</a></h3>
+      </div>
 
-        <ul class="list-unstyled menu-elements">
-          <li class="active">
-              <a href="../DonorPage.html"><i class="fas fa-home"></i> Home</a>
-          </li>
-          <li>
-              <a href="../Donor/Donations.html"><i class="fas fa-donate"></i> My Donations</a>
-          </li>
-          <li>
-              <a href="./ReqD.html"><i class="fas fa-hand-holding-heart"></i> Requested Donations</a>
-          </li>
-          <li>
-              <a href="./Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
-          </li>
-          <li>
-              <a href="../Donor/TeachingPosts.html"><i class="fas fa-chalkboard-teacher"></i> Teaching Posts</a>
-          </li>
-          <li>
-              <a href="../Donor/MedicalCases.html"><i class="fas fa-notes-medical"></i> Medical Cases</a>
-          </li>
-          
-          <li>
-              <a href="../Donor/RegOrganizations.html"><i class="fas fa-users"></i> Registered Organizations</a>
-          </li>
-          <li>
-              <a href="../Donor/AccountSettings.html"><i class="fas fa-cogs"></i> Account Settings</a>
-          </li>
+      <ul class="list-unstyled menu-elements">
+        <li class="active">
+          <a href="../DonorPage.html"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="../Donor/Donations.html"><i class="fas fa-donate"></i> My Donations</a>
+        </li>
+        <li>
+          <a href="./ReqD.html"><i class="fas fa-hand-holding-heart"></i> Requested Donations</a>
+        </li>
+        <li>
+          <a href="./Volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
+        </li>
+        <li>
+          <a href="../Donor/TeachingPosts.html"><i class="fas fa-chalkboard-teacher"></i> Teaching Posts</a>
+        </li>
+        <li>
+          <a href="../Donor/MedicalCases.html"><i class="fas fa-notes-medical"></i> Medical Cases</a>
+        </li>
+
+        <li>
+          <a href="../Donor/RegOrganizations.html"><i class="fas fa-users"></i> Registered Organizations</a>
+        </li>
+        <li>
+          <a href="../Donor/AccountSettings.html"><i class="fas fa-cogs"></i> Account Settings</a>
+        </li>
       </ul>
-      
-       
-          <a class="btn btn-primary btn-customized-3" href="../HomePage.html" role="button">
-            <i class="fas fa-sign-out-alt"></i> Log out
-          </a>
-   
-        <!-- <div class="dark-light-buttons">
+
+
+      <a class="btn btn-primary btn-customized-3" href="../HomePage.html" role="button">
+        <i class="fas fa-sign-out-alt"></i> Log out
+      </a>
+
+      <!-- <div class="dark-light-buttons">
 				<a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
 				<a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
 			</div> -->
-      </nav>
-      <!-- End sidebar -->
+    </nav>
+    <!-- End sidebar -->
 
-      <!-- Dark overlay -->
-      <div class="overlay"></div>
+    <!-- Dark overlay -->
+    <div class="overlay"></div>
 
-      <!-- Content -->
-      <div class="content">
-        <!-- open sidebar menu -->
-        <a class="open-menu" href="#" role="button">
-          <button class="btnMenu" style="background-color: #212121">
-            <span class="icon">
-              <svg viewBox="0 0 175 80" width="40" height="40">
-                <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
-                <rect
-                  y="30"
-                  width="80"
-                  height="15"
-                  fill="#f0f0f0"
-                  rx="10"></rect>
-                <rect
-                  y="60"
-                  width="80"
-                  height="15"
-                  fill="#f0f0f0"
-                  rx="10"></rect>
-              </svg>
-            </span>
-            <span class="text">Menu</span>
-          </button>
-        </a>
-        <div class="maincontent" id="maincontent">
+    <!-- Content -->
+    <div class="content">
+      <!-- open sidebar menu -->
+      <a class="open-menu" href="#" role="button">
+        <button class="btnMenu" style="background-color: #212121">
+          <span class="icon">
+            <svg viewBox="0 0 175 80" width="40" height="40">
+              <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+              <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+              <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+            </svg>
+          </span>
+          <span class="text">Menu</span>
+        </button>
+      </a>
+      <div class="maincontent" id="maincontent">
         <!-- Top content -->
         <div class="top-content section-container" id="top-content">
           <div class="container">
             <div class="row">
               <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                <h1 class="wow fadeIn" style="color:  #0c0f1d                ;">Kindle</h1>
+                <h1 class="wow fadeIn" style="color:  #0c0f1d;">Kindle</h1>
                 <div class="description wow fadeInLeft">
-                <h3 ><p style="color:  #0c0f1d                ;"></p>Together, Make a Difference.</p></h3>
+                  <h3>
+                    <p style="color:  #0c0f1d                ;"></p>Together, Make a Difference.</p>
+                  </h3>
                 </div>
                 <div class="center-container">
                   <div class="buttons wow fadeInUp">
                     <div class="container-input">
-                      
-                      <input
-                        type="text"
-                        id="searchInput"
-                        placeholder="Search"
-                        name="text"
-                        class="input"
-                      />
-                      <svg
-                        fill="#000000"
-                        width="20px"
-                        height="20px"
-                        viewBox="0 0 1920 1920"
+
+                      <input type="text" id="searchInput" placeholder="Search" name="text" class="input" />
+                      <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                           d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 
@@ -270,10 +192,13 @@
                           fill-rule="evenodd"></path>
                       </svg>
                       <div class="dropdown" style="position: relative; display: inline-block;">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #222024; padding: 12px 20px; font-size: 18px; border-radius: 10px;">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                          style="background-color: #222024; padding: 12px 20px; font-size: 18px; border-radius: 10px;">
                           Category
                         </button>
-                        <ul class="dropdown-menu" style="position: absolute; top: 100%; left: 0; background-color: #222024; border: none;">
+                        <ul class="dropdown-menu"
+                          style="position: absolute; top: 100%; left: 0; background-color: #222024; border: none;">
                           <li><a class="dropdown-item" href="#" style="color: #ffffff;">All</a></li>
                           <li><a class="dropdown-item" href="#" style="color: #ffffff;">Clothes</a></li>
                           <li><a class="dropdown-item" href="#" style="color: #ffffff;">Toys</a></li>
@@ -292,53 +217,49 @@
         </div>
 
         <!-- Section 2 -->
-        <div
-          class="section-2-container section-container section-container-gray-bg"
-          id="section-2" style="background-color: #FCFAF0;"
-          >
+        <div class="section-2-container section-container section-container-gray-bg" id="section-2"
+          style="background-color: #FCFAF0;">
           <BR>
-          <h1 style="font-family: roboto; font-weight: bolder;text-align: justify;margin-left:240px ;font-size: 48px">Requested Items for Donation</h1>
+          <h1 style="font-family: roboto; font-weight: bolder;text-align: justify;margin-left:240px ;font-size: 48px">
+            Requested Items for Donation</h1>
           <div class="divider-1 wow fadeInUp" style="margin-right:1220px"><span></span></div>
           <div id="filterButton"></div>
           <div class="containerView containerTest">
-            <div id="itemContainer" class="item-container" style="display:flex;flex-wrap: wrap;justify-content: space-between"></div>
-        </div>
+            <div id="itemContainer" class="item-container"
+              style="display:flex;flex-wrap: wrap;justify-content: space-between"></div>
+          </div>
         </div>
 
         <div class="Filtersidebar" id="sidebar2">
-          <div class="filter-button" style="background-color: #222024; position: absolute; top: 15px; right: 20px;" onclick="closeSidebar()">
-              <i class="fas fa-arrow-left"></i>   Return
+          <div class="filter-button" style="background-color: #222024; position: absolute; top: 15px; right: 20px;"
+            onclick="closeSidebar()">
+            <i class="fas fa-arrow-left"></i> Return
           </div>
           <div style="margin-left: 40px; margin-top: 20px;">
-          <div id="filterInputs" style="margin-left: 100px; margin-top: 20px;">
+            <div id="filterInputs" style="margin-left: 100px; margin-top: 20px;">
 
-          </div>
-          </div>
-          </div>
-
-          <div class="popup-container">
-            <div class="card">
-                <h4 class="card-title"></h4>
-                <p class="card-text">Full Description: </p>
-                <p class="card-text">A first aid kit is a portable collection of medical supplies intended for basic treatment of minor injuries and illnesses. It typically contains adhesive bandages, antiseptic wipes, ointments, gauze pads, and rolls, along with some non-prescription pain medication.  These kits are not meant for serious medical emergencies, but rather for cuts, scrapes, burns, sprains, and other bumps and bruises. They are considered a passive medical device, since they are used for basic care and not for operating or diagnosing. </p>
-                <p class="card-text">Quantity: 49</p>
-                <div class="text-center">
-                  <button type="button" class="btn btn-primary btn-lg">Donate</button>
-                </div>
-                <button class="close-button">x</button>
             </div>
-        </div> 
-        <button class="button" id="notificationsButton">
-          <svg class="bell" viewBox="0 0 448 512">
-            <path
-            d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"
-            ></path>
-          </svg>
-          Notifications
-          <div class="arrow">›</div>
-          <div class="dot"></div>
-          </button>
-          
+          </div>
+        </div>
+
+        <div class="popup-container">
+          <div class="card">
+            <h4 class="card-title"></h4>
+            <p class="card-text">Full Description: </p>
+            <p class="card-text">A first aid kit is a portable collection of medical supplies intended for basic
+              treatment of minor injuries and illnesses. It typically contains adhesive bandages, antiseptic wipes,
+              ointments, gauze pads, and rolls, along with some non-prescription pain medication. These kits are not
+              meant for serious medical emergencies, but rather for cuts, scrapes, burns, sprains, and other bumps and
+              bruises. They are considered a passive medical device, since they are used for basic care and not for
+              operating or diagnosing. </p>
+            <p class="card-text">Quantity: 49</p>
+            <div class="text-center">
+              <button type="button" class="btn btn-primary btn-lg">Donate</button>
+            </div>
+            <button class="close-button">x</button>
+          </div>
+        </div>
+
 
         <!-- Footer -->
         <footer class="footer-container">
@@ -352,33 +273,29 @@
         </footer>
       </div>
     </div>
-      <!-- End content -->
-    </div>
-    <!-- End wrapper -->
-
-    
+    <!-- End content -->
+  </div>
+  <!-- End wrapper -->
 
 
 
-    <!-- Javascript -->
-    <script src="../assets/js/jquery-3.3.1.min.js"></script>
-    <script src="../assets/js/jquery-migrate-3.0.0.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"></script>
-    <script src="../assets/js/jquery.backstretch.min.js"></script>
-    <script src="../assets/js/wow.min.js"></script>
-    <script src="../assets/js/jquery.waypoints.min.js"></script>
-    <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../assets/js/scripts.js"></script>
-    <script src="../Donor/TeachingPost.js"></script>
-    <script src="../Organization/notifyButton.js"></script>
 
-  </body><link rel="stylesheet" href="../Organization/notifyButton.css">
+
+  <!-- Javascript -->
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/jquery-migrate-3.0.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="../assets/js/jquery.backstretch.min.js"></script>
+  <script src="../assets/js/wow.min.js"></script>
+  <script src="../assets/js/jquery.waypoints.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../Donor/TeachingPost.js"></script>
+</body>
 
 </html>
