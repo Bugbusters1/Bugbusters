@@ -300,7 +300,14 @@
                 window.location.href = "./OrganizationHome.html";
                 }, 1500);
             } else if (result.isDenied) {
-                Swal.fire("Changes are not saved", "", "info");
+                Swal.fire({
+                    title: "Changes are not saved",
+                    text: "",
+                    icon: "info",
+                    showConfirmButton:false,
+                    timer:1500
+
+                })
             }
             });
 
