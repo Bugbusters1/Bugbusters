@@ -11,34 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Medical Supplies",
       medicalCategory: "medication",
       text: ` 
-     Device Type:
-        - Bandages (adhesive strips)
-        - Gauze pads
-        - Adhesive tape
-        - Antiseptic wipes
-        - Scissors
-        - Tweezers
-        - Disposable gloves
-        - CPR mask
-        - Thermometer
-        - Pain relievers (e.g., ibuprofen, acetaminophen)
-        - Antihistamines
-        - Hand sanitizer
-       
-       Use:
-        - Bandages for covering wounds and stopping bleeding
-        - Gauze pads for dressing larger wounds
-        - Adhesive tape for securing bandages and dressings
-        - Antiseptic wipes for cleaning wounds
-        - Scissors and tweezers for wound care and splinter removal
-        - Disposable gloves for infection control
-        - CPR mask for performing CPR
-        - Thermometer for checking body temperature
-        - Pain relievers for reducing pain and fever
-        - Antihistamines for allergic reactions
-        - Hand sanitizer for hand hygiene
-
-      Quantity needed: 70
       `,
     },
     {
