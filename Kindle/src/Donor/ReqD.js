@@ -115,6 +115,9 @@ document.addEventListener("DOMContentLoaded", function () {
       description: "Device used to measure blood pressure.",
       image: "../assets/img/items/Blood Pressure Monitor.png",
       category: "Blood Donations",
+      governorate: "cairo",
+      area: "heliopolis",
+      hospital: "damascus",
       text: `
  Device Type:
    - Blood pressure monitors, also known as sphygmomanometers, are medical devices used to measure blood pressure levels. They come in various types, including manual, digital, and ambulatory monitors.
@@ -134,6 +137,9 @@ document.addEventListener("DOMContentLoaded", function () {
       description: "Measure concentration of glucose in the blood.",
       image: "../assets/img/items/Blood Glucose Meter.png",
       category: "Blood Donations",
+      governorate: "aswan",
+      area: "dokki",
+      hospital: "medical",
       text: `
  Device Type:
    - A blood glucose meter, also known as a glucometer or blood sugar meter, is a small, portable electronic device used to measure the concentration of glucose (sugar) in the blood. These meters are available in various models, ranging from basic models to more advanced ones with additional features.
@@ -153,6 +159,9 @@ document.addEventListener("DOMContentLoaded", function () {
       description: "Sterile bag used to collect and store blood.",
       image: "../assets/img/items/Blood Bag.png",
       category: "Blood Donations",
+      governorate: "cairo",
+      area: "october",
+      hospital: "greek",
       text: `
        Device Type:
          - A blood bag is a sterile, disposable container used for collecting, storing, and transporting blood and its components. It is typically made of medical-grade plastic materials that are compatible with blood products and maintain the integrity and safety of the collected blood. Blood bags come in various sizes and configurations, depending on the specific requirements of blood collection and transfusion procedures.
@@ -249,7 +258,7 @@ document.addEventListener("DOMContentLoaded", function () {
       description: "Warm jackets for cold weather.",
       image: "../assets/img/items/jacket.png",
       category: "Clothes",
-      minAge: 5,
+      minAge: 18,
       maxAge: 70,
       gender: "all",
       season: "winter",
@@ -261,8 +270,8 @@ document.addEventListener("DOMContentLoaded", function () {
       description: "Assorted shoes for all ages.",
       image: "../assets/img/items/shoes.png",
       category: "Clothes",
-      minAge: 0,
-      maxAge: 80,
+      minAge: 10,
+      maxAge: 17,
       gender: "male",
       season: "winter",
       text: "d",
@@ -274,8 +283,20 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/tshirt.png",
       category: "Clothes",
       minAge: 10,
-      maxAge: 50,
+      maxAge: 15,
       gender: "female",
+      season: "summer",
+      text: "d",
+    },
+    {
+      name: "Jeans",
+      quantity: 100,
+      description: "Casual blue jeans to wear.",
+      image: "../assets/img/items/jeans.png",
+      category: "Clothes",
+      minAge: 0,
+      maxAge: 5,
+      gender: "male",
       season: "summer",
       text: "d",
     },
@@ -287,7 +308,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Toys",
       gender: "all",
       ageMin: 0,
-      ageMax: 12,
+      ageMax: 5,
       ToysCategory: "dolls",
       text: "d",
     },
@@ -298,8 +319,8 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/buildingblocks.png",
       category: "Toys",
       gender: "male",
-      ageMin: 2,
-      ageMax: 8,
+      ageMin: 5,
+      ageMax: 10,
       ToysCategory: "dolls",
       text: "d",
     },
@@ -312,7 +333,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Toys",
       gender: "all",
       ageMin: 5,
-      ageMax: 99,
+      ageMax: 10,
       ToysCategory: "dolls",
       text: "d",
     },
@@ -323,8 +344,8 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/sports.png",
       category: "Toys",
       gender: "female",
-      ageMin: 5,
-      ageMax: 15,
+      ageMin: 0,
+      ageMax: 18,
       ToysCategory: "dolls",
       text: "d",
     },
@@ -335,21 +356,10 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/toycar.png",
       category: "Toys",
       gender: "male",
-      ageMin: 2,
-      ageMax: 12,
+      ageMin: 10,
+      ageMax: 18,
       ToysCategory: "stuffed toys",
       text: "d",
-    },
-    {
-      name: "Jeans",
-      quantity: 20,
-      description: "Casual blue jeans to wear.",
-      image: "../assets/img/items/jeans.png",
-      category: "Clothes",
-      gender: "male",
-      ageMin: 2,
-      ageMax: 60,
-      season: "summer",
     },
     {
       name: "Outdoor Playset",
@@ -358,8 +368,8 @@ document.addEventListener("DOMContentLoaded", function () {
       image: "../assets/img/items/outdoorplayset.png",
       category: "Toys",
       gender: "all",
-      ageMin: 3,
-      ageMax: 10,
+      ageMin: 18,
+      ageMax: 100,
       ToysCategory: "stuffed toys",
       text: "dddd",
     },
@@ -809,9 +819,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <div class="radio-wrapper">
         <label class="radio-button">
-            <input value="octobor" name="area" type="radio">
+            <input value="october" name="area" type="radio">
             <span class="radio-checkmark"></span>
-            <span class="radio-label">6th Octobor</span>
+            <span class="radio-label">6th October</span>
         </label>
     </div>
   
