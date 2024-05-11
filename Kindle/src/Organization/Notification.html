@@ -217,7 +217,7 @@
 	<div class="wrapper">
 
 		<!-- Sidebar -->
-		<nav class="sidebar">
+		<nav class="sidebar" style="background-color: #212121;">
 
 			<!-- close sidebar menu -->
 			<div class="dismiss">
@@ -268,7 +268,7 @@
 
 			<!-- open sidebar menu -->
 			<a class="open-menu" href="#" role="button">
-				<button class="btnMenu">
+				<button class="btnMenu" style="background-color: #212121;">
 					<span class="icon">
 						<svg viewBox="0 0 175 80" width="40" height="40">
 							<rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
@@ -297,7 +297,7 @@
                         <p class="text-muted">Your donation post has been successfully fulfilled by a generous donor! 🎉 #MakingADifference</p>
                         <div style="display: flex; align-items: center;">
                             <p class="text-muted" style="margin-right: 10px;"><small>2 mins ago</small></p>
-                            <button class="btn btn-primary btn-customized btn-sm">Schedule Pick-up</button>
+                            <button class="btn btn-sm">Schedule Pick-up</button>
                         </div>
                     </div>
                 </div>
@@ -315,7 +315,7 @@
                         <p class="text-muted">Congratulations! Your donation post has been fulfilled. 🌟 Keep spreading kindness!</p>
                         <div style="display: flex; align-items: center;">
                             <p class="text-muted" style="margin-right: 10px;"><small>20 mins ago</small></p>
-                            <button class="btn btn-primary btn-sm">Schedule Pick-up</button>
+                            <button class="btn btn-sm">Schedule Pick-up</button>
                         </div>
                     </div>
                 </div>
@@ -333,7 +333,7 @@
                         <p class="text-muted">Great news! A donor has fulfilled your donation request. 🙌 Thank you for making a difference!</p>
                         <div style="display: flex; align-items: center;">
                             <p class="text-muted" style="margin-right: 10px;"><small>3 days ago</small></p>
-                            <button class="btn btn-primary btn-sm">Schedule Pick-up</button>
+                            <button class="btn btn-sm">Schedule Pick-up</button>
                         </div>
                     </div>
                 </div>
@@ -351,7 +351,7 @@
                         <p class="text-muted">You've got mail! Your donation post has been fulfilled by a generous donor. 💌</p>
                         <div style="display: flex; align-items: center;">
                             <p class="text-muted" style="margin-right: 10px;"><small>2 weeks ago</small></p>
-                            <button class="btn btn-primary btn-sm">Schedule Pick-up</button>
+                            <button class="btn btn-sm">Schedule Pick-up</button>
                         </div>
                     </div>
                 </div>
@@ -369,7 +369,7 @@
                         <p class="text-muted">Hooray! Your donation request has been fulfilled. 🎁 Thank you for your generosity!</p>
                         <div style="display: flex; align-items: center;">
                             <p class="text-muted" style="margin-right: 10px;"><small>1 month ago</small></p>
-                            <button class="btn btn-primary btn-sm">Schedule Pick-up</button>
+                            <button class="btn btn-sm">Schedule Pick-up</button>
                         </div>
                     </div>
                 </div>
@@ -378,16 +378,13 @@
                 </div>
             </div>
         </div>
-        <div class="text-center" style="text-decoration: underline;">
-            <a href="#!" class="dark-link">Load more activity</a>
-        </div>
         
     </div>
 </section>
 
 <div class="popup-container">
     <div class="card">
-        <h4 class="card-title">Schedule Pick-up</h4>
+        <h4 class="card-title" style="font-weight: bold;">Schedule Pick-up</h4>
         <div class="card-body">
             <p>Please choose a suitable time slot for pick-up:</p>
             <div class="time-slots">
@@ -402,7 +399,7 @@
                 </label><br>
             </div>
             <div class="text-center">
-                <button class="btn btn-primary" id="schButton">Schedule</button>
+                <button class="schedule-btn btn-sm" id="schButton">Schedule</button>
             </div>
             <div class="confirmation-message" style="display: none;">
                 <p class="text-success">Schedule time confirmed!</p>
@@ -452,6 +449,39 @@
     <script src="./card.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>	 
 	<script src="sweetalert2.all.min.js"></script> 
+
+    <style>
+        .btn.btn-sm {
+            border: 1.5px solid black;
+            background-color: #212121; /* Set the background color to black */
+            color: white; /* Set the text color to white for better visibility */
+            transition: transform 0.3s ease-in-out;
+        }
+        .btn.btn-sm:focus,
+        .btn.btn-sm:active {
+        outline-color: #212121; /* Set the outline color to black */
+        box-shadow: none; /* Remove any box shadow */
+    }
+    .btn.btn-sm:hover {
+        background-color: black;
+    }
+    .schedule-btn.btn-sm {
+  border: 1.5px solid black;
+  padding: 10px;
+  width: 100px;
+  margin: 15px;
+  color: #f5f0f0;
+  background-color: #212121;
+  /* box-shadow: 3px 3px 6px #101014; */
+  transition: transform 0.3s ease-in-out;
+}
+
+.schedule-btn.btn-sm:hover {
+  background-color: black;
+}
+    
+    </style>
+
 </body>
 
 </html>
