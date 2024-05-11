@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link
-      rel="icon"
-      type="image/png"
-      href="../LoginANDregister/images/signin-image.png" />
+    <link rel="icon" type="image/png" href="./signin-image.png" />
 
     <link
       rel="stylesheet"
@@ -21,7 +18,7 @@
         <div class="side-wrapper">
           <figure>
             <img
-              src="../LoginANDregister/images/signin-image.png"
+              src="./signin-image.png"
               alt="sing up image"
               style="height: 270px" />
           </figure>
@@ -34,12 +31,12 @@
 
         <h1>Sign In</h1>
         <div class="input-box">
-          <input type="email" required />
+          <input id="email" type="email" required />
           <label class="user-label">Email</label>
           <i class="bx bx-envelope"></i>
         </div>
         <div class="input-box">
-          <input type="password" required />
+          <input id="password" type="password" required />
           <label>Password</label>
           <i class="bx bxs-lock-alt"></i>
         </div>
@@ -50,7 +47,9 @@
           </label>
           <a href="#">Forgot Password?</a>
         </div>
-        <button type="submit" class="signin-button">Sign in</button>
+        <button id="signin-button" type="submit" class="signin-button">
+          Sign in
+        </button>
         <div class="register-link">
           <p>
             Don't have an account?
@@ -59,5 +58,31 @@
         </div>
       </div>
     </form>
+    <script>
+      document
+        .getElementById("signin-button")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          // Get values from the form fields
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+          alert(email, password);
+          // Dummy if conditions based on email and password
+          if (email === "admin@kindle.com" && password === "kindle123") {
+            window.location.href = "../components/Admin/Admin.html"; // Redirect to page1.html
+          } else if (email === "Donor@Kindle.com" && password === "password1") {
+            window.location.href = "../DonorPage.html"; // Redirect to page2.html
+          } else {
+            if (email === "Org@Kindle.com" && password === "password2") {
+              window.location.href = "../Organization/OrganizationHome.html"; // Redirect to page2.html
+            } else {
+              document.getElementById("checkbox-error").innerText =
+                "Check Email or Password!";
+              return false;
+            }
+          }
+        });
+    </script>
   </body>
 </html>

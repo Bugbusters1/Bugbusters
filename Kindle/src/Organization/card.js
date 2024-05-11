@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener('click', function() {
             popupContainer.style.display = "block";
             $('.overlay').addClass('active');
+            event.stopPropagation();
         });
     });
 
@@ -27,5 +28,13 @@ document.addEventListener("DOMContentLoaded", function() {
             timer: 2000
           });
     });    
+
+    document.addEventListener('click', function(event) {
+        // Check if the clicked element is not inside the pop-up card
+        if (!popupContainer.contains(event.target) && event.target !== scheduleButton) {
+            // Close the pop-up card
+            popupContainer.style.display = "none";
+        }
+    });
 
 });
