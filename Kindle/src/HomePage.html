@@ -20,6 +20,93 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/media-queries.css">
 
+	<style>.section-6-form {
+		padding-top: 20px;
+		text-align: left;
+	  }
+	  
+	  .section-6-form input[type="text"],
+	  .section-6-form textarea {
+		background: none;
+		background: #f7f8fd;
+		border: 1px solid  #f7f8fd;
+		font-family: 'Roboto', sans-serif;
+		font-size: 16px;
+		font-weight: 300;
+		color: #0c0f1d;
+		box-shadow: none;
+		transition: all .3s;
+	  }
+	  
+	  .section-6-form textarea {
+		height: 90px;
+	  }
+	  
+	  .section-6-form input[type="text"]:focus,
+	  .section-6-form textarea:focus {
+		outline: 0;
+		background: #f7f8fd;
+		border: 1px solid #f7f8fd;
+		color: #0c0f1d;
+		box-shadow: none;
+	  }
+	  
+	  .section-6-form input[type="text"].input-error,
+	  .section-6-form textarea.input-error {
+		border-color: black;;
+	  }
+	  
+	  .section-6-form input[type="text"]::-moz-placeholder,
+	  .section-6-form textarea::-moz-placeholder {
+		color: #0c0f1d;
+		
+		font-style: italic;
+	  }
+	  
+	  .section-6-form input[type="text"]:-ms-input-placeholder,
+	  .section-6-form textarea:-ms-input-placeholder {
+		color: #f7f8fd;
+		font-style: italic;
+	  }
+	  
+	  .section-6-form input[type="text"]::-webkit-input-placeholder,
+	  .section-6-form textarea::-webkit-input-placeholder {
+		color: #0c0f1d;
+		font-style: italic;
+	  }
+	  
+	  .section-6-form button.btn-customized {
+		padding: .75rem 1.5rem;
+		background: #222024;
+		border: 0;
+		border-radius: 4px;
+		font-family: 'Roboto', sans-serif;
+		font-size: 16px;
+		font-weight: 300;
+		color: #fff;
+		box-shadow: none;
+	  }
+	  
+	  .section-6-form button.btn-customized:hover,
+	  .section-6-form button.btn-customized:active,
+	  .section-6-form button.btn-customized:focus,
+	  .section-6-form button.btn-customized:active:focus,
+	  .section-6-form button.btn-customized.active:focus,
+	  .section-6-form button.btn.btn-primary:not(:disabled):not(.disabled):active,
+	  .section-6-form button.btn.btn-primary:not(:disabled):not(.disabled):active:focus {
+		outline: 0;
+		background: #222024;
+		background: black;
+		border: 0;
+		color: #fff;
+		box-shadow: none;
+	  }
+	  
+	  .section-6-form button.btn-customized i {
+		margin-right: 5px;
+	  }
+	  </style>
+
 	<!-- Favicon and touch icons -->
 	<link rel="shortcut icon" href="assets/ico/favicon.png">
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
@@ -35,7 +122,7 @@
 	<div class="wrapper ">
 
 		<!-- Sidebar -->
-		<nav class="sidebar">
+		<nav class="sidebar" style="background-color: #212121">
 
 			<!-- close sidebar menu -->
 			<div class="dismiss">
@@ -56,36 +143,15 @@
 				<li>
 					<a class="scroll-link" href="#section-2"><i class="fas fa-user"></i> About us</a>
 				</li>
-				<li>
-					<a class="scroll-link" href="#section-5"><i class="fas fa-pencil-alt"></i> Portfolio</a>
-				</li>
+				
 				<li>
 					<a class="scroll-link" href="#section-6"><i class="fas fa-envelope"></i> Contact us</a>
 				</li>
-				<li>
-					<a class="scroll-link" href="#section-1"><i class="fas fa-cog"></i>Account Settings</a>
-				</li>
-				<li>
-					<a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"
-						role="button" aria-controls="otherSections">
-						<i class="fas fa-sync"></i>Other sections
-					</a>
-					<ul class="collapse list-unstyled" id="otherSections">
-						<li>
-							<a class="scroll-link" href="#section-3">Our projects</a>
-						</li>
-						<li>
-							<a class="scroll-link" href="#section-4">We think that...</a>
-						</li>
-					</ul>
-				</li>
+				
+			
 			</ul>
 
-			<div class="to-top">
-				<a class="btn btn-primary btn-customized-3" href="#" role="button">
-					<i class="fas fa-sign-out-alt"></i> Log out 
-				</a>
-			</div>
+			
 			
 			<!-- <div class="dark-light-buttons">
 				<a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
@@ -102,8 +168,8 @@
 		<div class="content">
 
 			<!-- open sidebar menu -->
-			<a class="open-menu" href="#" role="button">
-				<button class="btnMenu">
+			<a class="open-menu" href="#" role="button " >
+				<button class="btnMenu" style="background-color: #212121">
 					<span class="icon">
 						<svg viewBox="0 0 175 80" width="40" height="40">
 							<rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
@@ -129,12 +195,14 @@
 								</h3>
 							</div>
 							<div class="buttons wow fadeInUp">
-								<a class="btn btn-primary btn-customized scroll-link" href="#section-1" role="button">
-									<i class="fas fa-book-open"></i> Log In
+								<a class="btn btn-primary btn-customized " href="./LoginANDregister/login.html" role="button">
+									<i class="fas fa-sign-in-alt"></i> Log In
 								</a>
-								<a class="btn btn-primary btn-customized scroll-link" href="#section-3" role="button">
-									<i class="fas fa-pencil-alt"></i> Sign Up
+								
+								<a class="btn btn-primary btn-customized " href="./LoginANDregister/registerDonor.html" role="button">
+									<i class="fas fa-user-plus"></i> Sign Up
 								</a>
+								
 							</div>
 						</div>
 					</div>
@@ -194,7 +262,7 @@
     </div>
 </div>
 			<!-- Section 2 -->
-<div class="section-2-container section-container section-container-gray-bg " id="section-2" style="background-color:  #f7f8fd;">
+<div class="section-2-container section-container section-container-gray-bg " id="section-2" style="background-color: #fcfaf0;">
     <div class="container">
         <div class="row">
             <div class="col section-2 section-description wow fadeIn">
@@ -297,54 +365,77 @@
 </div>
 
 
-			<!-- Section 6 -->
-			<div class="section-6-container section-container section-container-image-bg" id="section-6">
-				<div class="container">
-					<div class="row">
-						<div class="col section-6 section-description wow fadeIn">
-							<h2>Contact Us</h2>
-							<div class="divider-1 wow fadeInUp"><span></span></div>
-							<p>Send us an email using the form below or follow us on our social media channels.</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6 section-6-box wow fadeInUp">
-							<h3>By eMail</h3>
-							<div class="section-6-form">
-								<form role="form" action="assets/contact.php" method="post">
-									<div class="form-group">
-										<label class="sr-only" for="contact-email">Email</label>
-										<input type="text" name="email" placeholder="Email..."
-											class="contact-email form-control" id="contact-email">
-									</div>
-									<div class="form-group">
-										<label class="sr-only" for="contact-subject">Subject</label>
-										<input type="text" name="subject" placeholder="Subject..."
-											class="contact-subject form-control" id="contact-subject">
-									</div>
-									<div class="form-group">
-										<label class="sr-only" for="contact-message">Message</label>
-										<textarea name="message" placeholder="Message..."
-											class="contact-message form-control" id="contact-message"></textarea>
-									</div>
-									<button type="submit" class="btn btn-primary btn-customized" ><i
-											class="fas fa-paper-plane"></i> Send Message</button>
-								</form>
-							</div>
-						</div>
-						<div class="col-md-5 offset-md-1 section-6-box wow fadeInDown">
-							<h3>Follow us</h3>
-							<div class="section-6-social">
-								<a href="#"><i class="fab fa-facebook-f"></i></a>
-								<a href="#"><i class="fab fa-dribbble"></i></a>
-								<a href="#"><i class="fab fa-twitter"></i></a>
-								<a href="#"><i class="fab fa-instagram"></i></a>
-								<a href="#"><i class="fab fa-pinterest"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+		   <!-- Section 6 -->
+		   <div
+		   class="section-6-container section-container section-container-image-bg"
+		   id="section-6">
+		   <div class="container">
+			 <div class="row">
+			   <div class="col section-6 section-description wow fadeIn">
+				 <h2 style="color: white">Contact Us</h2>
+				 <div class="divider-1 wow fadeInUp"><span></span></div>
+				 <p style="color: white;font-weight: 500;">
+				   Send us an email using the form below or follow us on our
+				   social media channels.
+				 </p>
+			   </div>
+			 </div>
+			 <div class="row">
+			   <div class="col-md-6 section-6-box wow fadeInUp">
+				 <h3 style="color: white">By eMail</h3>
+				 <div class="section-6-form">
+				   <form role="form" action="assets/contact.php" method="post">
+					 <div class="form-group">
+					   <label class="sr-only" for="contact-email">Email</label>
+					   <input
+						 type="text"
+						 name="email"
+						 placeholder="Email..."
+						 class="contact-email form-control"
+						 id="contact-email" />
+					 </div>
+					 <div class="form-group">
+					   <label class="sr-only" for="contact-subject"
+						 >Subject</label
+					   >
+					   <input
+						 type="text"
+						 name="subject"
+						 placeholder="Subject..."
+						 class="contact-subject form-control"
+						 id="contact-subject" />
+					 </div>
+					 <div class="form-group">
+					   <label class="sr-only" for="contact-message"
+						 >Message</label
+					   >
+					   <textarea
+						 name="message"
+						 placeholder="Message..."
+						 class="contact-message form-control"
+						 id="contact-message"></textarea>
+					 </div>
+					 <button
+					   type="submit"
+					   class="btn btn-primary btn-customized" id="submit-post-btn2">
+					   <i class="fas fa-paper-plane"></i> Send Message
+					 </button>
+				   </form>
+				 </div>
+			   </div>
+			   <div class="col-md-5 offset-md-1 section-6-box wow fadeInDown">
+				 <h3>Follow us</h3>
+				 <div class="section-6-social">
+				   <a href="#"><i class="fab fa-facebook-f"></i></a>
+				   <a href="#"><i class="fab fa-dribbble"></i></a>
+				   <a href="#"><i class="fab fa-twitter"></i></a>
+				   <a href="#"><i class="fab fa-instagram"></i></a>
+				   <a href="#"><i class="fab fa-pinterest"></i></a>
+				 </div>
+			   </div>
+			 </div>
+		   </div>
+		 </div>
 
 			<!-- Footer -->
 			<footer class="footer-container">
@@ -366,7 +457,23 @@
 
 	</div>
 	<!-- End wrapper -->
-
+	<script>
+		document.getElementById("submit-post-btn2").addEventListener("click", function() {
+		  // Show popup
+		   // Show the submission message if the form is valid
+			Swal.fire({
+				  title: "Sent Successfully!",
+				  text: "We will be in touch!",
+				  icon: "success",
+				  showConfirmButton: false,
+				  timer:2500
+				  });	
+		  // Redirect after 2 seconds
+		  setTimeout(function() {
+			 // Replace with your desired URL
+		  }, 1500); // Adjust the time as needed (in milliseconds)
+		});
+		</script>
 	<!-- Javascript -->
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
@@ -381,7 +488,8 @@
 	<script src="assets/js/jquery.waypoints.min.js"></script>
 	<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
-
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>	 
+    <script src="sweetalert2.all.min.js"></script> 
 </body>
 
 </html>
