@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up As Donor</title>
+    <title>Kindle</title>
     <link rel="stylesheet" href="SignUpForm.css" />
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link
+      rel="stylesheet"
+      href="fonts/material-icon/css/material-design-iconic-font.min.css" />
     <link
       rel="icon"
       type="image/png"
@@ -16,18 +18,15 @@
       <div class="wrapper">
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-          rel="stylesheet"
-        />
+          rel="stylesheet" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
           integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
           crossorigin="anonymous"
-          referrerpolicy="no-referrer"
-        />
-       
-    
-        <h1 >Sign Up</h1>
+          referrerpolicy="no-referrer" />
+
+        <h1>Sign Up</h1>
 
         <div class="input-box">
           <input type="tel" required />
@@ -48,41 +47,33 @@
             <i class="fa-solid fa-earth-africa"></i>
           </div>
 
-          <div class="input-box" style="margin-bottom: 100px;">
+          <div class="input-box" style="margin-bottom: 100px">
             <input type="text" required />
             <label class="user-label">Area</label>
             <i class="fa-solid fa-map-location-dot"></i>
           </div>
         </div>
-
-        
       </div>
 
       <div class="side-thing">
         <a href="../LoginANDregister/SignUp.html" class="back-button">
-            <i class="bx bx-arrow-back"></i> Back
+          <i class="bx bx-arrow-back"></i> Back
         </a>
         <figure>
-            <img
-              src="../LoginANDregister/images/signin-image.png"
-              alt="sing up image"
-              style="height: 270px;" />
-          </figure>
+          <img
+            src="../LoginANDregister/images/signin-image.png"
+            alt="sing up image"
+            style="height: 270px" />
+        </figure>
         <div class="next-finish" id="fin">
           <button type="submit" class="signup-button">Finish</button>
         </div>
       </div>
     </form>
     <script>
-    
-
-      
       document.getElementById("fin").addEventListener("click", () => {
-        window.location.href="./DonorPage.html"
-
+        window.location.href = "../DonorPage.html";
       });
-
-
     </script>
   </body>
 </html>
