@@ -1,99 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Kindle</title>
 
     <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link
+      rel="stylesheet"
+      href="fonts/material-icon/css/material-design-iconic-font.min.css" />
 
     <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <style>
-        .signup-image {
-            margin-top: -25px; /* Adjust this value to move the image up */
-        }
+      .signup-image {
+        margin-top: -25px; /* Adjust this value to move the image up */
+      }
 
-        .error-message {
-            color: red;
-            font-size: 14px;
-            margin-top: 5px;
-        }
+      .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="main">
-
-        <!-- Sign in form -->
-        <section class="sign-in">
-            <div class="container">
-                <div class="signin-content">
-                    <div class="signin-image">
-                        <figure><img src="images/signin-image.png" alt="sing up image" style="height: 22.7vw;"></figure>
-                        <p style="color: black; ;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create an account as :</p>
-                    </div>
-
-                    <div class="signin-form">
-                        <h2 class="form-title">Sign in</h2>
-                        <form method="POST" class="register-form" id="login-form" action="#">
-                            <div class="form-group">
-                                <label for="your_name"><i class="zmdi zmdi-email "></i></label>
-                                <input type="text" name="your_name" id="your_name" placeholder="Email"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="your_pass" id="your_pass" placeholder="Password"/>
-                            </div>
-                            <div class="form-group">
-                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
-                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
-                            </div>
-                            <div class="error-message" id="checkbox-error"></div>
-                            <div class="form-group form-button">
-                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
-                            </div>
-                        </form>
-                        <div class="social-login">
-                            <ul>
-                                <li><a href="registerDonor.html">Donor</a></li>
-                                <li><a href="registerOrg.html">Organization Representative</a></li>
-                            </ul>
-                        </div>
-                    </div> 
-                </div>
+      <!-- Sign in form -->
+      <section class="sign-in">
+        <div class="container">
+          <div class="signin-content">
+            <div class="signin-image">
+              <figure>
+                <img
+                  src="images/signin-image.png"
+                  alt="sing up image"
+                  style="height: 22.7vw" />
+              </figure>
+              <p style="color: black">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create
+                an account as :
+              </p>
             </div>
-        </section>
 
+            <div class="signin-form">
+              <h2 class="form-title">Sign in</h2>
+              <form
+                method="POST"
+                class="register-form"
+                id="login-form"
+                action="#">
+                <div class="form-group">
+                  <label for="your_name"><i class="zmdi zmdi-email"></i></label>
+                  <input
+                    type="text"
+                    name="your_name"
+                    id="your_name"
+                    placeholder="Email" />
+                </div>
+                <div class="form-group">
+                  <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                  <input
+                    type="password"
+                    name="your_pass"
+                    id="your_pass"
+                    placeholder="Password" />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="checkbox"
+                    name="remember-me"
+                    id="remember-me"
+                    class="agree-term" />
+                  <label for="remember-me" class="label-agree-term"
+                    ><span><span></span></span>Remember me</label
+                  >
+                </div>
+                <div class="error-message" id="checkbox-error"></div>
+                <div class="form-group form-button">
+                  <input
+                    type="submit"
+                    name="signin"
+                    id="signin"
+                    class="form-submit"
+                    value="Log in" />
+                </div>
+              </form>
+              <div class="social-login">
+                <ul>
+                  <li><a href="registerDonor.html">Donor</a></li>
+                  <li>
+                    <a href="registerOrg.html">Organization Representative</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
     <!-- JS -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        document.getElementById('login-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form submission
-            
-            // Get values from the form fields
-            var email = document.getElementById('your_name').value;
-            var password = document.getElementById('your_pass').value;
-            
-            // Dummy if conditions based on email and password
-            if (email === 'admin@kindle.com' && password === 'kindle123') {
-                window.location.href = '../components/Admin/Admin.html'; // Redirect to page1.html
-            } else if (email === 'Donor@Kindle.com' && password === 'password1') {
-                window.location.href = '../DonorPage.html'; // Redirect to page2.html
-            } else { 
-                if (email === 'Org@Kindle.com' && password === 'password2') {
-                window.location.href = '../Organization/OrganizationHome.html'; // Redirect to page2.html
-            }else{
-                document.getElementById("checkbox-error").innerText = "Check Email or Password!";
-                return false; // Show error message
-            }}
-        });
-    </script>
-    
-</body>
+   
+  </body>
 </html>
