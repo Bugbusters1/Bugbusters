@@ -17,11 +17,7 @@
   </head>
 
   <body>
-    <form
-      class="container"
-      action="uploadO.php"
-      method="POST"
-      enctype="multipart/form-data">
+    <form class="container">
       <div
         class="side-thing"
         style="
@@ -120,13 +116,8 @@
             alt="sing up image"
             style="height: 270px" />
         </figure>
-        <!-- <button type="submit" class="signup-button">Finish</button> -->
-        <input
-          type="submit"
-          class="signup-button"
-          name="upload_btn"
-          value="Finish" />
-      </div>
+         <button id ="finish"type="submit" class="signup-button">Finish</button> 
+
     </form>
     <script>
       var map = L.map("map").setView([30.0444, 31.2357], 6);
@@ -192,19 +183,116 @@
         window.location.href = "../DonorPage.html";
       });
     </script>
-    <script>
-      // Function to handle button click
-      function handleButtonClick() {
-        // Redirect the user to a specified URL
-        window.location.href = "../Organization/OrganizationHome.html";
-      }
-      // Add event listener to the button
-      document.addEventListener("DOMContentLoaded", function () {
-        var finishButton = document.querySelector(
-          ".signup-button[name='upload_btn']"
-        );
+   <script>
+    // Function to handle button click
+    function handleButtonClick(event) {
+        // Prevent default form submission behavior
+        event.preventDefault();
+
+        // Check if the form is valid before redirecting
+        if (isFormValid()) {
+            window.location.href = "../Organization/OrganizationHome.html";
+        } else {
+            alert("Please fill out all the required fields.");
+        }
+    }
+
+    // Function to check if the form is valid
+    function isFormValid() {
+        // Add validation logic here
+        // For simplicity, let's assume all fields are required
+        var inputs = document.querySelectorAll("input[required]");
+        for (var i = 0; i < inputs.length; i++) {
+            if (!inputs[i].value) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Add event listener to the button
+    document.addEventListener("DOMContentLoaded", function () {
+        var finishButton = document.getElementById("finish");
         finishButton.addEventListener("click", handleButtonClick);
-      });
-    </script>
+    });
+</script><script>
+  // Function to handle button click
+  function handleButtonClick(event) {
+      // Prevent default form submission behavior
+      event.preventDefault();
+
+      // Check if the form is valid before redirecting
+      if (isFormValid()) {
+          window.location.href = "../Organization/OrganizationHome.html";
+      } else {
+          alert("Please fill out all the required fields.");
+      }
+  }
+
+  // Function to check if the form is valid
+  function isFormValid() {
+      // Add validation logic here
+      // For simplicity, let's assume all fields are required
+      var inputs = document.querySelectorAll("input[required]");
+      for (var i = 0; i < inputs.length; i++) {
+          if (!inputs[i].value) {
+              return false;
+          }
+      }
+      return true;
+  }
+
+  // Add event listener to the button
+  document.addEventListener("DOMContentLoaded", function () {
+      var finishButton = document.getElementById("finish");
+      finishButton.addEventListener("click", handleButtonClick);
+  });
+</script><script>
+  // Function to handle button click
+  function handleButtonClick(event) {
+      // Prevent default form submission behavior
+      event.preventDefault();
+
+      // Check if the form is valid before redirecting
+      if (isFormValid()) {
+          window.location.href = "../Organization/OrganizationHome.html";
+      } else {
+          alert("Please fill out all the required fields.");
+      }
+  }
+
+  // Function to check if the form is valid
+  function isFormValid() {
+      // Add validation logic here
+      // For simplicity, let's assume all fields are required
+      var inputs = document.querySelectorAll("input[required]");
+      for (var i = 0; i < inputs.length; i++) {
+          if (!inputs[i].value) {
+              return false;
+          }
+      }
+      return true;
+  }
+
+  // Add event listener to the button
+  document.addEventListener("DOMContentLoaded", function () {
+      var finishButton = document.getElementById("finish");
+      finishButton.addEventListener("click", handleButtonClick);
+  });
+</script><script>
+  function handleButtonClick(event) {
+      event.preventDefault();
+
+     
+          window.location.href = "../Organization/OrganizationHome.html";
+      
+  }
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+      var finishButton = document.getElementById("finish");
+      finishButton.addEventListener("click", handleButtonClick);
+  });
+</script>
   </body>
 </html>

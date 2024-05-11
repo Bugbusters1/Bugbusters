@@ -65,22 +65,16 @@
           event.preventDefault(); // Prevent form submission
 
           // Get values from the form fields
-          var email = document.getElementById("email").value;
-          var password = document.getElementById("password").value;
-          alert(email, password);
+          var email = document.getElementById("your_name").value;
+          var password = document.getElementById("your_pass").value;
+
           // Dummy if conditions based on email and password
           if (email === "admin@kindle.com" && password === "kindle123") {
             window.location.href = "../components/Admin/Admin.html"; // Redirect to page1.html
           } else if (email === "Donor@Kindle.com" && password === "password1") {
             window.location.href = "../DonorPage.html"; // Redirect to page2.html
-          } else {
-            if (email === "Org@Kindle.com" && password === "password2") {
-              window.location.href = "../Organization/OrganizationHome.html"; // Redirect to page2.html
-            } else {
-              document.getElementById("checkbox-error").innerText =
-                "Check Email or Password!";
-              return false;
-            }
+          } else if (email === "Org@Kindle.com" && password === "password2") {
+            window.location.href = "../Organization/OrganizationHome.html"; // Redirect to page2.html
           }
         });
     </script>

@@ -71,8 +71,13 @@
       </div>
     </form>
     <script>
-      document.getElementById("fin").addEventListener("click", () => {
-        window.location.href = "../DonorPage.html";
+      document.addEventListener("DOMContentLoaded", function () {
+        var form = document.getElementById("form");
+        function handleFormSubmission(event) {
+          event.preventDefault(); 
+            window.location.href = "../DonorPage.html";
+        }
+        form.addEventListener("submit", handleFormSubmission);
       });
     </script>
   </body>
