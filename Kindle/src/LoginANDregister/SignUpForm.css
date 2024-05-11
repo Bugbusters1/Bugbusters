@@ -1,0 +1,784 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:#fcfaf0;}
+
+.container{
+    height: fit-content;
+    
+    display: flex;
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+}
+
+.side-thing {
+    width: 350px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fcfaf0;
+    border-radius: 0 9px 9px 0;
+}
+.side-thing-map{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    background: none;
+    width: 400px;
+    padding: 10px;
+    color: white;
+    background-color: #161c28;
+    border-right: 1px solid hsla(0, 0%, 50%, 0.3);
+    height: 500px;
+}
+.side-thing-map h3{
+    font-weight: bold;
+}
+.side-thing-map iframe{
+    border-radius: 10px;
+}
+
+.side-thing .welcome {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 600;
+}
+.side-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.side-text {
+    color: #95a4d5;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.wrapper{
+    width: 600px;
+    height: 650px;
+    background-color:#212121;
+    color: white;
+    border-radius: 9px;
+    padding: 30px 40px;
+    border-right: 1px solid;
+    border-color: hsla(0, 0%, 50%, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+    padding-bottom: 0px;
+    
+}
+
+.wrapper .input-box{
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 25px 0 0 ;
+    z-index: 1;
+    color: #212121;
+}
+.input-box i{
+    color: #212121;
+}
+.wrapper .input-box-optional{
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 25px 0 0 ;
+}
+
+.wrapper .name-holder{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+
+.input-box input{
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid white;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+  height: 45px;
+}
+.input-box-optional input{
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+  }
+.input-box label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.95em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: #212121;
+    transition: all 0.6s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+.input-box-optional label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.95em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: #212121;
+    transition: all 0.6s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.input-box :is(input:focus, input:valid)~label {
+    transform: translateY(-85%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    color: white;
+    
+}
+.input-box :is(input:focus, input:valid) {
+    outline: none;
+    border: 1.5px solid #212121;
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(30%);
+    font-size: 20px;
+}
+.input-box-optional i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(30%);
+    font-size: 20px;
+}
+
+.gender{
+    border: solid;
+    
+}
+.next-finish{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-button{
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    
+    background-size: 300% 100%;
+    background-color:#212121;
+    /* box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75); */
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.signup-button:hover{
+/* .wrapper .signin-button:hover{ */
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.side-thing .signin-link{
+     font-size: 13px;
+     text-align: center;
+}
+
+.signin-link p a{
+    color: #212121;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signin-link p a:hover{
+    color: black;
+    text-decoration: underline;
+}
+.next-button {
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 65%;
+    border: 0;
+    border-radius: 20px;
+    color: #fff;
+    padding: 0.8em ;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s all;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+  }
+  
+  .next-button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .next-button .arrow {
+    margin-top: 1px;
+    width: 15px;
+    background: transparent;
+    height: 3px;
+    position: relative;
+    transition: 0.2s;
+  }
+  
+  .next-button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+  
+  .next-button:hover {
+    background-color: #0c111d;
+  }
+  
+  .next-button:hover .arrow {
+    background: #fff;
+  }
+  
+  .next-button:hover .arrow:before {
+    right: 0;
+  }
+  .input-box .optional-lable{
+    transform: translateY(-85%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    color: white;
+  }
+
+  input[type="file"]::file-selector-button {
+    border-radius: 4px;
+    padding: 0 15px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #212121;
+    box-shadow: 1px 1px 1px #212121;
+    margin-right: 16px;
+    transition: background-color 200ms;
+  }
+  
+  /* file upload button hover state */
+  input[type="file"]::file-selector-button:hover {
+    background-color: #f3f4f6;
+    border: 1px solid #1a73e8;
+  }
+  
+  /* file upload button active state */
+  input[type="file"]::file-selector-button:active {
+    background-color: #e5e7eb;
+  }
+
+/* radio busttons */
+.radio, .radio::before, .radio::after{
+    margin: 35px 0 0;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+.radio h3{
+    margin-bottom: 10px;
+}
+.radio .radio-wrapper{
+    display: flex;
+    align-items: center;
+}
+.form-control {
+    font-size: 20px;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.1em;
+}
+.radio input[type="radio"] {
+    appearance: none;
+    background-color: #fff;
+    font: inherit;
+    color: currentColor;
+    width: 0.9em;
+    height: 0.9em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    transform: translateY(0.075em);
+    display: grid;
+    place-content: center;
+  }
+.radio input[type="radio"]::before {
+    content: "";
+    width: 0.45em;
+    height: 0.45em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #212121;
+  }
+  
+.radio input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+  .form-control + .form-control {
+    margin-left: 0.8em;
+  }
+/* end of radio buttons */
+
+.select-menu{
+    box-sizing: border-box;
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 25px 0 0 ;
+}
+.select-menu .select-btn{
+    box-sizing: border-box;
+    display: flex;
+    height: 45px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border-radius: 20px;
+    width: 100%;
+    background-color: white;
+    color: #212121;
+}
+.select-btn i{
+    font-size: 25px;
+    transition: 0.3s;
+    box-sizing: border-box;
+
+}
+.select-menu.active .select-btn i{
+    transform: rotate(-180deg);
+    box-sizing: border-box;
+}
+.select-menu .options{
+    position: relative;
+    padding: 0.8em;
+    margin-top: 5px;
+    border-radius: 20px;
+    display: none;
+    border: 2px solid #212121;
+    background:white;
+    box-sizing: border-box;
+    background-color: white;
+}
+.select-menu.active .options{
+    display: block;
+    box-sizing: border-box;
+}
+.options .option{
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+.options .option:hover{
+    background: #fff;
+    box-sizing: border-box;
+
+}
+.select-menu .options{
+    position: relative;
+    padding: 0.8em;
+    margin-top: 5px;
+    border-radius: 20px;
+    display: none;
+    border: 2px solid #212121;
+    background:white;
+    box-sizing: border-box;
+    background-color: white;
+}
+.select-menu.active .options{
+    display: block;
+    box-sizing: border-box;
+}
+.options .option{
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+.options .option:hover{
+    background: #fff;
+    box-sizing: border-box;
+
+}
+.option i{
+    font-size: 25px;
+    margin-right: 12px;
+    box-sizing: border-box;
+    
+}
+.option .option-text{
+    font-size: 18px;
+    color: #212121;
+    box-sizing: border-box;
+
+}
+.select-menu1{
+    box-sizing: border-box;
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 25px 0 0 ;
+    z-index: 1;
+}
+.select-menu1 .select-btn1{
+    box-sizing: border-box;
+    display: flex;
+    height: 45px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border-radius: 20px;
+    width: 100%;
+    background-color: white;
+    color: #212121;
+
+}
+.select-btn1 i{
+    font-size: 25px;
+    transition: 0.3s;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.select-menu1.active .select-btn1 i{
+    transform: rotate(-180deg);
+    box-sizing: border-box;
+}
+.select-menu1 .options1{
+    position: relative;
+    padding: 0.8em;
+    margin-top: 5px;
+    border-radius: 20px;
+    display: none;
+    border: 2px solid #212121;
+    background:white;
+    box-sizing: border-box;
+    background-color: white;
+}
+.select-menu1.active .options1{
+    display: block;
+    box-sizing: border-box;
+}
+.options1 .option1{
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+.options1 .option1:hover{
+    background: #fff;
+    box-sizing: border-box;
+
+}
+.select-menu1 .options1{
+    position: relative;
+    padding: 0.8em;
+    margin-top: 5px;
+    border-radius: 20px;
+    display: none;
+    border: 2px solid #212121;
+    background:white;
+    box-sizing: border-box;
+    background-color: white;
+}
+.select-menu1.active .options1{
+    display: block;
+    box-sizing: border-box;
+}
+.options1 .option1{
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+.options1 .option1:hover{
+    background: #fff;
+    box-sizing: border-box;
+
+}
+.option1 i{
+    font-size: 25px;
+    margin-right: 12px;
+    box-sizing: border-box;
+    
+}
+.option1 .option-text1{
+    font-size: 18px;
+    color: #212121;
+    box-sizing: border-box;
+
+}
+
+.select-menu2{
+    box-sizing: border-box;
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 25px 0 0 ;
+    z-index: 1;
+}
+.select-menu2 .select-btn2{
+    box-sizing: border-box;
+    display: flex;
+    height: 45px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border-radius: 20px;
+    width: 100%;
+    background-color: white;
+    color: #212121;
+
+}
+.select-btn2 i{
+    font-size: 25px;
+    transition: 0.3s;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.select-menu2.active .select-btn2 i{
+    transform: rotate(-180deg);
+    box-sizing: border-box;
+}
+.select-menu2 .options2{
+    position: relative;
+    padding: 0.8em;
+    margin-top: 5px;
+    border-radius: 20px;
+    display: none;
+    border: 2px solid #212121;
+    background:white;
+    box-sizing: border-box;
+    background-color: white;
+}
+.select-menu2.active .options2{
+    display: block;
+    box-sizing: border-box;
+}
+.options2 .option2{
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+.options2 .option2:hover{
+    background: #e5e7eb;
+    box-sizing: border-box;
+
+}
+.select-menu2 .options2{
+    position: relative;
+    padding: 0.8em;
+    margin-top: 5px;
+    border-radius: 20px;
+    display: none;
+    border: 2px solid #212121;
+    background:white;
+    box-sizing: border-box;
+    background-color: white;
+}
+.select-menu2.active .options2{
+    display: block;
+    box-sizing: border-box;
+}
+.options2 .option2{
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    padding: 0 16px;
+    border-radius: 8px;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+.options2 .option2:hover{
+    background: #fff;
+    box-sizing: border-box;
+
+}
+.option2 i{
+    font-size: 25px;
+    margin-right: 12px;
+    box-sizing: border-box;
+    
+}
+.option2 .option-text2{
+    font-size: 18px;
+    color: #212121;
+    box-sizing: border-box;
+
+}
+
+
+/* success message */
+.success{
+    background-color: #161c28;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 111;
+    position: absolute;
+    width: 25%;
+    height: 65%;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border: 2px solid #212121;
+}
+.success h1{
+    font-size: 29px;
+    font-weight: bold;
+    background: linear-gradient(to right, #2c3d7d, #E4E7F1); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.success h1 i{
+    font-size: 43px;
+}
+.success p{
+    text-align: center;
+    font-size: 21px;
+    color: white;
+    font-weight: 600;
+}
+.success button{
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-size: 300% 100%;
+    background-image: linear-gradient(to right, #2c3d7d, #95a4d5, #2c3d7d, #212121);
+    /* box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75); */
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.success button:hover{
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+/* end of suc */
+
+.back-button {
+    position: absolute;
+    top: 160px;
+    right: 510px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #212121;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #0c111d;
+}
+

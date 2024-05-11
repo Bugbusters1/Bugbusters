@@ -206,6 +206,8 @@
 			</div> -->
       </nav>
       <!-- End sidebar -->
+      <!-- Dark overlay -->
+		<div class="overlay"></div>
 
       <!-- Content -->
       <div class="content">
@@ -238,7 +240,7 @@
           <div class="container">
             <div class="row">
               <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                <h1 class="wow fadeIn">Kindle</h1>
+                <h1 class="wow fadeIn" style="font-family: Arial, sans-serif;" >Kindle</h1>
                 <div class="description wow fadeInLeft">
                   <h3>
                     <p>Together, Make a Difference.</p>
@@ -551,24 +553,22 @@
 
     <!-- Javascript -->
     <script>
-      document
-        .getElementById("submit-post-btn2")
-        .addEventListener("click", function () {
-          // Show popup
-          // Show the submission message if the form is valid
-          Swal.fire({
-            title: "Sent Successfully!",
-            text: "We will be in touch!",
-            icon: "success",
-            showConfirmButton: false,
-            timer: 2500,
-          });
-          // Redirect after 2 seconds
-          setTimeout(function () {
-            window.location.href = "./DonorPage.html"; // Replace with your desired URL
-          }, 1500); // Adjust the time as needed (in milliseconds)
-        });
-    </script>
+      document.getElementById("submit-post-btn2").addEventListener("click", function() {
+        // Show popup
+         // Show the submission message if the form is valid
+		  Swal.fire({
+				title: "Sent Successfully!",
+				text: "We will be in touch!",
+				icon: "success",
+				showConfirmButton: false,
+				timer:2500
+				});	
+        // Redirect after 2 seconds
+        setTimeout(function() {
+        // Replace with your desired URL
+        }, 1500); // Adjust the time as needed (in milliseconds)
+      });
+      </script>
 
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>

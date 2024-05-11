@@ -57,9 +57,99 @@
           <i class="fas fa-arrow-left"></i>
         </div>
 
-        <div class="logo">
-          <h3><a href="index.html">Kindle</a></h3>
-        </div>
+	<style>.section-6-form {
+		padding-top: 20px;
+		text-align: left;
+	  }
+	  
+	  .section-6-form input[type="text"],
+	  .section-6-form textarea {
+		background: none;
+		background: #f7f8fd;
+		border: 1px solid  #f7f8fd;
+		font-family: 'Roboto', sans-serif;
+		font-size: 16px;
+		font-weight: 300;
+		color: #0c0f1d;
+		box-shadow: none;
+		transition: all .3s;
+	  }
+	  
+	  .section-6-form textarea {
+		height: 90px;
+	  }
+	  
+	  .section-6-form input[type="text"]:focus,
+	  .section-6-form textarea:focus {
+		outline: 0;
+		background: #f7f8fd;
+		border: 1px solid #f7f8fd;
+		color: #0c0f1d;
+		box-shadow: none;
+	  }
+	  
+	  .section-6-form input[type="text"].input-error,
+	  .section-6-form textarea.input-error {
+		border-color: black;;
+	  }
+	  
+	  .section-6-form input[type="text"]::-moz-placeholder,
+	  .section-6-form textarea::-moz-placeholder {
+		color: #0c0f1d;
+		
+		font-style: italic;
+	  }
+	  
+	  .section-6-form input[type="text"]:-ms-input-placeholder,
+	  .section-6-form textarea:-ms-input-placeholder {
+		color: #f7f8fd;
+		font-style: italic;
+	  }
+	  
+	  .section-6-form input[type="text"]::-webkit-input-placeholder,
+	  .section-6-form textarea::-webkit-input-placeholder {
+		color: #0c0f1d;
+		font-style: italic;
+	  }
+	  
+	  .section-6-form button.btn-customized {
+		padding: .75rem 1.5rem;
+		background: #222024;
+		border: 0;
+		border-radius: 4px;
+		font-family: 'Roboto', sans-serif;
+		font-size: 16px;
+		font-weight: 300;
+		color: #fff;
+		box-shadow: none;
+	  }
+	  
+	  .section-6-form button.btn-customized:hover,
+	  .section-6-form button.btn-customized:active,
+	  .section-6-form button.btn-customized:focus,
+	  .section-6-form button.btn-customized:active:focus,
+	  .section-6-form button.btn-customized.active:focus,
+	  .section-6-form button.btn.btn-primary:not(:disabled):not(.disabled):active,
+	  .section-6-form button.btn.btn-primary:not(:disabled):not(.disabled):active:focus {
+		outline: 0;
+		background: #222024;
+		background: black;
+		border: 0;
+		color: #fff;
+		box-shadow: none;
+	  }
+	  
+	  .section-6-form button.btn-customized i {
+		margin-right: 5px;
+	  }
+	  </style>
+
+	<!-- Favicon and touch icons -->
+	<link rel="shortcut icon" href="assets/ico/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
         <ul class="list-unstyled menu-elements">
           <li class="active">
@@ -119,7 +209,42 @@
           </a>
         </div>
 
-        <!-- <div class="dark-light-buttons">
+	<!-- Wrapper -->
+	<div class="wrapper ">
+
+		<!-- Sidebar -->
+		<nav class="sidebar" style="background-color: #212121">
+
+			<!-- close sidebar menu -->
+			<div class="dismiss">
+				<i class="fas fa-arrow-left"></i>
+			</div>
+
+			<div class="logo">
+				<h3><a href="index.html">Kindle</a></h3>
+			</div>
+
+			<ul class="list-unstyled menu-elements">
+				<li class="active">
+					<a class="scroll-link" href="#top-content"><i class="fas fa-home"></i> Home</a>
+				</li>
+				<li>
+					<a class="scroll-link" href="#section-1"><i class="fas fa-cog"></i> What we do</a>
+				</li>
+				<li>
+					<a class="scroll-link" href="#section-2"><i class="fas fa-user"></i> About us</a>
+				</li>
+				
+				<li>
+					<a class="scroll-link" href="#section-6"><i class="fas fa-envelope"></i> Contact us</a>
+				</li>
+				
+			
+			</ul>
+
+			
+			
+			<!-- <div class="dark-light-buttons">
 				<a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
 				<a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
 			</div> -->
@@ -183,11 +308,53 @@
           </div>
         </div>
 
-        <!-- Section 1 -->
-        <div class="section-1-container section-container" id="section-1">
-          <div class="container">
-            <div class="row">
-              <div class="col section-1 section-description wow fadeIn">
+			<!-- open sidebar menu -->
+			<a class="open-menu" href="#" role="button " >
+				<button class="btnMenu" style="background-color: #212121">
+					<span class="icon">
+						<svg viewBox="0 0 175 80" width="40" height="40">
+							<rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+							<rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+							<rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+						</svg>
+					</span>
+					<span class="text">Menu</span>
+				</button>
+			</a>
+
+			<!-- Top content -->
+			<div class="top-content section-container" id="top-content" >
+
+				<div class="container" >
+					<div class="row">
+						<div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+							<h1 class="wow fadeIn">Kindle</h1>
+							<div class="description wow fadeInLeft">
+								<h3><p>
+									Together, Make a Difference.
+								</p>
+								</h3>
+							</div>
+							<div class="buttons wow fadeInUp">
+								<a class="btn btn-primary btn-customized " href="./LoginANDregister/login.html" role="button">
+									<i class="fas fa-sign-in-alt"></i> Log In
+								</a>
+								
+								<a class="btn btn-primary btn-customized " href="./LoginANDregister/registerDonor.html" role="button">
+									<i class="fas fa-user-plus"></i> Sign Up
+								</a>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 1 -->
+<div class="section-1-container section-container" id="section-1">
+    <div class="container">
+        <div class="row">
+            <div class="col section-1 section-description wow fadeIn">
                 <h2>What We Do</h2>
                 <div class="divider-1 wow fadeInUp"><span></span></div>
               </div>
@@ -246,14 +413,54 @@
             </div>
           </div>
         </div>
-        <!-- Section 2 -->
-        <div
-          class="section-2-container section-container section-container-gray-bg"
-          id="section-2"
-          style="background-color: #f7f8fd">
-          <div class="container">
-            <div class="row">
-              <div class="col section-2 section-description wow fadeIn">
+        <div class="row">
+            <div class="col-md-4 section-1-box wow fadeInUp">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="section-1-box-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Non-Monetary Donations</h3>
+                        <p>Facilitating the donation process for clothes, medical supplies, school supplies, furniture, toys, and more to those in need.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 section-1-box wow fadeInDown">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="section-1-box-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Connecting Donors and Recipients</h3>
+                        <p>Providing a platform for donors to browse donation requests and connect with individuals, organizations, or communities in need.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 section-1-box wow fadeInUp">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="section-1-box-icon">
+                            <i class="fas fa-truck-moving"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Efficient Logistics</h3>
+                        <p>Coordinating pickup and delivery of donations to ensure they reach recipients in a timely and efficient manner.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+			<!-- Section 2 -->
+<div class="section-2-container section-container section-container-gray-bg " id="section-2" style="background-color: #fcfaf0;">
+    <div class="container">
+        <div class="row">
+            <div class="col section-2 section-description wow fadeIn">
                 <h2>About Us</h2>
                 <div class="divider-1 wow fadeInUp"><span></span></div>
               </div>
