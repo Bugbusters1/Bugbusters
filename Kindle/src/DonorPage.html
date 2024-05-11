@@ -28,6 +28,96 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/media-queries.css" />
 
+    <style>
+      .section-6-form {
+        padding-top: 20px;
+        text-align: left;
+      }
+
+      .section-6-form input[type="text"],
+      .section-6-form textarea {
+        background: none;
+        background: #f7f8fd;
+        border: 1px solid #f7f8fd;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        color: #0c0f1d;
+        box-shadow: none;
+        transition: all 0.3s;
+      }
+
+      .section-6-form textarea {
+        height: 90px;
+      }
+
+      .section-6-form input[type="text"]:focus,
+      .section-6-form textarea:focus {
+        outline: 0;
+        background: #f7f8fd;
+        border: 1px solid #f7f8fd;
+        color: #0c0f1d;
+        box-shadow: none;
+      }
+
+      .section-6-form input[type="text"].input-error,
+      .section-6-form textarea.input-error {
+        border-color: black;
+      }
+
+      .section-6-form input[type="text"]::-moz-placeholder,
+      .section-6-form textarea::-moz-placeholder {
+        color: #0c0f1d;
+
+        font-style: italic;
+      }
+
+      .section-6-form input[type="text"]:-ms-input-placeholder,
+      .section-6-form textarea:-ms-input-placeholder {
+        color: #f7f8fd;
+        font-style: italic;
+      }
+
+      .section-6-form input[type="text"]::-webkit-input-placeholder,
+      .section-6-form textarea::-webkit-input-placeholder {
+        color: #0c0f1d;
+        font-style: italic;
+      }
+
+      .section-6-form button.btn-customized {
+        padding: 0.75rem 1.5rem;
+        background: #222024;
+        border: 0;
+        border-radius: 4px;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        color: #fff;
+        box-shadow: none;
+      }
+
+      .section-6-form button.btn-customized:hover,
+      .section-6-form button.btn-customized:active,
+      .section-6-form button.btn-customized:focus,
+      .section-6-form button.btn-customized:active:focus,
+      .section-6-form button.btn-customized.active:focus,
+      .section-6-form
+        button.btn.btn-primary:not(:disabled):not(.disabled):active,
+      .section-6-form
+        button.btn.btn-primary:not(:disabled):not(.disabled):active:focus {
+        outline: 0;
+        background: #222024;
+        background: black;
+        border: 0;
+        color: #fff;
+        box-shadow: none;
+      }
+
+      .section-6-form button.btn-customized i {
+        margin-right: 5px;
+      }
+    </style>
+
     <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="assets/ico/favicon.png" />
     <link
@@ -103,10 +193,12 @@
           </li>
         </ul>
 
-    
-          <a class="btn btn-primary btn-customized-3" href="./HomePage.html" role="button">
-            <i class="fas fa-sign-out-alt"></i> Log out
-          </a>
+        <a
+          class="btn btn-primary btn-customized-3"
+          href="./HomePage.html"
+          role="button">
+          <i class="fas fa-sign-out-alt"></i> Log out
+        </a>
 
         <!-- <div class="dark-light-buttons">
 				<a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
@@ -146,10 +238,10 @@
           <div class="container">
             <div class="row">
               <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                <h1 class="wow fadeIn" style="color: #0c0f1d">Kindle</h1>
+                <h1 class="wow fadeIn">Kindle</h1>
                 <div class="description wow fadeInLeft">
                   <h3>
-                    <p style="color: #0c0f1d">Together, Make a Difference.</p>
+                    <p>Together, Make a Difference.</p>
                   </h3>
                 </div>
                 <div class="buttons wow fadeInUp">
@@ -368,9 +460,9 @@
           <div class="container">
             <div class="row">
               <div class="col section-6 section-description wow fadeIn">
-                <h2 style="color: #0c0f1d">Contact Us</h2>
+                <h2 style="color: white">Contact Us</h2>
                 <div class="divider-1 wow fadeInUp"><span></span></div>
-                <p style="color: #0c0f1d">
+                <p style="color: white; font-weight: 500">
                   Send us an email using the form below or follow us on our
                   social media channels.
                 </p>
@@ -378,7 +470,7 @@
             </div>
             <div class="row">
               <div class="col-md-6 section-6-box wow fadeInUp">
-                <h3 style="color: #0c0f1d">By eMail</h3>
+                <h3 style="color: white">By eMail</h3>
                 <div class="section-6-form">
                   <form role="form" action="assets/contact.php" method="post">
                     <div class="form-group">
@@ -413,7 +505,8 @@
                     </div>
                     <button
                       type="submit"
-                      class="btn btn-primary btn-customized">
+                      class="btn btn-primary btn-customized"
+                      id="submit-post-btn2">
                       <i class="fas fa-paper-plane"></i> Send Message
                     </button>
                   </form>
@@ -432,7 +525,15 @@
             </div>
           </div>
         </div>
-
+        <button class="button" id="notificationsButton">
+          <svg class="bell" viewBox="0 0 448 512">
+            <path
+              d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"></path>
+          </svg>
+          Notifications
+          <div class="arrow">›</div>
+          <div class="dot"></div>
+        </button>
         <!-- Footer -->
         <footer class="footer-container">
           <div class="container">
@@ -449,6 +550,26 @@
     <!-- End wrapper -->
 
     <!-- Javascript -->
+    <script>
+      document
+        .getElementById("submit-post-btn2")
+        .addEventListener("click", function () {
+          // Show popup
+          // Show the submission message if the form is valid
+          Swal.fire({
+            title: "Sent Successfully!",
+            text: "We will be in touch!",
+            icon: "success",
+            showConfirmButton: false,
+            timer: 2500,
+          });
+          // Redirect after 2 seconds
+          setTimeout(function () {
+            window.location.href = "./DonorPage.html"; // Replace with your desired URL
+          }, 1500); // Adjust the time as needed (in milliseconds)
+        });
+    </script>
+
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
     <script
@@ -464,5 +585,19 @@
     <script src="assets/js/jquery.waypoints.min.js"></script>
     <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="assets/js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var notificationsButton = document.getElementById(
+          "notificationsButton"
+        );
+
+        notificationsButton.addEventListener("click", function () {
+          window.location.href = "./Donor/Notification.html";
+        });
+      });
+    </script>
   </body>
+  <link rel="stylesheet" href="./Organization/notifyButton.css" />
 </html>
