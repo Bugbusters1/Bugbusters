@@ -28,6 +28,93 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/media-queries.css" />
 
+    <style>.section-6-form {
+      padding-top: 20px;
+      text-align: left;
+    }
+    
+    .section-6-form input[type="text"],
+    .section-6-form textarea {
+      background: none;
+      background: #f7f8fd;
+      border: 1px solid  #f7f8fd;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      color: #0c0f1d;
+      box-shadow: none;
+      transition: all .3s;
+    }
+    
+    .section-6-form textarea {
+      height: 90px;
+    }
+    
+    .section-6-form input[type="text"]:focus,
+    .section-6-form textarea:focus {
+      outline: 0;
+      background: #f7f8fd;
+      border: 1px solid #f7f8fd;
+      color: #0c0f1d;
+      box-shadow: none;
+    }
+    
+    .section-6-form input[type="text"].input-error,
+    .section-6-form textarea.input-error {
+      border-color: black;;
+    }
+    
+    .section-6-form input[type="text"]::-moz-placeholder,
+    .section-6-form textarea::-moz-placeholder {
+      color: #0c0f1d;
+      
+      font-style: italic;
+    }
+    
+    .section-6-form input[type="text"]:-ms-input-placeholder,
+    .section-6-form textarea:-ms-input-placeholder {
+      color: #f7f8fd;
+      font-style: italic;
+    }
+    
+    .section-6-form input[type="text"]::-webkit-input-placeholder,
+    .section-6-form textarea::-webkit-input-placeholder {
+      color: #0c0f1d;
+      font-style: italic;
+    }
+    
+    .section-6-form button.btn-customized {
+      padding: .75rem 1.5rem;
+      background: #222024;
+      border: 0;
+      border-radius: 4px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      color: #fff;
+      box-shadow: none;
+    }
+    
+    .section-6-form button.btn-customized:hover,
+    .section-6-form button.btn-customized:active,
+    .section-6-form button.btn-customized:focus,
+    .section-6-form button.btn-customized:active:focus,
+    .section-6-form button.btn-customized.active:focus,
+    .section-6-form button.btn.btn-primary:not(:disabled):not(.disabled):active,
+    .section-6-form button.btn.btn-primary:not(:disabled):not(.disabled):active:focus {
+      outline: 0;
+      background: #222024;
+      background: black;
+      border: 0;
+      color: #fff;
+      box-shadow: none;
+    }
+    
+    .section-6-form button.btn-customized i {
+      margin-right: 5px;
+    }
+    </style>
+
     <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="assets/ico/favicon.png" />
     <link
@@ -368,9 +455,9 @@
           <div class="container">
             <div class="row">
               <div class="col section-6 section-description wow fadeIn">
-                <h2 style="color: #0c0f1d">Contact Us</h2>
+                <h2 style="color: white">Contact Us</h2>
                 <div class="divider-1 wow fadeInUp"><span></span></div>
-                <p style="color: #0c0f1d">
+                <p style="color: white;font-weight: 500;">
                   Send us an email using the form below or follow us on our
                   social media channels.
                 </p>
@@ -378,7 +465,7 @@
             </div>
             <div class="row">
               <div class="col-md-6 section-6-box wow fadeInUp">
-                <h3 style="color: #0c0f1d">By eMail</h3>
+                <h3 style="color: white">By eMail</h3>
                 <div class="section-6-form">
                   <form role="form" action="assets/contact.php" method="post">
                     <div class="form-group">
@@ -413,7 +500,7 @@
                     </div>
                     <button
                       type="submit"
-                      class="btn btn-primary btn-customized">
+                      class="btn btn-primary btn-customized" id="submit-post-btn2">
                       <i class="fas fa-paper-plane"></i> Send Message
                     </button>
                   </form>
@@ -449,6 +536,24 @@
     <!-- End wrapper -->
 
     <!-- Javascript -->
+    <script>
+      document.getElementById("submit-post-btn2").addEventListener("click", function() {
+        // Show popup
+         // Show the submission message if the form is valid
+		  Swal.fire({
+				title: "Sent Successfully!",
+				text: "We will be in touch!",
+				icon: "success",
+				showConfirmButton: false,
+				timer:2500
+				});	
+        // Redirect after 2 seconds
+        setTimeout(function() {
+        window.location.href = "./DonorPage.html"; // Replace with your desired URL
+        }, 1500); // Adjust the time as needed (in milliseconds)
+      });
+      </script>
+
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
     <script
@@ -464,5 +569,7 @@
     <script src="assets/js/jquery.waypoints.min.js"></script>
     <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="assets/js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>	 
+    <script src="sweetalert2.all.min.js"></script> 
   </body>
 </html>
