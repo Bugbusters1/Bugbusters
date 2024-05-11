@@ -123,7 +123,7 @@
                                 <th style="padding-left: 80px;">Organization Name</th>
                                 <th style="padding-left: 80px;">Donation Category</th>
                                 <th style="padding-left: 80px;">Donation Details</th>
-                                <th style="padding-left: 80px;">Action</th>
+                                <th style="padding-left: 88px;">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -134,8 +134,8 @@
                                 <td>T-shirts, jeans</td>
                                 <td>
                                     <!-- Buttons for actions -->
-                                    <a href="UpdatePost.html" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Edit</a>
-                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
+                                    <a href="UpdatePost.html" class="btn btn-warning">Edit <i class="fas fa-pencil-alt" style="margin-left: 5px;"></i></a>
+                                    <button class="btn btn-danger">Delete <i class="fas fa-trash-alt" style="margin-left: 5px;"></i></button>
                                 </td>
                             </tr>
                             <tr>
@@ -144,8 +144,8 @@
                                 <td>Bandages, syringes</td>
                                 <td>
                                     <!-- Buttons for actions -->
-                                    <a href="UpdatePost.html" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Edit</a>
-                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
+                                    <a href="UpdatePost.html" class="btn btn-warning">Edit <i class="fas fa-pencil-alt" style="margin-left: 5px;"></i></a>
+                                    <button class="btn btn-danger">Delete <i class="fas fa-trash-alt" style="margin-left: 5px;"></i></button>
                                 </td>
                             </tr>
                             <tr>
@@ -154,8 +154,8 @@
                                 <td>Books, pencils, notebooks</td>
                                 <td>
                                     <!-- Buttons for actions -->
-                                    <a href="UpdatePost.html" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Edit</a>
-                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
+                                    <a href="UpdatePost.html" class="btn btn-warning">Edit <i class="fas fa-pencil-alt" style="margin-left: 5px;"></i></a>
+                                    <button class="btn btn-danger">Delete <i class="fas fa-trash-alt" style="margin-left: 5px;"></i></button>
                                 </td>
                             </tr>
                             <tr>
@@ -164,8 +164,8 @@
                                 <td>Canned goods, rice, pasta</td>
                                 <td>
                                     <!-- Buttons for actions -->
-                                    <a href="UpdatePost.html" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Edit</a>
-                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
+                                    <a href="UpdatePost.html" class="btn btn-warning">Edit <i class="fas fa-pencil-alt" style="margin-left: 5px;"></i></a>
+                                    <button class="btn btn-danger">Delete <i class="fas fa-trash-alt" style="margin-left: 5px;"></i></button>
                                 </td>
                             </tr>
                             <tr>
@@ -174,8 +174,8 @@
                                 <td>Soap, toothpaste, shampoo</td>
                                 <td>
                                     <!-- Buttons for actions -->
-                                    <a href="UpdatePost.html" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Edit</a>
-                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
+                                    <a href="UpdatePost.html" class="btn btn-warning">Edit <i class="fas fa-pencil-alt" style="margin-left: 5px;"></i></a>
+                                    <button class="btn btn-danger">Delete <i class="fas fa-trash-alt" style="margin-left: 5px;"></i></button>
                                 </td>
                             </tr>
                             <tr>
@@ -184,8 +184,8 @@
                                 <td>Pillows, blankets</td>
                                 <td>
                                     <!-- Buttons for actions -->
-                                    <a href="UpdatePost.html" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Edit</a>
-                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
+                                    <a href="UpdatePost.html" class="btn btn-warning">Edit <i class="fas fa-pencil-alt" style="margin-left: 5px;"></i></a>
+                                    <button class="btn btn-danger">Delete <i class="fas fa-trash-alt" style="margin-left: 5px;"></i></button>
                                 </td>
                             </tr>
                             <tr>
@@ -194,8 +194,8 @@
                                 <td>Laptops, tablets</td>
                                 <td>
                                     <!-- Buttons for actions -->
-                                    <a href="UpdatePost.html" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Edit</a>
-                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
+                                    <a href="UpdatePost.html" class="btn btn-warning">Edit <i class="fas fa-pencil-alt" style="margin-left: 5px;"></i></a>
+                                    <button class="btn btn-danger">Delete <i class="fas fa-trash-alt" style="margin-left: 5px;"></i></button>
                                 </td>
                             </tr>
                             <tr>
@@ -204,8 +204,8 @@
                                 <td>Sneakers, boots</td>
                                 <td>
                                     <!-- Buttons for actions -->
-                                    <a href="UpdatePost.html" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Edit</a>
-                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</button>
+                                    <a href="UpdatePost.html" class="btn btn-warning">Edit <i class="fas fa-pencil-alt" style="margin-left: 5px;"></i></a>
+                                    <button class="btn btn-danger">Delete <i class="fas fa-trash-alt" style="margin-left: 5px;"></i></button>
                                 </td>
                             </tr>                            
                             <!-- Add more rows as needed -->
@@ -236,8 +236,10 @@
                                         if (result.isConfirmed) {
                                             Swal.fire({
                                             title: "Deleted!",
+                                            showConfirmButton: false,
                                             text: "Donation post has been deleted.",
-                                            icon: "success"
+                                            icon: "success",
+                                            timer: 1500
                                             });
                                             // Apply CSS transition to fade out the row gradually
                                             row.style.transition = 'opacity 0.5s ease';
