@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<<<<<<< HEAD
+  <body>
+    <form class="container">
+      <div
+        class="side-thing"
+        style="
+          background-color: #212121;
+          color: white;
+          border-radius: 9px 0 0 9px;
+        ">
+        <h3>Please Choose Organization location:</h3>
+        <div id="map" style="height: 400px; width: 330px"></div>
+      </div>
+=======
 <head>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -26,6 +40,7 @@
             <h3>Please Choose Organization location:</h3>
             <div id="map" style="height: 400px; width: 330px"></div>
           </div>
+>>>>>>> a230c47af549f07410f3c8cec8aabefa4326f5c3
       <div class="wrapper">
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -114,13 +129,8 @@
             alt="sing up image"
             style="height: 270px" />
         </figure>
-        <!-- <button type="submit" class="signup-button">Finish</button> -->
-        <input
-          type="submit"
-          class="signup-button"
-          name="upload_btn"
-          value="Finish" />
-      </div>
+         <button id ="finish"type="submit" class="signup-button">Finish</button> 
+
     </form>
     <script>
       var map = L.map("map").setView([30.0444, 31.2357], 6);
@@ -186,19 +196,116 @@
         window.location.href = "../DonorPage.html";
       });
     </script>
-    <script>
-      // Function to handle button click
-      function handleButtonClick() {
-        // Redirect the user to a specified URL
-        window.location.href = "../Organization/OrganizationHome.html";
-      }
-      // Add event listener to the button
-      document.addEventListener("DOMContentLoaded", function () {
-        var finishButton = document.querySelector(
-          ".signup-button[name='upload_btn']"
-        );
+   <script>
+    // Function to handle button click
+    function handleButtonClick(event) {
+        // Prevent default form submission behavior
+        event.preventDefault();
+
+        // Check if the form is valid before redirecting
+        if (isFormValid()) {
+            window.location.href = "../Organization/OrganizationHome.html";
+        } else {
+            alert("Please fill out all the required fields.");
+        }
+    }
+
+    // Function to check if the form is valid
+    function isFormValid() {
+        // Add validation logic here
+        // For simplicity, let's assume all fields are required
+        var inputs = document.querySelectorAll("input[required]");
+        for (var i = 0; i < inputs.length; i++) {
+            if (!inputs[i].value) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Add event listener to the button
+    document.addEventListener("DOMContentLoaded", function () {
+        var finishButton = document.getElementById("finish");
         finishButton.addEventListener("click", handleButtonClick);
-      });
-    </script>
+    });
+</script><script>
+  // Function to handle button click
+  function handleButtonClick(event) {
+      // Prevent default form submission behavior
+      event.preventDefault();
+
+      // Check if the form is valid before redirecting
+      if (isFormValid()) {
+          window.location.href = "../Organization/OrganizationHome.html";
+      } else {
+          alert("Please fill out all the required fields.");
+      }
+  }
+
+  // Function to check if the form is valid
+  function isFormValid() {
+      // Add validation logic here
+      // For simplicity, let's assume all fields are required
+      var inputs = document.querySelectorAll("input[required]");
+      for (var i = 0; i < inputs.length; i++) {
+          if (!inputs[i].value) {
+              return false;
+          }
+      }
+      return true;
+  }
+
+  // Add event listener to the button
+  document.addEventListener("DOMContentLoaded", function () {
+      var finishButton = document.getElementById("finish");
+      finishButton.addEventListener("click", handleButtonClick);
+  });
+</script><script>
+  // Function to handle button click
+  function handleButtonClick(event) {
+      // Prevent default form submission behavior
+      event.preventDefault();
+
+      // Check if the form is valid before redirecting
+      if (isFormValid()) {
+          window.location.href = "../Organization/OrganizationHome.html";
+      } else {
+          alert("Please fill out all the required fields.");
+      }
+  }
+
+  // Function to check if the form is valid
+  function isFormValid() {
+      // Add validation logic here
+      // For simplicity, let's assume all fields are required
+      var inputs = document.querySelectorAll("input[required]");
+      for (var i = 0; i < inputs.length; i++) {
+          if (!inputs[i].value) {
+              return false;
+          }
+      }
+      return true;
+  }
+
+  // Add event listener to the button
+  document.addEventListener("DOMContentLoaded", function () {
+      var finishButton = document.getElementById("finish");
+      finishButton.addEventListener("click", handleButtonClick);
+  });
+</script><script>
+  function handleButtonClick(event) {
+      event.preventDefault();
+
+     
+          window.location.href = "../Organization/OrganizationHome.html";
+      
+  }
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+      var finishButton = document.getElementById("finish");
+      finishButton.addEventListener("click", handleButtonClick);
+  });
+</script>
   </body>
 </html>
