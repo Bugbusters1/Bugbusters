@@ -740,7 +740,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <h3 style="text-align: left;color: white;">Hospital :</h3>
     <div class="radio-wrapper">
         <label class="radio-button">
-            <input id="All" name="organization" type="radio" checked>
+            <input value="all" name="organization" type="radio" checked>
             <span class="radio-checkmark"></span>
             <span class="radio-label">All</span>
         </label>
@@ -1138,6 +1138,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     displayResults(filteredRequests);
   }
+
   displayItems();
 
   function centerPopup() {
@@ -1254,23 +1255,4 @@ document.addEventListener("DOMContentLoaded", function () {
   const popupContainer = document.querySelector(".popup-container");
   const detailsButton = document.querySelectorAll(".details-button");
   const closeButton = document.querySelector(".close-button");
-
-  // detailsButton.forEach((button) => {
-  //   button.addEventListener("click", function () {
-  //     // Provide feedback to the user
-  //     popupContainer.style.display = "block";
-  //   });
-  // });
-  // closeButton.addEventListener("click", function () {
-  //   popupContainer.style.display = "none";
-  // });
-
-  // document.body.addEventListener("click",function(event) {
-  //   if(event.target.id == "detailsButton"){
-  //     alert('You clicked the button!');
-  //   }
-  //   else if(event.target.id == "resultDetailsButton"){
-  //     alert('You clicked the results button');
-  //   }
-  // });
 });
