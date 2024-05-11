@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kindle</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <style>
+        /* Style for custom file input container */
+        .file-input-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Style for custom file input */
+        .custom-file-input {
+            cursor: pointer;
+            font-size: 10px;
+            padding: 5px 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+            transition: all 0.3s ease;
+            margin-left: 57%;
+            margin-bottom: 10%;
+            width: 100px;
+            font-weight: bolder;
+        }
+        input[type='file'] {
+            margin-left: 0%;
+        }
+        .custom-file-input:hover {
+            background-color: #f0f0f0;
+            border-color: #999;
+        }
+
+        .custom-file-input:focus {
+            outline: none;
+            border-color: #666;
+        }
+        ::-webkit-file-upload-button {
+            display: none;
+        }
+
+        /* Hide the default file input */
+        .custom-file-input[type="file"] {
+            display: none;
+        }
+        
+        /* Hide the default file input label */
+        .file-input-label {
+            display: none;
+        }
+
+        /* Style for error message */
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <form method="POST" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="orgName"><i class="zmdi zmdi-city material-icons-name"></i></label>
+                                <input type="text" name="orgName" id="orgName" placeholder="Organization Name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="orgType"><i class="zmdi zmdi-case"></i></label>
+                                <input type="text" name="orgType" id="orgType" placeholder="Organization Type" required/>
+                            </div>
+                            
+                            <!-- Custom styled file input container -->
+                            <div class="form-group file-input-container">
+                                <label for="documents"><i class="zmdi zmdi-file"></i></label>
+                                <label class="custom-file-input" for="documents">Upload Documents</label>
+                                <input type="file" name="documents" id="documents" accept=".pdf, .doc, .docx"/>
+                            </div>
+                            <div id="fileErrorMessage" class="error-message"></div>
+                            
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Next"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
+                        <a href="login.html" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Get a reference to the form element
+        const form = document.getElementById('register-form');
+        // Get a reference to the file input element
+        const fileInput = document.getElementById('documents');
+        // Get a reference to the file input label
+        const fileInputLabel = document.getElementById('fileInputLabel');
+        // Get a reference to the error message element
+        const fileErrorMessage = document.getElementById('fileErrorMessage');
+
+        // Add an event listener for the form submission
+        form.addEventListener('submit', function(event) {
+            // Prevent the form from submitting normally
+            event.preventDefault();
+
+            // Validate if a file is selected
+            if (fileInput.files.length === 0) {
+                // Show error message
+                fileErrorMessage.textContent = "Please select a file.";
+            } else {
+                // Reset error message
+                fileErrorMessage.textContent = "";
+                // Redirect the user to the desired page
+                window.location.href = 'registerOrg2.html';
+            }
+        });
+
+        
+    </script>
+    
+</body>
+</html>
