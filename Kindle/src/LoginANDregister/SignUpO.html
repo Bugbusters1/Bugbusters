@@ -1,168 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin="" />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up As Organization</title>
+    <link rel="stylesheet" href="SignUpForm.css " />
+  </head>
 
-<head>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign Up As Organization</title>
-  <link rel="stylesheet" href="SignUpForm.css" />
-</head>
+  <body>
+    <form
+      class="container"
+      action="uploadO.php"
+      method="POST"
+      enctype="multipart/form-data">
+      <div
+        class="side-thing"
+        style="
+          background-color: #212121;
+          color: white;
+          border-radius: 9px 0 0 9px;
+        ">
+        <h3>Please Choose Organization location:</h3>
+        <div id="map" style="height: 400px; width: 330px"></div>
+      </div>
+      <div class="wrapper">
+        <link
+          href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+          rel="stylesheet" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
 
-<body>
-  <form class="container" action="uploadO.php" method="POST" enctype="multipart/form-data">
-    <div class="side-thing" style="background-color: #212121;color:white;border-radius: 9px 0 px 0px 9 px ;">
-        
-            <h3>Please Choose Organization location:</h3>
-            <div id="map" style="height: 400px; width: 330px"></div>
+        <h1>Sign Up</h1>
+
+        <div class="input-box">
+          <input type="tel" required />
+          <label class="user-label">Contact Number</label>
+          <i class="bx bxs-phone"></i>
+        </div>
+
+        <div class="name-holder">
+          <div class="input-box">
+            <input type="text" required />
+            <label class="user-label">Organization Name</label>
+            <i class="fa-solid fa-question"></i>
           </div>
-    <div class="wrapper">
-      <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-      <h1>Sign Up</h1>
+          <div class="select-menu">
+            <div class="select-btn">
+              <span class="sBtn-text" id="speciality">Organization Type</span>
+              <i class="bx bx-chevron-down"></i>
+            </div>
 
-      <div class="input-box">
-        <input type="tel" required />
-        <label class="user-label">Contact Number</label>
-        <i class="bx bxs-phone"></i>
-      </div>
-
-      <div class="name-holder">
-        <div class="input-box">
-          <input type="text" required />
-          <label class="user-label">Organization Name</label>
-          <i class="fa-solid fa-question"></i>
+            <ul class="options">
+              <li class="option">
+                <span class="option-text">Educational</span>
+              </li>
+              <li class="option">
+                <span class="option-text">Healthcare</span>
+              </li>
+              <li class="option">
+                <span class="option-text">Charity</span>
+              </li>
+              <li class="option">
+                <span class="option-text">Government</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="select-menu">
-          <div class="select-btn">
-            <span class="sBtn-text" id="speciality">Organization Type</span>
-            <i class="bx bx-chevron-down"></i>
+        <div class="input-box">
+          <input type="text" required />
+          <label class="user-label">Organization Address</label>
+          <i class="bx bxs-building"></i>
+        </div>
+
+        <div class="name-holder">
+          <div class="input-box">
+            <input type="text" required />
+            <label class="user-label">Governorate</label>
+            <i class="fa-solid fa-earth-africa"></i>
           </div>
 
-          <ul class="options">
-            <li class="option">
-              <span class="option-text">Educational</span>
-            </li>
-            <li class="option">
-              <span class="option-text">Healthcare</span>
-            </li>
-            <li class="option">
-              <span class="option-text">Charity</span>
-            </li>
-            <li class="option">
-              <span class="option-text">Government</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="input-box">
-        <input type="text" required />
-        <label class="user-label">Organization Address</label>
-        <i class="bx bxs-building"></i>
-      </div>
-
-      <div class="name-holder">
-        <div class="input-box">
-          <input type="text" required />
-          <label class="user-label">Governorate</label>
-          <i class="fa-solid fa-earth-africa"></i>
+          <div class="input-box">
+            <input type="text" required />
+            <label class="user-label">Area</label>
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
         </div>
 
         <div class="input-box">
-          <input type="text" required />
-          <label class="user-label">Area</label>
-          <i class="fa-solid fa-map-location-dot"></i>
+          <label class="optional-lable">Verification Document</label>
+          <input type="file" name="userFile" required />
+          <i class="bx bxs-file-doc"></i>
         </div>
       </div>
-
-      <div class="input-box">
-        <label class="optional-lable">Verification Document</label>
-        <input type="file" name="userFile" required />
-        <i class="bx bxs-file-doc"></i>
-      </div>
-    </div>
-    <div class="side-thing">
-        <a href="../LoginANDregister/SignUp.html" class="back-button" style="right:320px">
-            <i class="bx bx-arrow-back"></i> Back
+      <div class="side-thing">
+        <a
+          href="../LoginANDregister/SignUp.html"
+          class="back-button"
+          style="right: 320px">
+          <i class="bx bx-arrow-back"></i> Back
         </a>
         <figure>
-            <img
-              src="../LoginANDregister/images/signin-image.png"
-              alt="sing up image"
-              style="height: 270px;" />
-          </figure>
-      <!-- <button type="submit" class="signup-button">Finish</button> -->
-      <input type="submit" class="signup-button" name="upload_btn" value="Finish" />
-    </div>
-  </form>
-  <script>
-    var map = L.map("map").setView([30.0444, 31.2357], 6);
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 19,
-      attribution:
-        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    }).addTo(map);
+          <img
+            src="../LoginANDregister/images/signin-image.png"
+            alt="sing up image"
+            style="height: 270px" />
+        </figure>
+        <!-- <button type="submit" class="signup-button">Finish</button> -->
+        <input
+          type="submit"
+          class="signup-button"
+          name="upload_btn"
+          value="Finish" />
+      </div>
+    </form>
+    <script>
+      var map = L.map("map").setView([30.0444, 31.2357], 6);
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map);
 
-    var marker = L.marker([0, 0]).addTo(map);
-    function onMapClick(e) {
-      // marker.setLatLng(e.latlng);
-      // marker.bindPopup("Youe Organization is at " + e.latlng.toString()).openPopup();
-      fetch(
-        "https://nominatim.openstreetmap.org/reverse?format=json&lat=" +
-        e.latlng.lat +
-        "&lon=" +
-        e.latlng.lng
-      )
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (data) {
-          var address = data.display_name;
-          marker.setLatLng(e.latlng);
-          marker.bindPopup("Your Organization is at " + address).openPopup();
+      var marker = L.marker([0, 0]).addTo(map);
+      function onMapClick(e) {
+        // marker.setLatLng(e.latlng);
+        // marker.bindPopup("Youe Organization is at " + e.latlng.toString()).openPopup();
+        fetch(
+          "https://nominatim.openstreetmap.org/reverse?format=json&lat=" +
+            e.latlng.lat +
+            "&lon=" +
+            e.latlng.lng
+        )
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            var address = data.display_name;
+            marker.setLatLng(e.latlng);
+            marker.bindPopup("Your Organization is at " + address).openPopup();
+          });
+      }
+
+      map.on("click", onMapClick);
+    </script>
+    <script>
+      const optionMenu = document.querySelector(".select-menu"),
+        selectBtn = optionMenu.querySelector(".select-btn"),
+        options = optionMenu.querySelectorAll(".option"),
+        sBtn_text = optionMenu.querySelector(".sBtn-text");
+      optionMenu.style.zIndex = "100";
+      selectBtn.addEventListener("click", () =>
+        optionMenu.classList.toggle("active")
+      );
+
+      options.forEach((option) => {
+        option.addEventListener("click", () => {
+          let selectedOption = option.querySelector(".option-text").innerText;
+          sBtn_text.innerText = selectedOption;
+
+          optionMenu.classList.remove("active");
         });
-    }
-
-    map.on('click', onMapClick);
-
-  </script>
-  <script>
-    const optionMenu = document.querySelector(".select-menu"),
-      selectBtn = optionMenu.querySelector(".select-btn"),
-      options = optionMenu.querySelectorAll(".option"),
-      sBtn_text = optionMenu.querySelector(".sBtn-text");
-    optionMenu.style.zIndex = "100";
-    selectBtn.addEventListener("click", () =>
-      optionMenu.classList.toggle("active")
-    );
-
-    options.forEach((option) => {
-      option.addEventListener("click", () => {
-        let selectedOption = option.querySelector(".option-text").innerText;
-        sBtn_text.innerText = selectedOption;
-
-        optionMenu.classList.remove("active");
       });
-    });
-  </script>
-  <script>
-    var form = document.getElementById("form");
-    const menu = document.querySelector(".select-menu"),
-      text = menu.querySelector(".sBtn-text");
-    function submitForm(event) {
-      event.preventDefault();
-      window.location.href = "SignUpTYD.html";
-    }
-    form.addEventListener("submit", submitForm);
-  </script>
-</body>
-
+    </script>
+    <script>
+      var form = document.getElementById("form");
+      const menu = document.querySelector(".select-menu"),
+        text = menu.querySelector(".sBtn-text");
+      function submitForm(event) {
+        event.preventDefault();
+        window.location.href = "SignUpTYD.html";
+      }
+      form.addEventListener("submit", submitForm);
+    </script>
+    <script>
+      document.getElementById("fin").addEventListener("click", () => {
+        window.location.href = "../DonorPage.html";
+      });
+    </script>
+    <script>
+      // Function to handle button click
+      function handleButtonClick() {
+        // Redirect the user to a specified URL
+        window.location.href = "../Organization/OrganizationHome.html";
+      }
+      // Add event listener to the button
+      document.addEventListener("DOMContentLoaded", function () {
+        var finishButton = document.querySelector(
+          ".signup-button[name='upload_btn']"
+        );
+        finishButton.addEventListener("click", handleButtonClick);
+      });
+    </script>
+  </body>
 </html>
